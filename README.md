@@ -34,7 +34,7 @@
 
 - 📄 Know about my experiences [https://github.com/Dthai16gg](https://github.com/Dthai16gg)
 
-- ⚡ Fun fact **Giang Love Me**
+- ⚡ Fun fact **I LOVE GIANG FOREVER ❤️❤️❤️**
 
 ### Blogs posts
 
