@@ -1,5 +1,6 @@
 # Assignment NET-4 (Colo_shop)
-<h1 align="center">Hi 👋, I'm Dthai</h1>
+
+<h1 align="center">Hi 👋, I'm Dthai16gg</h1>
 
 <h3 align="center">A passionate backend developer from Viet Nam ❤️</h3>
 <div id="header" align="center">
@@ -36,6 +37,7 @@
 - ⚡ Fun fact **Giang Love Me**
 
 ### Blogs posts
+
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
 
