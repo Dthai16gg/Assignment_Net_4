@@ -8273,6 +8273,1222 @@
       "PackagePath": "staticwebassets\\ViewForUser\\styles\\single_styles.css"
     },
     {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\images\\About\\about.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\About\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\images\\About\\about@2x.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\About\\about@2x.jpg"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\images\\Blogstandard\\Blog.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\Blogstandard\\Blog.jpg"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\images\\Blogstandard\\Blogstandard_.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\Blogstandard\\Blogstandard_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\js\\landing.js",
+      "PackagePath": "staticwebassets\\assets\\js\\landing.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\js\\loader.js",
+      "PackagePath": "staticwebassets\\assets\\js\\loader.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_about.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_blog.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_contact.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_error.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_error.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_font.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_font.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_landing.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_landing.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_loader.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_loader.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_portfolio.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_portfolio.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_shop.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_typography.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\components\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\components\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\CODE_OF_CONDUCT.md",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\CODE_OF_CONDUCT.md"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\LICENSE",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\README.md",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\animate-config.json",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\animate-config.json"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\bower.json",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\bower.json"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\gulpfile.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\gulpfile.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\package.json",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\_base.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\_base.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\_vars.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\_vars.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\bounce.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\bounce.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\flash.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\flash.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\headShake.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\headShake.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\heartBeat.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\heartBeat.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\jello.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\jello.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\pulse.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\pulse.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\rubberBand.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\rubberBand.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\shake.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\shake.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\swing.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\swing.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\tada.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\tada.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\attention_seekers\\wobble.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\attention_seekers\\wobble.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceIn.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceIn.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_entrances\\bounceInUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOut.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOut.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\bouncing_exits\\bounceOutUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeIn.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeIn.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInDownBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInDownBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInLeftBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInLeftBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInRightBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInRightBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInUpBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_entrances\\fadeInUpBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOut.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOut.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutDownBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutDownBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutLeftBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutLeftBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutRightBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutRightBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutUpBig.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\fading_exits\\fadeOutUpBig.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\flippers\\flip.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\flippers\\flip.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\flippers\\flipInX.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\flippers\\flipInX.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\flippers\\flipInY.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\flippers\\flipInY.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\flippers\\flipOutX.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\flippers\\flipOutX.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\flippers\\flipOutY.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\flippers\\flipOutY.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\lightspeed\\lightSpeedIn.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\lightspeed\\lightSpeedIn.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\lightspeed\\lightSpeedOut.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\lightspeed\\lightSpeedOut.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateIn.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateIn.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInDownLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInDownLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInDownRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInDownRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInUpLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInUpLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInUpRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_entrances\\rotateInUpRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOut.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOut.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutDownLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutDownLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutDownRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutDownRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutUpLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutUpLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutUpRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\rotating_exits\\rotateOutUpRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_entrances\\slideInUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\sliding_exits\\slideOutUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\specials\\hinge.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\specials\\hinge.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\specials\\jackInTheBox.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\specials\\jackInTheBox.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\specials\\rollIn.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\specials\\rollIn.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\specials\\rollOut.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\specials\\rollOut.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomIn.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomIn.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_entrances\\zoomInUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOut.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOut.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutDown.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutDown.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutLeft.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutLeft.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutRight.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutRight.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutUp.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\animate.css\\source\\zooming_exits\\zoomOutUp.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\README.md",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\alert.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\alert.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\alert.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\alert.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\button.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\button.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\button.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\button.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\carousel.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\carousel.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\carousel.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\collapse.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\collapse.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\collapse.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\collapse.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\dropdown.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\dropdown.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\dropdown.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\dropdown.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\index.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\index.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\index.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\modal.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\modal.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\modal.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\modal.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\popover.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\popover.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\popover.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\popover.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\scrollspy.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\scrollspy.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\scrollspy.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\scrollspy.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\tab.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\tab.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\tab.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\tab.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\toast.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\toast.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\toast.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\toast.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\tooltip.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\tooltip.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\tooltip.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\tooltip.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\util.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\util.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\dist\\util.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\dist\\util.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\alert.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\alert.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\button.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\button.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\carousel.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\collapse.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\collapse.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\dropdown.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\dropdown.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\index.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\modal.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\modal.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\popover.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\popover.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\scrollspy.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\scrollspy.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\tab.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\tab.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\toast.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\toast.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\tools\\sanitizer.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\tools\\sanitizer.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\tooltip.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\tooltip.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\js\\src\\util.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\js\\src\\util.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\package.json",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_code.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_custom-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_input-group.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_media.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_media.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_print.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_print.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_align.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_display.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_text.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\fancybox\\jquery.fancybox.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\fancybox\\jquery.fancybox.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\fancybox\\jquery.fancybox.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\fancybox\\jquery.fancybox.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\fancybox\\jquery.fancybox.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\fancybox\\jquery.fancybox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\fancybox\\jquery.fancybox.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\fancybox\\jquery.fancybox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\jquery\\core.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\core.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\jquery\\jquery.min.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\jquery\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\jquery\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\jquery\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\masonry-layout\\masonry.pkgd.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\masonry-layout\\masonry.pkgd.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\masonry-layout\\masonry.pkgd.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\masonry-layout\\masonry.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper-utils.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper-utils.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper-utils.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper-utils.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper-utils.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper-utils.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper-utils.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper.js.flow",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\popper.js\\popper.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\vendors\\popper.js\\popper.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\config.rb",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\config.rb"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick-theme.less",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick-theme.less"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick-theme.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick-theme.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick.less",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick.less"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\slick-carousel\\slick.scss",
+      "PackagePath": "staticwebassets\\assets\\vendors\\slick-carousel\\slick.scss"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\wowjs\\wow.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\wowjs\\wow.js"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\vendors\\wowjs\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendors\\wowjs\\wow.min.js"
+    },
+    {
       "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

@@ -37,30 +37,6 @@
 
                                     <!-- Currency / Language / My Account -->
 
-                                    <li class="currency">
-                                        <a href="#">
-                                            usd
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="currency_selection">
-                                            <li><a href="#">cad</a></li>
-                                            <li><a href="#">aud</a></li>
-                                            <li><a href="#">eur</a></li>
-                                            <li><a href="#">gbp</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="language">
-                                        <a href="#">
-                                            English
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="language_selection">
-                                            <li><a href="#">French</a></li>
-                                            <li><a href="#">Italian</a></li>
-                                            <li><a href="#">German</a></li>
-                                            <li><a href="#">Spanish</a></li>
-                                        </ul>
-                                    </li>
                                     <li class="account">
                                         <a href="#">
                                             My Account
@@ -91,13 +67,39 @@
                                 <ul class="navbar_menu">
                                     <li><a asp-controller="Home" asp-action="Index">home</a></li>
                                     <li><a asp-controller="Home" asp-action="Shop">shop</a></li>
-                                    <li><a asp-controller="Home" asp-action="Shop">promotion</a></li>
-                                    <li><a href="#">pages</a></li>
-                                    <li><a href="#">blog</a></li>
+                                    <li><a asp-controller="Home" asp-action="About">about</a></li>
+                                    <li><a asp-controller="Home" asp-action="Blog">blog</a></li>
                                     <li><a asp-controller="Home" asp-action="Contact">contact</a></li>
                                 </ul>
                                 <ul class="navbar_user">
-                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                    <li>
+                                        <div class="box">
+                                            <form name="search">
+                                                <input type="text" class="input" placeholder="Search">
+                                            </form>
+                             
+                                        </div>
+                                    </li>
+                                    <style>
+
+                                        .box {
+                                            position: relative;
+                                        }
+                                        .input {
+                                            padding: 5px;
+                                            width: 70px;
+                                            height: 40px;
+                                            background: none;
+                                            border-radius: 50px;
+                                            box-sizing: border-box;
+                                            outline: none;
+                                            transition: .5s;
+                                        }
+                                        .box:hover input {
+                                            width: 250px;
+                                            border-radius: 5px;
+                                        }
+                                    </style>
                                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                     <li class="checkout">
                                         <a href="#">
@@ -116,75 +118,11 @@
             </div>
 
         </header>
-        <div class="fs_menu_overlay"></div>
-        <div class="hamburger_menu">
-            <div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-            <div class="hamburger_menu_content text-right">
-                <ul class="menu_top_nav">
-                    <li class="menu_item has-children">
-                        <a href="#">
-                            usd
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="menu_selection">
-                            <li><a href="#">cad</a></li>
-                            <li><a href="#">aud</a></li>
-                            <li><a href="#">eur</a></li>
-                            <li><a href="#">gbp</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu_item has-children">
-                        <a href="#">
-                            English
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="menu_selection">
-                            <li><a href="#">French</a></li>
-                            <li><a href="#">Italian</a></li>
-                            <li><a href="#">German</a></li>
-                            <li><a href="#">Spanish</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu_item has-children">
-                        <a href="#">
-                            My Account
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="menu_selection">
-                            <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-                            <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu_item"><a href="#">home</a></li>
-                    <li class="menu_item"><a href="#">shop</a></li>
-                    <li class="menu_item"><a href="#">promotion</a></li>
-                    <li class="menu_item"><a href="#">pages</a></li>
-                    <li class="menu_item"><a href="#">blog</a></li>
-                    <li class="menu_item"><a href="#">contact</a></li>
-                </ul>
-            </div>
-        </div>
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-        <div class="newsletter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
-                            <h4>Newsletter</h4>
-                            <p>Subscribe to our newsletter and get 20% off your first purchase</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
-                            <input id="newsletter_email" type="email" placeholder="Your email" required="required" data-error="Valid email is required.">
-                            <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">subscribe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
         <footer class="footer">
             <div class="container">
@@ -229,7 +167,7 @@
     <script src="~/ViewForUser/js/custom.js"></script>
     <script src="~/ViewForUser/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <script src="~/ViewForUser/js/categories_custom.js"></script>
-    
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
