@@ -1,6 +1,7 @@
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Colo_Shop.exe
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Colo_Shop.dll
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\appsettings.json
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Colo_Shop.staticwebassets.runtime.json
@@ -31,7 +32,6 @@ C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\M
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
-C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\buith\OneDrive\Máy tính\Assignment_Net_4\Colo_Shop\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll

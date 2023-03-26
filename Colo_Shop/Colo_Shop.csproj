@@ -30,4 +30,11 @@
     <Folder Include="wwwroot\ViewForUser\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\assets\scss\style.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

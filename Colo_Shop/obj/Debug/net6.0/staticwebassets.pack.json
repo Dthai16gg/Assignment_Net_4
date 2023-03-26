@@ -8273,12 +8273,20 @@
       "PackagePath": "staticwebassets\\ViewForUser\\styles\\single_styles.css"
     },
     {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleCart.css",
+      "PackagePath": "staticwebassets\\assets\\css\\StyleCart.css"
+    },
+    {
       "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\style.css.map",
-      "PackagePath": "staticwebassets\\assets\\css\\style.css.map"
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\styleRegister.css",
+      "PackagePath": "staticwebassets\\assets\\css\\styleRegister.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\stylelogin.css",
+      "PackagePath": "staticwebassets\\assets\\css\\stylelogin.css"
     },
     {
       "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\images\\About\\about.jpg",
@@ -9491,6 +9499,10 @@
     {
       "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\images\\bg.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Colo_Shop.Microsoft.AspNetCore.StaticWebAssets.props",
