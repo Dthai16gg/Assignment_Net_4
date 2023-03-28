@@ -1,100 +1,125 @@
-﻿
-    <div class="main-content mt-5">
-        <div class="container mt-7">
-            <!-- Table -->
-            <h2 class="mb-5">My Account Card</h2>
-            <div class="row">
-                <div class="col-xl-8 m-auto order-xl-1">
-                    <div class="card bg-secondary shadow">
-                        <div class="card-header bg-white border-0">
-                            <div class="row align-items-center">
-                                <div class="col-8">
-                                    <h3 class="mb-0">My account</h3>
-                                </div>
-                                <div class="col-4 text-right">
-                                    <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-                                </div>
+﻿<div class="container" style="margin-top: 200px">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link btn btn-primary active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+               aria-selected="true">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-primary  ml-2" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+               aria-selected="false">Settings</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row mt-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">User</h3>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <form>
-                                <h6 class="heading-small text-muted mb-4">User information</h6>
-                                <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-username">Username</label>
-                                                <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-email">Email address</label>
-                                                <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
-                                            </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <h6 class="heading-small text-muted mb-4">User information</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-username">Username</label>
+                                            <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-first-name">First name</label>
-                                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-last-name">Last name</label>
-                                                <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
-                                            </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-email">Email address</label>
+                                            <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="my-4">
-                                <!-- Address -->
-                                <h6 class="heading-small text-muted mb-4">Contact information</h6>
-                                <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-address">Address</label>
-                                                <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
-                                            </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-first-name">First name</label>
+                                            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-city">City</label>
-                                                <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-country">Country</label>
-                                                <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-country">Postal code</label>
-                                                <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
-                                            </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-last-name">Last name</label>
+                                            <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="my-4">
-                                <!-- Description -->
-                                <h6 class="heading-small text-muted mb-4">About me</h6>
-                                <div class="pl-lg-4">
-                                    <div class="form-group focused">
-                                        <label>About Me</label>
-                                        <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
+
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="wrapper bg-white mt-sm-5">
+                <h4 class="pb-4 border-bottom">Account settings</h4>
+                <div class="d-flex align-items-start py-3 border-bottom">
+                    <img src="https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                         class="img" alt="">
+                    <div class="pl-sm-4 pl-2" id="img-section">
+                        <b>Profile Photo</b>
+                        <p>Accepted file type .png. Less than 1MB</p>
+                        <button class="btn button border"><b>Upload</b></button>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="row py-2">
+                        <div class="col-md-6">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="bg-light form-control" placeholder="Steve">
+                        </div>
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="bg-light form-control" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-md-6">
+                            <label for="email">Email Address</label>
+                            <input type="text" class="bg-light form-control" placeholder="">
+                        </div>
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="bg-light form-control" placeholder="+1 213-548-6015">
+                        </div>
+                    </div>  
+                    <div class="row py-2">
+                        <div class="col-md-6">
+                            <label for="">UserName</label>
+                            <input type="text" class="bg-light form-control" placeholder="">
+                        </div>
+                        <div class="col-md-6 pt-md-0 pt-3">
+                            <label for="phone">Password</label>
+                            <input type="tel" class="bg-light form-control">    
+                            <label for="phone">Config Password</label>
+                            <input type="tel" class="bg-light form-control">
+                        </div>
+                    </div>
+                    <div class="py-3 pb-4 border-bottom">
+                        <button class="btn btn-primary mr-3">Save Changes</button>
+                        <button class="btn border button">Cancel</button>
+                    </div>
+                    <div class="d-sm-flex align-items-center pt-3" id="deactivate">
+                        <div>
+                            <b>Deactivate your account</b>
+                            <p>Details about your company account and password</p>
+                        </div>
+                        <div class="ml-auto">
+                            <button class=" btn btn-danger">Deactivate</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>

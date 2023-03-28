@@ -2,7 +2,7 @@
 
 namespace Colo_Shop.Controllers
 {
-    public class Admin : Controller
+    public class UserController : Controller
     {
         public IActionResult Index()
         {

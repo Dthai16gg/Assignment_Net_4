@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+X+rpHeOSz+tN4c6yUG5pOL0VVrjWpfGZ/q1KhsVukk=",
+  "Hash": "690L0segDpRUrZhFWWQPxIE6g0Sn6XCSb9EiZfnEF84=",
   "Source": "Colo_Shop",
   "BasePath": "_content/Colo_Shop",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
     },
     {
+      "Identity": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleAdminHomePage.css",
+      "SourceId": "Colo_Shop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\",
+      "BasePath": "_content/Colo_Shop",
+      "RelativePath": "assets/css/StyleAdminHomePage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\StyleAdminHomePage.css"
+    },
+    {
       "Identity": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleCart.css",
       "SourceId": "Colo_Shop",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\stylelogin.css"
+    },
+    {
+      "Identity": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleLoginAdmin.css",
+      "SourceId": "Colo_Shop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\",
+      "BasePath": "_content/Colo_Shop",
+      "RelativePath": "assets/css/StyleLoginAdmin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\StyleLoginAdmin.css"
     },
     {
       "Identity": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\styleRegister.css",
@@ -38792,6 +38826,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\images\\users.svg",
+      "SourceId": "Colo_Shop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\",
+      "BasePath": "_content/Colo_Shop",
+      "RelativePath": "images/users.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\users.svg"
     },
     {
       "Identity": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\ViewForUser\\images\\banner_1.jpg",

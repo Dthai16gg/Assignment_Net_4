@@ -38,45 +38,20 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Index">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-                <div class="form-inline">
-                    <div class="input-group" data-widget="sidebar-search">
-                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-sidebar">
-                                <i class="fas fa-search fa-fw"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </ul>
-
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
-                <li class="nav-item">
-
-                    <div class="navbar-search-block">
-                        <form class="form-inline">
-                            <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-navbar" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                <div class="dropdown">
+                    <button class=" btn " data-toggle="dropdown">
+                        <i class="mr-2 fas fa-user"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" asp-controller="Admin" asp-action="MyAccount" >My Account</a>
+                        <a class="dropdown-item" asp-controller="Admin" asp-action="Login">Sign Out</a>
+                        <a class="dropdown-item" asp-controller="Admin" asp-action="Register" >Create New Account</a>
                     </div>
-                </li>
+                </div> 
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
@@ -93,25 +68,14 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="" class="brand-link">
+            <a asp-controller="Admin" asp-action="HomePage" class="brand-link">
                 <img src="~/Client/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Admin Colo Shop</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
-                <div class=" ml-3 mt-3 pb-3 mb-3 d-flex note-tab-pane">
-                    <div class="info">
-                        <a href="#" class=" btn btn-danger d-block dropdown-toggle-split" data-toggle="dropdown"><i class="mr-2 fas fa-user"></i>     Account </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">My Account</a>
-                            <a class="dropdown-item" href="#">Sign Out</a>
-                            <a class="dropdown-item" href="#">New +</a>
-                        </div>
-                    </div>
-
-                </div>
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
                         <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
                         <li class="nav-header">Manager</li>
@@ -125,21 +89,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item ml-3">
-                                    <a href="" class="nav-link">
+                                    <a asp-controller="Products" asp-action="ShowList" class="nav-link">
                                         <i class="far fa-list nav-icon"></i>
                                         <p>Show List Product</p>
                                     </a>
                                 </li>
                                 <li class="nav-item ml-3">
-                                    <a href="" class="nav-link">
+                                    <a asp-controller="Products" asp-action="Create" class="nav-link">
                                         <i class="far fa-plus nav-icon"></i>
                                         <p>Create New Product</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item ml-3">
-                                    <a href="~/Client/index3.html" class="nav-link">
-                                        <i class="far fa-edit nav-icon"></i>
-                                        <p>Edit Product</p>
                                     </a>
                                 </li>
                             </ul>
@@ -165,16 +123,11 @@
                                         <p>Create New User</p>
                                     </a>
                                 </li>
-                                <li class="nav-item ml-3">
-                                    <a href="~/Client/index3.html" class="nav-link">
-                                        <i class="far fa-edit nav-icon"></i>
-                                        <p>Edit User</p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a  class="nav-link">
                                 <i class="nav-icon fas fa-paint-roller"></i>
                                 <p>
                                     Role
@@ -183,25 +136,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
+                                    <a asp-controller="Role" asp-action="ShowList" class="nav-link ">
                                         <i class="far fa-list nav-icon"></i>
                                         <p>Show List Role</p>
                                     </a>
                                 </li>
                                 <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
+                                    <a asp-controller="Role" asp-action="Create" class="nav-link ">
                                         <i class="far fa-plus nav-icon"></i>
                                         <p>Create New Role</p>
                                     </a>
                                 </li>
-                                <li class="nav-item ml-3">
-                                    <a href="~/Client/index3.html" class="nav-link">
-                                        <i class="far fa-edit nav-icon"></i>
-                                        <p>Edit Role</p>
-                                    </a>
-                                </li>
                             </ul>
-                        </li  >
+                        </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-money-bill"></i>
@@ -224,7 +171,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>   
+                        </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-charging-station"></i>
@@ -247,7 +194,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li> 
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

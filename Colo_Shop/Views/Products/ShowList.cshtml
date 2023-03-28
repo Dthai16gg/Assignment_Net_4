@@ -1,0 +1,110 @@
+﻿@using System.Security.Cryptography
+@model IEnumerable<Colo_Shop.Models.Product>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<p>
+    <a class="ml-3 mt-5 btn btn-outline-danger" asp-action="Create">Create New<i class="fa-plus"></i></a>
+</p>
+<div class="ml-3">
+    @using (Html.BeginForm("Search", "Products", FormMethod.Post))
+    {
+        @Html.TextBox("name")
+        ;
+        <button type="submit" class="btn_search mt-3"><span><i class="fa-solid fa-search text-danger"></i></span></button>
+    }
+</div>
+@{
+ <h1>@ViewBag.Null</h1>
+}
+<table class="table ml-3 mt-3 bg-gradient-info">
+    <thead>
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image2)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>           
+    @{
+        int stt = 1;
+    }
+
+    @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @stt
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AvailableQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Supplier)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Style)
+                </td>
+                <td>
+                    <img src="~/ViewForUser/images/@item.Image1" width="50" />
+                </td>
+                <td>
+                    <img src="~/ViewForUser/images/@item.Image2" width="50" />
+                </td>
+                <td>
+                    <a class="btn btn-secondary" href='@Url.Action("Edit", "Products",new{id= item.Id})'>
+                        <span>EDIT<i class="fa-edit"></i></span>
+                    </a>
+                    <a class="btn btn-primary" href='@Url.Action("Details", "Products",new{id= item.Id})'>
+                        <span>DETAILS<i class="fa-eye"></i></span>
+                    </a>
+                    <a class="btn btn-danger" href='@Url.Action("Delete", "Products",new{id= item.Id})'>
+                        <span>REMOVE<i class="fa-remove"></i></span>
+                    </a>
+                </td>
+            </tr>
+            stt++;
+        }
+    </tbody>
+</table>

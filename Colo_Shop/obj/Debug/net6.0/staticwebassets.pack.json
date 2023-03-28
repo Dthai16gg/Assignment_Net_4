@@ -8273,8 +8273,16 @@
       "PackagePath": "staticwebassets\\ViewForUser\\styles\\single_styles.css"
     },
     {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleAdminHomePage.css",
+      "PackagePath": "staticwebassets\\assets\\css\\StyleAdminHomePage.css"
+    },
+    {
       "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleCart.css",
       "PackagePath": "staticwebassets\\assets\\css\\StyleCart.css"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleLoginAdmin.css",
+      "PackagePath": "staticwebassets\\assets\\css\\StyleLoginAdmin.css"
     },
     {
       "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\style.css",
@@ -9503,6 +9511,10 @@
     {
       "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\images\\bg.jpg",
       "PackagePath": "staticwebassets\\images\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\wwwroot\\images\\users.svg",
+      "PackagePath": "staticwebassets\\images\\users.svg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Colo_Shop.Microsoft.AspNetCore.StaticWebAssets.props",
