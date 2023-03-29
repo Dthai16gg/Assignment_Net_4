@@ -50,14 +50,9 @@
                 <span asp-validation-for="Style" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Image1" class="control-label"></label>
-                <input asp-for="Image1" class="form-control" />
-                <span asp-validation-for="Image1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Image2" class="control-label"></label>
-                <input asp-for="Image2" class="form-control" />
-                <span asp-validation-for="Image2" class="text-danger"></span>
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" type="file" class="form-control" accept=".jpg,.jpeg,.png,.gif" />
+                <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-danger" />

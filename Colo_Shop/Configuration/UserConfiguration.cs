@@ -14,7 +14,6 @@ namespace Web_Application.Configurations
             builder.Property(p => p.Email).HasColumnType("nvarchar(MAX)");
             builder.Property(p => p.NumberPhone).HasColumnType("nvarchar(MAX)");
             builder.Property(p => p.Status).HasColumnType("int");
-            builder.Property(p => p.ImageUser).HasColumnType("nvarchar(MAX)");
             builder.HasOne(p => p.Role).WithMany(p => p.Users).
                 HasForeignKey(p => p.RoleId);
         }

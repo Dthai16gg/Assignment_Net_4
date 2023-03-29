@@ -52,7 +52,6 @@ namespace Colo_Shop.Services
         _User.Name = User.Name;
         _User.Email = User.Email;
         _User.NumberPhone = User.NumberPhone;
-        _User.ImageUser = User.ImageUser;
         _dbConText.Users.Update(_User);
         _dbConText.SaveChanges();
         return true;

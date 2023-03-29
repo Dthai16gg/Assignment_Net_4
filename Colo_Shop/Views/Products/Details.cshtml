@@ -50,17 +50,12 @@
             @Html.DisplayFor(model => model.Style)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image1)
+            @Html.DisplayNameFor(model => model.Image)
         </dt>
         <dd class = "col-sm-10">
-           <img src="~/ViewForUser/images/@Model.Image1" width="300"/>
+            <img src="data:image/png;base64,@Convert.ToBase64String(Model.Image)" alt="Product Image" width="300"/>
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image2)
-        </dt>
-        <dd class = "col-sm-10">
-            <img src="~/ViewForUser/images/@Model.Image2"width="300"/>
-        </dd>
+        
     </dl>
 </div>
 <div class="ml-5">

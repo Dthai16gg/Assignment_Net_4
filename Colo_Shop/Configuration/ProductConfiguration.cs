@@ -12,8 +12,7 @@ namespace Web_Application.Configurations
             builder.Property(x => x.Supplier).HasColumnType("nvarchar(MAX)");
             builder.Property(x => x.Description).HasColumnType("nvarchar(MAX)");
             builder.Property(x => x.Style).HasColumnType("nvarchar(MAX)");
-            builder.Property(x => x.Image1).HasColumnType("nvarchar(MAX)");
-            builder.Property(x => x.Image2).HasColumnType("nvarchar(MAX)");
+            builder.Property(x => x.Image);
         }
 	}
 }

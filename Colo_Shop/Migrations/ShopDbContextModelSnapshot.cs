@@ -128,13 +128,9 @@ namespace Colo_Shop.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(MAX)");
 
-                    b.Property<string>("Image1")
+                    b.Property<byte[]>("Image")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)");
-
-                    b.Property<string>("Image2")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(MAX)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -188,10 +184,6 @@ namespace Colo_Shop.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(MAX)");
-
-                    b.Property<string>("ImageUser")
                         .IsRequired()
                         .HasColumnType("nvarchar(MAX)");
 

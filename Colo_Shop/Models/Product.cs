@@ -11,8 +11,7 @@ namespace Colo_Shop.Models
         public string Supplier { get; set; }
         public string Description { get; set; }
         public string Style { get; set; }
-        public string Image1 { get; set; }
-        public string Image2 { get; set; }
+        public byte[] Image { get; set; }
         public virtual ICollection<BillDetails> BillDetails { get; set; }
         public virtual ICollection<CartDetail> CartDetails { get; set; }
     }

@@ -50,8 +50,7 @@ namespace Colo_Shop.Services
         _product.AvailableQuantity = product.AvailableQuantity;
         _product.Description = product.Description;
         _product.Style = product.Style;
-        _product.Image1 = product.Image1;
-        _product.Image2 = product.Image2;
+        _product.Image = product.Image;
         _dbConText.Products.Update(_product);
         _dbConText.SaveChanges();
         return true;

@@ -3,12 +3,14 @@ using Colo_Shop.Models;
 using Colo_Shop.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.EntityFrameworkCore;
 
 namespace Colo_Shop.Controllers
 {
     public class ProductsController : Controller
     {
         private IProductServices _productServices;
+
         public ProductsController()
         {
             _productServices = new ProductServices();
@@ -24,31 +26,62 @@ namespace Colo_Shop.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public IActionResult Create(Product product)
+        public async Task<IActionResult> Create(Product product, IFormFile imageFile)
         {
+            if (product.Price < 0 || product.AvailableQuantity < 0)
+            {
+                return Content("Kiem tra lai");
+            }
+
+            if (imageFile != null)
+            {
+                using (var stream = new MemoryStream())
+                {
+                    await imageFile.CopyToAsync(stream);
+                    product.Image = stream.ToArray();
+                }
+            }
+
             _productServices.CreateNewProducts(product);
+
             return RedirectToAction("ShowList");
         }
+
 
         [HttpGet]
         public IActionResult Edit(Guid id)
         {
-            var product= _productServices.GetProductById(id);
+            var product = _productServices.GetProductById(id);
             return View(product);
         }
-        public IActionResult Edit(Product product)
-        {
-            if (product.AvailableQuantity<0 || product.Price<0 || product.Description == null)
-            {
-                ViewBag.Message ="Lỗi rồi nhé ! kiểm tra lại đi làm ơn";
-            }
-            else
-            {
-                _productServices.UpdateProduct(product);
-            }
 
-            return RedirectToAction("ShowList");
+        //[HttpPost]
+        public IActionResult Edit(Product product, IFormFile imageFile)
+        {
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (imageFile != null && imageFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            imageFile.CopyTo(ms);
+                            product.Image = ms.ToArray();
+                        }
+                    }
+                    _productServices.UpdateProduct(product);
+                    return RedirectToAction(nameof(ShowList));
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    return NotFound();
+                }
+            }
+            return View(product);
         }
 
         public IActionResult Delete(Guid id)
@@ -59,7 +92,7 @@ namespace Colo_Shop.Controllers
 
         public IActionResult Search(string name)
         {
-            if (name ==""|| name==null)
+            if (name == "" || name == null)
             {
                 var r = _productServices.GetAllProducts();
                 return View("ShowList", r.ToList());
