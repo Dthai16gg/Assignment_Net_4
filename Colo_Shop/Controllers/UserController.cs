@@ -79,27 +79,36 @@ namespace Colo_Shop.Controllers
             };
             return View(viewModel);
         }
-        public async Task<IActionResult> Edit(User product, IFormFile imageFile)
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(CreateViewModel viewModel, IFormFile imageFile)
         {
-            using (var stream = new MemoryStream())
+            if (ModelState.IsValid)
             {
-                await imageFile.CopyToAsync(stream);
-                product.ImageUser = stream.ToArray();
-            }
-            try
-            {
-                if (_userServices.UpdateUser(product))
+                if (imageFile != null)
                 {
-                    return RedirectToAction("ShowList");
+                    using (var stream = new MemoryStream())
+                    {
+                        await imageFile.CopyToAsync(stream);
+                        viewModel.User.ImageUser = stream.ToArray();
+                    }
+                }
+                try
+                {
+                    if (_userServices.UpdateUser(viewModel.User))
+                    {
+                        return RedirectToAction("ShowList");
+                    }
+                }
+                catch (Exception e)
+                {
+                    return Content(e.Message);
                 }
             }
-            catch (Exception e)
-            {
-                return Content(e.Message);
-            }
-
-            return View();
+            viewModel.Roles = _roleServices.GetAllRoles().ToList();
+            return RedirectToAction("ShowList");
         }
+
 
         public IActionResult Delete(Guid id)
         {
@@ -107,19 +116,6 @@ namespace Colo_Shop.Controllers
             return RedirectToAction("ShowList");
         }
 
-        public ActionResult Search(string name)
-        {
-            if (name == "" || name == null)
-            {
-                var r = _userServices.GetAllUsers();
-                return View("ShowList", r.ToList());
-            }
-            else
-            {
-                var p = _userServices.GetAllUsers();
-                return RedirectToAction("ShowList", p);
-            }
-        }
         public IActionResult Details(Guid id)
         {
             var p = _userServices.GetUserById(id);
