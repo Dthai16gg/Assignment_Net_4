@@ -51,23 +51,11 @@ namespace Colo_Shop.Controllers
             return RedirectToAction("ShowList");
         }
 
-        public ActionResult Search(string name)
-        {
-            if (name == ""|| name == null)
-            {
-                var r = _roleServices.GetAllRoles();
-                return View("ShowList",r.ToList());
-            }
-            else
-            {
-                var p = _roleServices.GetRoleByName(name);
-                return RedirectToAction("ShowList",p);
-            }
-        }
         public IActionResult Details(Guid id)
         {
             var p = _roleServices.GetRoleById(id);
             return View(p);
         }
+
     }
 }

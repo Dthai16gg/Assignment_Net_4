@@ -3,7 +3,15 @@
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 <link rel="stylesheet" href="~/assets/css/StyleLoginAdmin.css">
-
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show container fixed-top" role="alert">
+        @ViewBag.ErrorMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
 <div class="wrapper fadeInDown">
     <div id="formContent">
         <!-- Tabs Titles --
@@ -13,17 +21,22 @@
             <img src="~/images/users.svg" id="icon" alt="User Icon" style="width: 100px" />
         </div>
         <!-- Login Form -->
-        <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <form method="post" asp-controller="Admin" asp-action="Login">
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" name="Username">
+            </div>
+            <div class="form-group">
+                <label >Password:</label>
+                <input type="password"  name="Password" >
+            </div>
+            <input type="submit" class="btn btn-primary" value="LOGIN">
         </form>
-        <a asp-controller="Admin" asp-action="HomePage" class=" btn btn-outline-danger">LOG IN</a>
         <!-- Remind Passowrd -->
         <div id="formFooter" class="mt-3">
             <a class="underlineHover" data-toggle="modal" data-target="#exampleModal">Forgot Password?</a>
         </div>
         <!-- Modal -->
-
     </div>
 </div>
 <div class="modal fade  bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

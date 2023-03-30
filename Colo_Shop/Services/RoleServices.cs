@@ -63,7 +63,7 @@ namespace Colo_Shop.Services
     }
     public List<Role> GetRoleByName(string name)
     {
-      return _dbConText.Roles.Where(p => p.RoleName == name).ToList();
+      return _dbConText.Roles.Where(p => p.RoleName.Contains(name)).ToList();
     }
   }
 }

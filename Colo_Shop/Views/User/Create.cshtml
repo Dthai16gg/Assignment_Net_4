@@ -1,0 +1,97 @@
+﻿@model Colo_Shop.Controllers.UserController.CreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">Create</h1>
+
+<h4 class="ml-5">User</h4>
+<hr />
+<div class="row mx-5 ">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="User.RoleId" class="control-label"></label>
+                <select asp-for="User.RoleId" class="form-control">
+                    @foreach (var item in Model.Roles)
+                    {
+                        if (item.Status==1)
+                        {
+                            <option value="@item.Id">@item.RoleName</option>  
+                        }                               
+                    }
+                </select>
+                <span asp-validation-for="User.RoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Username" class="control-label"></label>
+                <input asp-for="User.Username" class="form-control" />
+                <span asp-validation-for="User.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Name" class="control-label"></label>
+                <input asp-for="User.Name" class="form-control" />
+                <span asp-validation-for="User.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Email" class="control-label"></label>
+                <input asp-for="User.Email" class="form-control" />
+                <span asp-validation-for="User.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.NumberPhone" class="control-label"></label>
+                <input asp-for="User.NumberPhone" class="form-control" />
+                <span asp-validation-for="User.NumberPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Password" class="control-label"></label>
+                <div class="input-group">
+                    <input asp-for="User.Password" class="form-control" type="password"/>
+                    <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('password-toggle-1')">
+                        <i class="fa fa-eye" id="password-toggle-1"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="User.Password" class="text-danger"></span>
+            </div> 
+
+            <div class="form-group">
+                <label asp-for="User.Status" class="control-label"></label>
+                <select asp-for="User.Status" class="form-control">
+                    <option value="1">Active</option>
+                    <option value="0">InActive</option>
+                </select>
+                <span asp-validation-for="User.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.ImageUser" class="control-label"></label>
+                <input type="file" name="ImageFile" class="form-control" />
+                <span asp-validation-for="User.ImageUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a class="btn btn-danger ml-5" asp-action="ShowList">Back to List</a>
+</div>
+<script>
+          function togglePasswordVisibility(iconId) {
+    var passwordField = document.querySelector("#" + iconId).parentNode.previousElementSibling;
+    var icon = document.querySelector("#" + iconId);
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    } else {
+        passwordField.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}
+</script>

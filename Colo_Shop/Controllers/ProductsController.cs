@@ -19,7 +19,7 @@ namespace Colo_Shop.Controllers
         public IActionResult ShowList()
         {
             var products = _productServices.GetAllProducts();
-            return View(products);
+            return View(products.ToList());
         }
 
         public IActionResult Create()
@@ -57,32 +57,24 @@ namespace Colo_Shop.Controllers
             return View(product);
         }
 
-        //[HttpPost]
-        public IActionResult Edit(Product product, IFormFile imageFile)
+        [HttpPost]
+        public async Task<IActionResult> Edit(Product product, IFormFile imageFile)
         {
-
-            if (ModelState.IsValid)
+            if (product.Price < 0 || product.AvailableQuantity < 0)
             {
-                try
-                {
-                    if (imageFile != null && imageFile.Length > 0)
-                    {
-                        using (var ms = new MemoryStream())
-                        {
-                            imageFile.CopyTo(ms);
-                            product.Image = ms.ToArray();
-                        }
-                    }
-                    _productServices.UpdateProduct(product);
-                    return RedirectToAction(nameof(ShowList));
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    return NotFound();
-                }
+                return Content("Kiem tra lai");
             }
-            return View(product);
+
+            using (var stream = new MemoryStream())
+            {
+                await imageFile.CopyToAsync(stream);
+                product.Image = stream.ToArray();
+            }
+            _productServices.UpdateProduct(product);
+            return RedirectToAction(nameof(ShowList));
         }
+
+
 
         public IActionResult Delete(Guid id)
         {

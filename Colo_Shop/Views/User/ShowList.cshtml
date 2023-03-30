@@ -1,0 +1,103 @@
+﻿@model Colo_Shop.Controllers.UserController.ShowModel   
+
+
+@{
+    ViewData["Title"] = "ShowList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">ShowList</h1>
+
+<p>
+    <a class="ml-3 mt-5 btn btn-outline-danger" asp-action="Create">Create New<i class="fa-plus"></i></a>
+</p>
+<table class="table  bg-gradient-info super_container">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>
+                Role Name
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              NumberPhone
+            </th>
+            <th>
+              Password
+            </th>
+            <th>
+              Status
+            </th>
+            <th>
+              ImageUser
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+        }
+    @foreach (var item in Model.User)
+        {
+            <tr>
+                <td>
+                    @i
+                </td>
+                <td>
+                    @Model.Roles.FirstOrDefault(r => r.Id == item.RoleId)?.RoleName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                @if (item.Status == 1)
+                {
+                    <td>
+                        Active
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        InActive
+                    </td>
+                }
+                <td>
+                    <img src="data:image/png;base64,@Convert.ToBase64String(item.ImageUser)" alt="User Image" width="70" />
+                </td>
+                <td>
+                    <a class="btn btn-secondary" href='@Url.Action("Edit", "User",new{id= item.Id})'>
+                        <span>EDIT<i class="fa-edit"></i></span>
+                    </a>
+                    <a class="btn btn-primary" href='@Url.Action("Details", "User",new{id= item.Id})'>
+                        <span>DETAILS<i class="fa-eye"></i></span>
+                    </a>
+                    <a class="btn btn-danger" href='@Url.Action("Delete", "User",new{id= item.Id})'>
+                        <span>REMOVE<i class="fa-remove"></i></span>
+                    </a>
+                </td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>

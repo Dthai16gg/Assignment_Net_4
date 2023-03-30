@@ -31,7 +31,8 @@
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <!-- Navbar -->
+        <!-- Navbar -->                               
+        <marquee class="fixed-bottom"><span class="text-danger" style="font-size: 20px">(THÔNG BÁO)</span> Cửa hàng Colo trân trọng thông báo : Tất cả các tài khoản ADMIN cần đắng kí với ID-ADMIN với chủ cửa hàng để tiếp tục sử dụng. Trân tr </marquee>
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
@@ -47,11 +48,11 @@
                         <i class="mr-2 fas fa-user"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" asp-controller="Admin" asp-action="MyAccount" >My Account</a>
+                        <a class="dropdown-item" asp-controller="Admin" asp-action="MyAccount">My Account</a>
                         <a class="dropdown-item" asp-controller="Admin" asp-action="Login">Sign Out</a>
-                        <a class="dropdown-item" asp-controller="Admin" asp-action="Register" >Create New Account</a>
+                        <a class="dropdown-item" asp-controller="Admin" asp-action="Register">Create New Account</a>
                     </div>
-                </div> 
+                </div>
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
@@ -112,13 +113,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
+                                    <a asp-controller="User" asp-action="ShowList" class="nav-link ">
                                         <i class="far fa-list nav-icon"></i>
                                         <p>Show List User</p>
                                     </a>
                                 </li>
                                 <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
+                                    <a asp-controller="User" asp-action="Create" class="nav-link ">
                                         <i class="far fa-plus nav-icon"></i>
                                         <p>Create New User</p>
                                     </a>
@@ -127,7 +128,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a  class="nav-link">
+                            <a class="nav-link">
                                 <i class="nav-icon fas fa-paint-roller"></i>
                                 <p>
                                     Role

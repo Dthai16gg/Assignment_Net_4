@@ -6,14 +6,17 @@
 }
 
 
-<table class="table mx-5">   
+<table class="table super_container bg-gradient-info">
     <h1 class="text-center">ShowList</h1>
-
     <p class="ml-3">
-        <a asp-action="Create">Create New</a>
+        <a class="btn btn-primary" asp-action="Create">Create New</a>
     </p>
+
     <thead>
         <tr>
+            <th>
+                STT
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Status)
             </th>
@@ -27,12 +30,27 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @{
+            int stt = 1;
+        }
+    @foreach (var item in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Status)
+                    @stt
                 </td>
+                @if (item.Status == 1)
+                {
+                    <td>
+                        Active
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        InActive
+                    </td>
+                }
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
@@ -51,6 +69,7 @@
                     </a>
                 </td>
             </tr>
+            stt++;
         }
     </tbody>
 </table>
