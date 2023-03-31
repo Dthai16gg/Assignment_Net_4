@@ -54,18 +54,18 @@
                                 <li><span class="text-primary text-medium">3. </span>Use the link to reset your password</li>
                             </ol>
                         </div>
-                        <form class="card mt-4">
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="email-for-pass">Enter your email address</label>
-                                    <input class="form-control" type="text" id="email-for-pass" required=""><small class="form-text text-muted">Enter the email address you used during the registration on BBBootstrap.com. Then we'll email a link to this address.</small>
-                                </div>
+                        @using (Html.BeginForm("Forgot", "Admin", FormMethod.Post))
+                        {
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                @Html.TextBox("username", null, new { @class = "form-control", required = "required" })
                             </div>
-                            <div class="card-footer">
-                                <button class="btn btn-success" type="submit">Get New Password</button>
-                                <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Back to Login</button>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                @Html.TextBox("email", null, new { @class = "form-control", required = "required", type = "email" })
                             </div>
-                        </form>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        }
                     </div>
                 </div>
             </div>

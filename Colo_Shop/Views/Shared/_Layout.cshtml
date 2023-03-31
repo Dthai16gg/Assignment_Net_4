@@ -63,47 +63,47 @@
                             <div class="logo_container">
                                 <a href="#">colo<span>shop</span></a>
                             </div>
-                            <nav class="navbar">
-                                <ul class="navbar_menu">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                <ul class="collapse navbar-collapse navbar_menu navbar-nav mr-auto" id="navbarSupportedContent">
                                     <li><a asp-controller="Home" asp-action="Index">home</a></li>
                                     <li><a asp-controller="Home" asp-action="Shop">shop</a></li>
                                     <li><a asp-controller="Home" asp-action="About">about</a></li>
                                     <li><a asp-controller="Home" asp-action="Blog">blog</a></li>
-                                    <li><a asp-controller="Home" asp-action="Contact">contact</a></li>
-                                </ul>
-                                <ul class="navbar_user">
-                                    <li>
-                                        <div class="box">
-                                            <form name="search">
-                                                <input type="text" class="input" placeholder="Search">
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <style>
-                                        .input {
-                                            padding: 5px;
-                                            width: 70px;
-                                            height: 30px;
-                                            background: none;
-                                            border-radius: 50px;
-                                            transition: .5s;
-                                        }
+                                    <li><a asp-controller="Home" asp-action="Contact">contact</a></li>  
+                                    <ul class="navbar_user">
+                                        <li>
+                                            <div class="box">
+                                                <form name="search">
+                                                    <input type="text" class="input" placeholder="Search">
+                                                </form>
+                                            </div>
+                                        </li>
+                                        <style>
+                                            .input {
+                                                padding: 5px;
+                                                width: 70px;
+                                                height: 30px;
+                                                background: none;
+                                                border-radius: 50px;
+                                                transition: .5s;
+                                            }
 
-                                        .box:hover input {
-                                            width: 250px;
-                                            border-radius: 5px;
-                                        }
-                                    </style>
-                                    <li><a asp-controller="Home" asp-action="MyAccount"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                                    <li class="checkout">
-                                        <a asp-controller="Home" asp-action="Cart">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                            <span id="checkout_items" class="checkout_items">2</span>
-                                        </a>
-                                    </li>
+                                            .box:hover input {
+                                                width: 250px;
+                                                border-radius: 5px;
+                                            }
+                                        </style>
+                                        <li><a asp-controller="Home" asp-action="MyAccount"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                        <li class="checkout">
+                                            <a asp-controller="Home" asp-action="Cart">
+                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                <span id="checkout_items" class="checkout_items">2</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </ul>
                                 <div class="hamburger_container">
-                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-bars" aria-hidden="true"></i></button>
                                 </div>
                             </nav>
                         </div>
