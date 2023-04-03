@@ -10,7 +10,6 @@ public class User
     public string NumberPhone { get; set; }
     public string Password { get; set; }
     public int Status { get; set; }
-    public byte[] ImageUser { get; set; }
     public virtual IEnumerable<Bill> Bills { get; set; }
     public virtual Role Role { get; set; }
 }

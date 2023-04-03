@@ -15,7 +15,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(p => p.Email).HasColumnType("nvarchar(MAX)");
         builder.Property(p => p.NumberPhone).HasColumnType("nvarchar(MAX)");
         builder.Property(p => p.Status).HasColumnType("int");
-        builder.Property(x => x.ImageUser);
         builder.HasOne(p => p.Role).WithMany(p => p.Users).HasForeignKey(p => p.RoleId);
     }
 }

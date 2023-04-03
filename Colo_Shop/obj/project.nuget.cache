@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "F1KF3LXpjFPnQocKrc5IdYkO8qVRK3Py5atnoaaN2aFQcVCWtu9Jjz98BzyQ4hpO7UIVSvNQSsUHLXg4ovd3oQ==",
+  "dgSpecHash": "Biz6TuIY6DAQSOKDJzzY0YZt8nIR9Ybyw98I5VKFPr4GwbALzYjsCb2JeofuC/4c3/1QGYdcZPHbSAwQjQiqUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj",
   "expectedPackageFiles": [
@@ -176,11 +176,7 @@
     "C:\\Users\\buith\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\buith\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\buith\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\buith\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\buith\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\buith\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\buith\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\buith\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
+    "C:\\Users\\buith\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -49,9 +49,10 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult ProductDetails()
+    public IActionResult ProductDetails(Guid id)
     {
-        return View();
+        var product = _productServices.GetProductById(id);
+        return View(product);
     }
 
     public IActionResult Cart()

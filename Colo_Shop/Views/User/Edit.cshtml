@@ -1,69 +1,74 @@
-﻿@model Colo_Shop.Controllers.UserController.CreateViewModel
+﻿@using Colo_Shop.IServices
+@using Colo_Shop.Services
+@model Colo_Shop.Models.User
 
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    IRoleServices _roleServices = new RoleServices();
 }
-
+@if (ViewBag.AlertMessage != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.AlertMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
 <h1 class="text-center">Edit</h1>
 
 <h4 class="text-center">User</h4>
 <hr/>
 <div class="row ml-5">
     <div class="col-md-4">
-        <form method="post" enctype="multipart/form-data">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="User.RoleId" class="control-label"></label>
-                <select asp-for="User.RoleId" class="form-control">
-                    @foreach (var item in Model.Roles)
+                <label asp-for="RoleId" class="control-label"></label>
+                <select asp-for="RoleId" class="form-control">
+                    @foreach (var item in _roleServices.GetAllRoles().ToList())
                     {
                         if (item.Status == 1)
                         {
-                            <option value="@item.Id">@item.RoleName</option>
+                                    <option value="@item.Id">@item.RoleName</option>
                         }
                     }
                 </select>
-                <span asp-validation-for="User.RoleId" class="text-danger"></span>
+                <span asp-validation-for="RoleId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User.Username" class="control-label"></label>
-                <input asp-for="User.Username" class="form-control"/>
-                <span asp-validation-for="User.Username" class="text-danger"></span>
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control"/>
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User.Name" class="control-label"></label>
-                <input asp-for="User.Name" class="form-control"/>
-                <span asp-validation-for="User.Name" class="text-danger"></span>
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User.Email" class="control-label"></label>
-                <input asp-for="User.Email" class="form-control"/>
-                <span asp-validation-for="User.Email" class="text-danger"></span>
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User.NumberPhone" class="control-label"></label>
-                <input asp-for="User.NumberPhone" class="form-control"/>
-                <span asp-validation-for="User.NumberPhone" class="text-danger"></span>
+                <label asp-for="NumberPhone" class="control-label"></label>
+                <input asp-for="NumberPhone" class="form-control"/>
+                <span asp-validation-for="NumberPhone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User.Password" class="control-label"></label>
-                <input asp-for="User.Password" class="form-control"/>
-                <span asp-validation-for="User.Password" class="text-danger"></span>
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User.Status" class="control-label"></label>
-                <select asp-for="User.Status" class="form-control">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control">
                     <option value="1">Active</option>
                     <option value="0">Inactive</option>
                 </select>
-                <span asp-validation-for="User.Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="User.ImageUser" class="control-label"></label> <br/>
-                <img src="data:image/png;base64,@Convert.ToBase64String(Model.User.ImageUser)" alt="Product Image" width="330"/>
-                <input asp-for="User.ImageUser" type="file" name="ImageFile" class="form-control"/>
-                <span asp-validation-for="User.ImageUser" class="text-danger"></span>
+                <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-danger"/>

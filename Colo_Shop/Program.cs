@@ -1,4 +1,4 @@
-using Colo_Shop.IServices;
+﻿using Colo_Shop.IServices;
 using Colo_Shop.Services;
 
 namespace Colo_Shop;
@@ -29,24 +29,32 @@ public class Program
          *AddTransient : Tao moi service voi moi khi co request. Voi moi yeu cau http se nhan dc 1 doi tuong service khac nhau. phu hop cho cac
          * service ma co the phuc vu nhieu yeu cau http request.
          */
-        var timeSession = 60;
-        builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromSeconds(timeSession); });
-        var app = builder.Build();
+        builder.Services.AddSession(options =>
+        {
+            options.IdleTimeout = TimeSpan.FromSeconds(15);
+        });
+        // Đăng ký Session với thời gian là 15 giây cho đến khi timeout
+
+        var app = builder.Build(); // Các cấu hình phải viết trước dòng này
 
         // Configure the HTTP request pipeline.
-        if (!app.Environment.IsDevelopment()) app.UseExceptionHandler("/Home/Error");
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler("/Home/Error");
+            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            app.UseHsts();
+        }
 
-        app.UseSession();
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-
+        app.UseSession();
         app.UseRouting();
 
         app.UseAuthorization();
 
         app.MapControllerRoute(
-            "default",
-            "{controller=Home}/{action=Index}/{id?}");
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}");
 
         app.Run();
     }

@@ -8,6 +8,7 @@ public interface IUserServices
     public bool UpdateUser(User User);
     public bool DeleteUser(Guid id);
     public User GetUserById(Guid id);
-    public List<User> GetUserByName(string name);
+    public IEnumerable<User> GetAllUsers(Guid? currentUserId = null);
+    public List<User> GetUserByUserName(string name);
     public List<User> GetAllUsers();
 }

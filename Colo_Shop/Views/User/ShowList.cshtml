@@ -36,9 +36,7 @@
         <th>
             Status
         </th>
-        <th>
-            ImageUser
-        </th>
+        
         <th></th>
     </tr>
     </thead>
@@ -82,9 +80,6 @@
                     InActive
                 </td>
             }
-            <td>
-                <img src="data:image/png;base64,@Convert.ToBase64String(item.ImageUser)" alt="User Image" width="70"/>
-            </td>
             <td>
                 <a class="btn btn-secondary" href='@Url.Action("Edit", "User", new { id = item.Id })'>
                     <span>EDIT<i class="fa-edit"></i></span>

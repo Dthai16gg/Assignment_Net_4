@@ -53,7 +53,6 @@ public class UserServices : IUserServices
             _User.Name = User.Name;
             _User.Email = User.Email;
             _User.NumberPhone = User.NumberPhone;
-            _User.ImageUser = User.ImageUser;
             _dbConText.Users.Update(_User);
             _dbConText.SaveChanges();
             return true;
@@ -74,8 +73,19 @@ public class UserServices : IUserServices
         return _dbConText.Users.FirstOrDefault(p => p.Id == id);
     }
 
-    public List<User> GetUserByName(string name)
+    public List<User> GetUserByUserName(string username)
     {
-        return _dbConText.Users.Where(p => p.Username == name).ToList();
+        return _dbConText.Users.Where(p => p.Username == username).ToList();
+    }
+    public IEnumerable<User> GetAllUsers(Guid? currentUserId = null)
+    {
+        if (currentUserId.HasValue)
+        {
+            return _dbConText.Users.Where(u => u.Id != currentUserId.Value);
+        }
+        else
+        {
+            return _dbConText.Users;
+        }
     }
 }

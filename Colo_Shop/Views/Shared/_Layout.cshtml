@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Colo_Shop.IServices
+@using Colo_Shop.Services
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Colo Shop</title>
@@ -115,7 +117,13 @@
                                     <li class="checkout">
                                         <a asp-controller="Home" asp-action="Cart">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                            <span id="checkout_items" class="checkout_items">2</span>
+                                            @{
+                                                ICartServices _cartServices = new CartServices();
+                                                ICartDetailsServices _cartDetailsServices = new CartDetailService();
+                                                Guid id = Guid.NewGuid();
+                                              int countProduct =  _cartDetailsServices.GetAllCartDetails().Where(p=>p.UserId == id).Select(p => p.IdSp).Count();
+                                            }
+                                            <span id="checkout_items" class="checkout_items">@countProduct</span>
                                         </a>
                                     </li>
                                 </ul>

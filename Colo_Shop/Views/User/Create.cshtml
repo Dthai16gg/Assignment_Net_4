@@ -4,7 +4,15 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-
+@if (ViewBag.AlertMessage != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.AlertMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
 <h1 class="text-center">Create</h1>
 
 <h4 class="ml-5">User</h4>
@@ -50,9 +58,6 @@
                 <label asp-for="User.Password" class="control-label"></label>
                 <div class="input-group">
                     <input asp-for="User.Password" class="form-control" type="password"/>
-                    <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('password-toggle-1')">
-                        <i class="fa fa-eye" id="password-toggle-1"></i>
-                    </button>
                 </div>
                 <span asp-validation-for="User.Password" class="text-danger"></span>
             </div>
@@ -66,11 +71,6 @@
                 <span asp-validation-for="User.Status" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User.ImageUser" class="control-label"></label>
-                <input type="file" name="ImageFile" class="form-control"/>
-                <span asp-validation-for="User.ImageUser" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary"/>
             </div>
         </form>
@@ -79,19 +79,3 @@
 <div>
     <a class="btn btn-danger ml-5" asp-action="ShowList">Back to List</a>
 </div>
-<script>
-          function togglePasswordVisibility(iconId) {
-    var passwordField = document.querySelector("#" + iconId).parentNode.previousElementSibling;
-    var icon = document.querySelector("#" + iconId);
-
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        icon.classList.remove("fa-eye");
-        icon.classList.add("fa-eye-slash");
-    } else {
-        passwordField.type = "password";
-        icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye");
-    }
-}
-</script>

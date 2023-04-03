@@ -1,8 +1,18 @@
-﻿@{
+﻿@model Colo_Shop.Controllers.UserController.CreateViewModel
+
+@{
     ViewData["Title"] = "MyAccount";
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
-
+@if (ViewBag.AlertMessage != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.AlertMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -10,36 +20,55 @@
 <h1 class="text-center">Create Account With Admin Colo Shop </h1>
 <p class="text-center text-danger">Hãy Liên hệ chủ của hàng để lấy ID</p>
 <p class="text-center text-danger">Email : thaibdtg16@gmail.com</p>
-<form>
+<form method="post" enctype="multipart/form-data">
     <label>
-        <p class="label-txt">ENTER YOUR EMAIL</p>
-        <input type="text" class="input">
+        <p class="label-txt">ENTER YOUR ID</p>
+        <input type="text" class="input form-control" asp-for="User.RoleId" >
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
-        <p class="label-txt">ENTER YOUR ID</p>
-        <input type="text" class="input">
+        <p class="label-txt">ENTER YOUR USER NAME</p>
+        <input type="text" class="input form-control"  asp-for="User.Username">
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
         <p class="label-txt">ENTER YOUR NAME</p>
-        <input type="text" class="input">
+        <input type="text" class="input form-control" asp-for="User.Name">
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
-        <p class="label-txt">ENTER YOUR PASSWORD</p>
-        <input type="text" class="input">
+        <p class="label-txt">ENTER YOUR EMAIL</p>
+        <input type="text" class="input form-control" asp-for="User.Email">
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
-    <button type="submit" asp-action="Login">submit</button>
+    <label>
+        <p class="label-txt">ENTER YOUR NUMBER PHONE</p>
+        <input type="text" class="input form-control"  asp-for="User.NumberPhone">
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+    </label> 
+    <label>
+        <p class="label-txt">ENTER YOUR PASSWORD</p>
+        <input type="text" class="input form-control"  asp-for="User.Password">
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+    </label>      
+    <label>
+        <input type="text" class="input form-control"  asp-for="User.Status" hidden value="1">
+    </label>  
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary"/>
+    </div>
 </form>
 <style>
     form {

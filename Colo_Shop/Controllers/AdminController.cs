@@ -1,8 +1,11 @@
 ﻿using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using Colo_Shop.IServices;
+using Colo_Shop.Models;
 using Colo_Shop.Services;
 using Microsoft.AspNetCore.Mvc;
+using static Colo_Shop.Controllers.UserController;
 
 namespace Colo_Shop.Controllers;
 
@@ -29,7 +32,7 @@ public class AdminController : Controller
 
     public bool CheckLogin(string username, string password)
     {
-        var user = _services.GetUserByName(username).FirstOrDefault();
+        var user = _services.GetUserByUserName(username).FirstOrDefault();
         if (user != null && user.Password == password && user.Status == 1)
         {
             var role = _roleServices.GetRoleById(user.RoleId);
@@ -44,53 +47,10 @@ public class AdminController : Controller
         return View();
     }
 
-    public void SendEmail(string fromEmail, string toEmail, string subject, string message)
-    {
-        // Set up the email message
-        var mail = new MailMessage(fromEmail, toEmail, subject, message);
-        mail.BodyEncoding = Encoding.UTF8;
-        mail.SubjectEncoding = Encoding.UTF8;
-        mail.IsBodyHtml = true;
-        mail.ReplyToList.Add(new MailAddress(fromEmail));
-        mail.Sender = new MailAddress(fromEmail);
-        using var smtpClient = new SmtpClient("localhost");
-        try
-        {
-            smtpClient.Send(mail);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-    }
-
     public IActionResult Forgot(string username, string email)
     {
-        var user = _services.GetUserByName(username).FirstOrDefault();
-        if (user != null && user.Email == email)
-        {
-            // Generate new password
-            var newPassword = GeneratePassword();
-            user.Password = newPassword;
-            _services.UpdateUser(user);
-            SendEmail("thaibdph23339@fpt.edu.vn", user.Email, "Your New Password",
-                $"Your new password is: {newPassword}");
-
-            return RedirectToAction("Login");
-        }
-
+        var user = _services.GetUserByUserName(username).FirstOrDefault();
         return RedirectToAction("Login");
-    }
-
-    private string GeneratePassword()
-    {
-        // Generate a new, random password
-        const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        var random = new Random();
-        var chars = new char[8];
-        for (var i = 0; i < chars.Length; i++) chars[i] = validChars[random.Next(validChars.Length)];
-        return new string(chars);
     }
 
     [HttpPost]
@@ -98,14 +58,87 @@ public class AdminController : Controller
     {
         var isValid = CheckLogin(Username, Password);
         if (isValid) return RedirectToAction("HomePage");
-
         ViewBag.ErrorMessage = "The user name or password provided is incorrect.";
+        string idUser = _services.GetUserByUserName(Username).FirstOrDefault().Id.ToString(); ;
+        if (idUser != null)
+        {
+            HttpContext.Session.SetString("idUser", idUser);
+            ViewData["idUser"] = idUser;
+        }
+        else
+        {
+            return View("Login");
+        }
         return View("Login");
     }
 
     public IActionResult Register()
     {
-        return View();
+        var viewModel = new CreateViewModel
+        {
+            Roles = _roleServices.GetAllRoles().ToList(),
+            User = new User()
+        };
+        return View(viewModel);
+    }
+    public bool IsValidPhoneNumber(string phoneNumber)
+    {
+        Regex regex = new Regex(@"^(03|05|07|08|09)[0-9]{8}$");
+        return regex.IsMatch(phoneNumber);
+    }
+    public bool IsValidEmail(string email)
+    {
+        Regex regex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+        return regex.IsMatch(email);
+    }
+    public bool IsValidName(string name)
+    {
+        Regex regex = new Regex(@"^[a-zA-Z]+$");
+        return regex.IsMatch(name);
+    }
+    [HttpPost]
+    public IActionResult Register(User user)
+    {
+        var viewModel = new CreateViewModel
+        {
+            Roles = _roleServices.GetAllRoles().ToList(),
+            User = new User()
+        };
+        try
+        {
+            if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
+            {
+                ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
+                return View(viewModel);
+            }
+
+            if (!IsValidPhoneNumber(user.NumberPhone))
+            {
+                ViewBag.AlertMessage = "Please enter a valid phone number.";
+                return View(viewModel);
+            }
+            if (!IsValidEmail(user.Email))
+            {
+                ViewBag.AlertMessage = "Please enter a valid email.";
+                return View(viewModel);
+            }
+            if (IsValidName(user.Name))
+            {
+                ViewBag.AlertMessage = "Please enter a valid name.";
+                return View(viewModel);
+            }
+            if (_services.GetAllUsers().Any(u => u.Username == user.Username.Trim()))
+            {
+                ViewBag.AlertMessage = "Username already exists.";
+                return View(viewModel);
+            }
+            else if (_services.CreateNewUsers(user)) ; return RedirectToAction("Login");
+        }
+        catch (Exception e)
+        {
+            return Content(e.Message);
+        }
+        return Content("Not User");
     }
 
     public IActionResult MyAccount()
