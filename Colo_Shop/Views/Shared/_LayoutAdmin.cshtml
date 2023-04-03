@@ -30,226 +30,229 @@
     <link rel="stylesheet" href="~/Client/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
-        <!-- Navbar -->                               
-        <marquee class="fixed-bottom"><span class="text-danger" style="font-size: 20px">(THÔNG BÁO)</span> Cửa hàng Colo trân trọng thông báo : Tất cả các tài khoản ADMIN cần đắng kí với ID-ADMIN với chủ cửa hàng để tiếp tục sử dụng. Trân tr </marquee>
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light fixed">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-            </ul>
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <!-- Navbar Search -->
-                <div class="dropdown">
-                    <button class=" btn " data-toggle="dropdown">
-                        <i class="mr-2 fas fa-user"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" asp-controller="Admin" asp-action="MyAccount">My Account</a>
-                        <a class="dropdown-item" asp-controller="Admin" asp-action="Login">Sign Out</a>
-                        <a class="dropdown-item" asp-controller="Admin" asp-action="Register">Create New Account</a>
-                    </div>
+<div class="wrapper">
+    <!-- Navbar -->
+    <marquee class="fixed-bottom"><span class="text-danger" style="font-size: 20px">(THÔNG BÁO)</span> Cửa hàng Colo trân trọng thông báo : Tất cả các tài khoản ADMIN cần đắng kí với ID-ADMIN với chủ cửa hàng để tiếp tục sử dụng. Trân tr </marquee>
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light fixed">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Navbar Search -->
+            <div class="dropdown">
+                <button class=" btn " data-toggle="dropdown">
+                    <i class="mr-2 fas fa-user"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" asp-controller="Admin" asp-action="MyAccount">My Account</a>
+                    <a class="dropdown-item" asp-controller="Admin" asp-action="Login">Sign Out</a>
+                    <a class="dropdown-item" asp-controller="Admin" asp-action="Register">Create New Account</a>
                 </div>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                        <i class="fas fa-th-large"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.navbar -->
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a asp-controller="Admin" asp-action="HomePage" class="brand-link">
-                <img src="~/Client/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Admin Colo Shop</span>
-            </a>
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
-                        <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
-                        <li class="nav-header">Manager</li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-procedures"></i>
-                                <p>
-                                    Product
-                                    <i class="right fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item ml-3">
-                                    <a asp-controller="Products" asp-action="ShowList" class="nav-link">
-                                        <i class="far fa-list nav-icon"></i>
-                                        <p>Show List Product</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item ml-3">
-                                    <a asp-controller="Products" asp-action="Create" class="nav-link">
-                                        <i class="far fa-plus nav-icon"></i>
-                                        <p>Create New Product</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    User
-                                    <i class="right fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item ml-3">
-                                    <a asp-controller="User" asp-action="ShowList" class="nav-link ">
-                                        <i class="far fa-list nav-icon"></i>
-                                        <p>Show List User</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item ml-3">
-                                    <a asp-controller="User" asp-action="Create" class="nav-link ">
-                                        <i class="far fa-plus nav-icon"></i>
-                                        <p>Create New User</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="nav-icon fas fa-paint-roller"></i>
-                                <p>
-                                    Role
-                                    <i class="right fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item ml-3">
-                                    <a asp-controller="Role" asp-action="ShowList" class="nav-link ">
-                                        <i class="far fa-list nav-icon"></i>
-                                        <p>Show List Role</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item ml-3">
-                                    <a asp-controller="Role" asp-action="Create" class="nav-link ">
-                                        <i class="far fa-plus nav-icon"></i>
-                                        <p>Create New Role</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-money-bill"></i>
-                                <p>
-                                    Bill
-                                    <i class="right fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
-                                        <i class="far fa-list nav-icon"></i>
-                                        <p>Show List Bill</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
-                                        <i class="far fa-file-export nav-icon"></i>
-                                        <p>Export Bill</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-charging-station"></i>
-                                <p>
-                                    Statistics
-                                    <i class="right fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
-                                        <i class="far fa-magic nav-icon"></i>
-                                        <p>Turnover</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item ml-3">
-                                    <a href="" class="nav-link ">
-                                        <i class="far fa-sellcast nav-icon"></i>
-                                        <p>Product</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
             </div>
-            <!-- /.sidebar -->
-        </aside>
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                    <i class="fas fa-th-large"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a asp-controller="Admin" asp-action="HomePage" class="brand-link">
+            <img src="~/Client/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">Admin Colo Shop</span>
+        </a>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
+                    <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                    <li class="nav-header">Manager</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-procedures"></i>
+                            <p>
+                                Product
+                                <i class="right fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item ml-3">
+                                <a asp-controller="Products" asp-action="ShowList" class="nav-link">
+                                    <i class="far fa-list nav-icon"></i>
+                                    <p>Show List Product</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ml-3">
+                                <a asp-controller="Products" asp-action="Create" class="nav-link">
+                                    <i class="far fa-plus nav-icon"></i>
+                                    <p>Create New Product</p>
+                                </a>
+                            </li>
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            @RenderBody()
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                User
+                                <i class="right fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item ml-3">
+                                <a asp-controller="User" asp-action="ShowList" class="nav-link ">
+                                    <i class="far fa-list nav-icon"></i>
+                                    <p>Show List User</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ml-3">
+                                <a asp-controller="User" asp-action="Create" class="nav-link ">
+                                    <i class="far fa-plus nav-icon"></i>
+                                    <p>Create New User</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i class="nav-icon fas fa-paint-roller"></i>
+                            <p>
+                                Role
+                                <i class="right fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item ml-3">
+                                <a asp-controller="Role" asp-action="ShowList" class="nav-link ">
+                                    <i class="far fa-list nav-icon"></i>
+                                    <p>Show List Role</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ml-3">
+                                <a asp-controller="Role" asp-action="Create" class="nav-link ">
+                                    <i class="far fa-plus nav-icon"></i>
+                                    <p>Create New Role</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-money-bill"></i>
+                            <p>
+                                Bill
+                                <i class="right fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item ml-3">
+                                <a href="" class="nav-link ">
+                                    <i class="far fa-list nav-icon"></i>
+                                    <p>Show List Bill</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ml-3">
+                                <a href="" class="nav-link ">
+                                    <i class="far fa-file-export nav-icon"></i>
+                                    <p>Export Bill</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-charging-station"></i>
+                            <p>
+                                Statistics
+                                <i class="right fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item ml-3">
+                                <a href="" class="nav-link ">
+                                    <i class="far fa-magic nav-icon"></i>
+                                    <p>Turnover</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ml-3">
+                                <a href="" class="nav-link ">
+                                    <i class="far fa-sellcast nav-icon"></i>
+                                    <p>Product</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
         </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer ">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.2.0-rc
-            </div>
-            <strong>Copyright &copy; 2023  Dthai16gg</strong> All rights reserved.
-        </footer>
+        <!-- /.sidebar -->
+    </aside>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        @RenderBody()
     </div>
-    <!-- ./wrapper -->
-    <!-- jQuery -->
-    <script src="~/Client/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="~/Client/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Select2 -->
-    <script src="~/Client/plugins/select2/js/select2.full.min.js"></script>
-    <!-- Bootstrap4 Duallistbox -->
-    <script src="~/Client/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
-    <!-- InputMask -->
-    <script src="~/Client/plugins/moment/moment.min.js"></script>
-    <script src="~/Client/plugins/inputmask/jquery.inputmask.min.js"></script>
-    <!-- date-range-picker -->
-    <script src="~/Client/plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- bootstrap color picker -->
-    <script src="~/Client/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="~/Client/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Bootstrap Switch -->
-    <script src="~/Client/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-    <!-- BS-Stepper -->
-    <script src="~/Client/plugins/bs-stepper/js/bs-stepper.min.js"></script>
-    <!-- dropzonejs -->
-    <script src="~/Client/plugins/dropzone/min/dropzone.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="~/Client/dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="~/Client/dist/js/demo.js"></script>
-    <!-- Page specific script -->
+    <!-- /.content-wrapper -->
+    <footer class="main-footer ">
+        <div class="float-right d-none d-sm-block">
+            <b>Version</b> 3.2.0-rc
+        </div>
+        <strong>Copyright &copy; 2023 Dthai16gg</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="~/Client/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/Client/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select2 -->
+<script src="~/Client/plugins/select2/js/select2.full.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="~/Client/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- InputMask -->
+<script src="~/Client/plugins/moment/moment.min.js"></script>
+<script src="~/Client/plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="~/Client/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="~/Client/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="~/Client/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Bootstrap Switch -->
+<script src="~/Client/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- BS-Stepper -->
+<script src="~/Client/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<!-- dropzonejs -->
+<script src="~/Client/plugins/dropzone/min/dropzone.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/Client/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/Client/dist/js/demo.js"></script>
+<!-- Page specific script -->
 
 </body>
 </html>

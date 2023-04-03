@@ -1,17 +1,15 @@
 @keyframes rotateInUpRight {
-  from {
-    transform-origin: right bottom;
-    transform: rotate3d(0, 0, 1, -90deg);
-    opacity: 0;
-  }
+    from {
+        opacity: 0;
+        transform: rotate3d(0, 0, 1, -90deg);
+        transform-origin: right bottom;
+    }
 
-  to {
-    transform-origin: right bottom;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transform-origin: right bottom;
+    }
 }
 
-.rotateInUpRight {
-  animation-name: rotateInUpRight;
-}
+.rotateInUpRight { animation-name: rotateInUpRight; }

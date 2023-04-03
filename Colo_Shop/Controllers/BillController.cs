@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Colo_Shop.Controllers
+namespace Colo_Shop.Controllers;
+
+public class BillController : Controller
 {
-    public class BillController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
     }
 }

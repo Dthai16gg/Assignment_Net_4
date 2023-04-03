@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Colo_Shop.Controllers
+namespace Colo_Shop.Controllers;
+
+public class StatisticsController : Controller
 {
-    public class StatisticsController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
     }
 }

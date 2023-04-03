@@ -9,24 +9,24 @@
 }
 
 <h1 class="text-center mt-3">Product</h1>
-<hr />
+<hr/>
 <div class="row ml-5">
     <div class="col-md-4">
         <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <input asp-for="Name" class="form-control"/>
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
+                <input asp-for="Price" class="form-control"/>
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="AvailableQuantity" class="control-label"></label>
-                <input asp-for="AvailableQuantity" class="form-control" />
+                <input asp-for="AvailableQuantity" class="form-control"/>
                 <span asp-validation-for="AvailableQuantity" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -39,27 +39,27 @@
             </div>
             <div class="form-group">
                 <label asp-for="Supplier" class="control-label"></label>
-                <input asp-for="Supplier" class="form-control" />
+                <input asp-for="Supplier" class="form-control"/>
                 <span asp-validation-for="Supplier" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <input asp-for="Description" class="form-control"/>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Style" class="control-label"></label>
-                <input asp-for="Style" class="form-control" />
+                <input asp-for="Style" class="form-control"/>
                 <span asp-validation-for="Style" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Image" class="control-label"></label>    
+                <label asp-for="Image" class="control-label"></label>
                 <img src="data:image/png;base64,@Convert.ToBase64String(Model.Image)" alt="Product Image" width="330"/>
-                <input asp-for="Image" type="file" name="ImageFile" class="form-control" />
+                <input asp-for="Image" type="file" name="ImageFile" class="form-control"/>
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-danger" />
+                <input type="submit" value="Save" class="btn btn-danger"/>
             </div>
         </form>
     </div>
@@ -67,5 +67,3 @@
 <div class="ml-5">
     <a class="btn btn-primary" asp-action="ShowList"> <i class=" fa-backward"></i>Back to List</a>
 </div>
-
-

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Colo_Shop.Models.Role>
+﻿@model IEnumerable<Role>
 
 @{
     ViewData["Title"] = "ShowList";
@@ -13,63 +13,63 @@
     </p>
 
     <thead>
-        <tr>
-            <th>
-                STT
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RoleName)
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-        @{
-            int stt = 1;
-        }
+    @{
+        var stt = 1;
+    }
     @foreach (var item in Model)
-        {
-            <tr>
+    {
+        <tr>
+            <td>
+                @stt
+            </td>
+            @if (item.Status == 1)
+            {
                 <td>
-                    @stt
+                    Active
                 </td>
-                @if (item.Status == 1)
-                {
-                    <td>
-                        Active
-                    </td>
-                }
-                else
-                {
-                    <td>
-                        InActive
-                    </td>
-                }
+            }
+            else
+            {
                 <td>
-                    @Html.DisplayFor(modelItem => item.Description)
+                    InActive
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RoleName)
-                </td>
-                <td>
-                    <a class="btn btn-secondary" href='@Url.Action("Edit", "Role",new{id= item.Id})'>
-                        <span>EDIT<i class="fa-edit"></i></span>
-                    </a>
-                    <a class="btn btn-primary" href='@Url.Action("Details", "Role",new{id= item.Id})'>
-                        <span>DETAILS<i class="fa-eye"></i></span>
-                    </a>
-                    <a class="btn btn-danger" href='@Url.Action("Delete", "Role",new{id= item.Id})'>
-                        <span>REMOVE<i class="fa-remove"></i></span>
-                    </a>
-                </td>
-            </tr>
-            stt++;
-        }
+            }
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleName)
+            </td>
+            <td>
+                <a class="btn btn-secondary" href='@Url.Action("Edit", "Role", new { id = item.Id })'>
+                    <span>EDIT<i class="fa-edit"></i></span>
+                </a>
+                <a class="btn btn-primary" href='@Url.Action("Details", "Role", new { id = item.Id })'>
+                    <span>DETAILS<i class="fa-eye"></i></span>
+                </a>
+                <a class="btn btn-danger" href='@Url.Action("Delete", "Role", new { id = item.Id })'>
+                    <span>REMOVE<i class="fa-remove"></i></span>
+                </a>
+            </td>
+        </tr>
+        stt++;
+    }
     </tbody>
 </table>

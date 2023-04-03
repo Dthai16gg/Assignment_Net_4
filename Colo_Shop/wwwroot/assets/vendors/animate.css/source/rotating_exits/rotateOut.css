@@ -1,16 +1,14 @@
 @keyframes rotateOut {
-  from {
-    transform-origin: center;
-    opacity: 1;
-  }
+    from {
+        opacity: 1;
+        transform-origin: center;
+    }
 
-  to {
-    transform-origin: center;
-    transform: rotate3d(0, 0, 1, 200deg);
-    opacity: 0;
-  }
+    to {
+        opacity: 0;
+        transform: rotate3d(0, 0, 1, 200deg);
+        transform-origin: center;
+    }
 }
 
-.rotateOut {
-  animation-name: rotateOut;
-}
+.rotateOut { animation-name: rotateOut; }

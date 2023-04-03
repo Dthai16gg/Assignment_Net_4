@@ -20,148 +20,194 @@
 </head>
 
 <body>
-    <div class="super_container">
-        <header class="header trans_300">
+<div class="super_container">
+    <header class="header trans_300">
 
-            <!-- Top Navigation -->
+        <!-- Top Navigation -->
 
-            <div class="top_nav">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="top_nav_left">free shipping on all u.s orders over $50</div>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <div class="top_nav_right">
-                                <ul class="top_nav_menu">
-
-                                    <!-- Currency / Language / My Account -->
-
-                                    <li class="account">
-                                        <a href="#">
-                                            My Account
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="account_selection">
-                                            <li><a asp-controller="Login" asp-action="Index"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-                                            <li><a asp-controller="Login" asp-action="Register"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main Navigation -->
-
-            <div class="main_nav_container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-right">
-                            <div class="logo_container">
-                                <a href="#">colo<span>shop</span></a>
-                            </div>
-                            <nav class="navbar navbar-expand-lg navbar-light">
-                                <ul class="collapse navbar-collapse navbar_menu navbar-nav mr-auto" id="navbarSupportedContent">
-                                    <li><a asp-controller="Home" asp-action="Index">home</a></li>
-                                    <li><a asp-controller="Home" asp-action="Shop">shop</a></li>
-                                    <li><a asp-controller="Home" asp-action="About">about</a></li>
-                                    <li><a asp-controller="Home" asp-action="Blog">blog</a></li>
-                                    <li><a asp-controller="Home" asp-action="Contact">contact</a></li>  
-                                    <ul class="navbar_user">
-                                        <li>
-                                            <div class="box">
-                                                <form name="search">
-                                                    <input type="text" class="input" placeholder="Search">
-                                                </form>
-                                            </div>
-                                        </li>
-                                        <style>
-                                            .input {
-                                                padding: 5px;
-                                                width: 70px;
-                                                height: 30px;
-                                                background: none;
-                                                border-radius: 50px;
-                                                transition: .5s;
-                                            }
-
-                                            .box:hover input {
-                                                width: 250px;
-                                                border-radius: 5px;
-                                            }
-                                        </style>
-                                        <li><a asp-controller="Home" asp-action="MyAccount"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                                        <li class="checkout">
-                                            <a asp-controller="Home" asp-action="Cart">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                <span id="checkout_items" class="checkout_items">2</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </ul>
-                                <div class="hamburger_container">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-bars" aria-hidden="true"></i></button>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>  
-                <marquee class="fixed-bottom"><span class="text-danger" style="font-size: 20px">(SAFE OFF 50%)</span> Cửa hàng Colo trân trọng thông báo : Sẽ sale toàn bộ sản phẩm từ ngày 1.1.2023 đến ngày 20.12.2023. Trân Trọng ! </marquee>
-            </div>
-
-        </header>
-
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-
-
-        <footer class="footer">
+        <div class="top_nav">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
-                            <ul class="footer_nav">
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
-                            </ul>
-                        </div>
+                    <div class="col-md-6">
+                        <div class="top_nav_left">free shipping on all u.s orders over $50</div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                    <div class="col-md-6 text-right">
+                        <div class="top_nav_right">
+                            <ul class="top_nav_menu">
+
+                                <!-- Currency / Language / My Account -->
+
+                                <li class="account">
+                                    <a href="#">
+                                        My Account
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="account_selection">
+                                        <li>
+                                            <a asp-controller="Login" asp-action="Index"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Login" asp-action="Register"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer_nav_container">
-                            <div class="cr">©2023 All Rights Reserverd. Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a> &amp; distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-    <script src="~/ViewForUser/js/jquery-3.2.1.min.js"></script>
-    <script src="~/ViewForUser/styles/bootstrap4/popper.js"></script>
-    <script src="~/ViewForUser/styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="~/ViewForUser/plugins/Isotope/isotope.pkgd.min.js"></script>
-    <script src="~/ViewForUser/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="~/ViewForUser/plugins/easing/easing.js"></script>
-    <script src="~/ViewForUser/js/custom.js"></script>
-    <script src="~/ViewForUser/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-    <script src="~/ViewForUser/js/categories_custom.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+        </div>
+
+        <!-- Main Navigation -->
+
+        <div class="main_nav_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-right">
+                        <div class="logo_container">
+                            <a href="#">colo<span>shop</span></a>
+                        </div>
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <ul class="collapse navbar-collapse navbar_menu navbar-nav mr-auto" id="navbarSupportedContent">
+                                <li>
+                                    <a asp-controller="Home" asp-action="Index">home</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="Shop">shop</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="About">about</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="Blog">blog</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="Contact">contact</a>
+                                </li>
+                                <ul class="navbar_user">
+                                    <li>
+                                        <div class="box">
+                                            <form name="search">
+                                                <input type="text" class="input" placeholder="Search">
+                                            </form>
+                                        </div>
+                                    </li>
+                                    <style>
+                                        .input {
+                                            background: none;
+                                            border-radius: 50px;
+                                            height: 30px;
+                                            padding: 5px;
+                                            transition: .5s;
+                                            width: 70px;
+                                        }
+
+                                        .box:hover input {
+                                            border-radius: 5px;
+                                            width: 250px;
+                                        }
+                                    </style>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="MyAccount">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="checkout">
+                                        <a asp-controller="Home" asp-action="Cart">
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span id="checkout_items" class="checkout_items">2</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </ul>
+                            <div class="hamburger_container">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <marquee class="fixed-bottom"><span class="text-danger" style="font-size: 20px">(SAFE OFF 50%)</span> Cửa hàng Colo trân trọng thông báo : Sẽ sale toàn bộ sản phẩm từ ngày 1.1.2023 đến ngày 20.12.2023. Trân Trọng ! </marquee>
+        </div>
+
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
+                        <ul class="footer_nav">
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer_nav_container">
+                        <div class="cr">©2023 All Rights Reserverd. Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a> &amp; distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="~/ViewForUser/js/jquery-3.2.1.min.js"></script>
+<script src="~/ViewForUser/styles/bootstrap4/popper.js"></script>
+<script src="~/ViewForUser/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="~/ViewForUser/plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="~/ViewForUser/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="~/ViewForUser/plugins/easing/easing.js"></script>
+<script src="~/ViewForUser/js/custom.js"></script>
+<script src="~/ViewForUser/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="~/ViewForUser/js/categories_custom.js"></script>
+@await RenderSectionAsync("Scripts", false)
 </body>
 </html>

@@ -8,7 +8,7 @@
 <h1 class="text-center">Edit</h1>
 
 <h4 class="ml-5">Role</h4>
-<hr />
+<hr/>
 <div class="row mx-5">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -23,16 +23,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <input asp-for="Description" class="form-control"/>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="RoleName" class="control-label"></label>
-                <input asp-for="RoleName" class="form-control" />
+                <input asp-for="RoleName" class="form-control"/>
                 <span asp-validation-for="RoleName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary"/>
             </div>
         </form>
     </div>
@@ -41,4 +41,3 @@
 <div class="mx-5">
     <a class="btn btn-danger" asp-action="ShowList"> <i class=" fa-backward"></i>Back to List</a>
 </div>
-

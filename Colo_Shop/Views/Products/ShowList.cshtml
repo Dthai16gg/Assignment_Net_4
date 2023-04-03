@@ -1,5 +1,4 @@
-﻿@using System.Security.Cryptography
-@model IEnumerable<Colo_Shop.Models.Product>
+﻿@model IEnumerable<Product>
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
@@ -12,7 +11,11 @@
     {
         @Html.TextBox("name")
         ;
-        <button type="submit" class="btn_search mt-3"><span><i class="fa-solid fa-search text-danger"></i></span></button>
+        <button type="submit" class="btn_search mt-3">
+            <span>
+                <i class="fa-solid fa-search text-danger"></i>
+            </span>
+        </button>
     }
 </div>
 @{
@@ -21,95 +24,95 @@
 
 <table class="table super_container mt-3 bg-gradient-info">
     <thead>
-        <tr>
-            <th>
-                STT
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AvailableQuantity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Supplier)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Style)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Image)
-            </th>
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
 
-            <th></th>
-        </tr>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-        @{
-            int stt = 1;
-        }
+    @{
+        var stt = 1;
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @stt
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableQuantity)
+            </td>
+            @if (item.Status == 1)
+            {
                 <td>
-                    @stt
+                    Còn Hàng
                 </td>
+            }
+            else
+            {
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    Hết Hàng
                 </td>
-                <td>
-                    $@Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AvailableQuantity)
-                </td>
-                @if (item.Status == 1)
-                {
-                    <td>
-                        Còn Hàng
-                    </td>
-                }
-                else
-                {
-                    <td>
-                        Hết Hàng
-                    </td>
-                }
-                <td>
-                    @Html.DisplayFor(modelItem => item.Supplier)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Style)
-                </td>
-                <td>
-                    <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" alt="Product Image" width="70" />
-                </td>
-                <td>
-                    <a class="btn btn-secondary" href='@Url.Action("Edit", "Products",new{id= item.Id})'>
-                        <span>EDIT<i class="fa-edit"></i></span>
-                    </a>
-                    <a class="btn btn-primary" href='@Url.Action("Details", "Products",new{id= item.Id})'>
-                        <span>DETAILS<i class="fa-eye"></i></span>
-                    </a>
-                    <a class="btn btn-danger" href='@Url.Action("Delete", "Products",new{id= item.Id})'>
-                        <span>REMOVE<i class="fa-remove"></i></span>
-                    </a>
-                </td>
-            </tr>
-            stt++;
-        }
+            }
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Style)
+            </td>
+            <td>
+                <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" alt="Product Image" width="70"/>
+            </td>
+            <td>
+                <a class="btn btn-secondary" href='@Url.Action("Edit", "Products", new { id = item.Id })'>
+                    <span>EDIT<i class="fa-edit"></i></span>
+                </a>
+                <a class="btn btn-primary" href='@Url.Action("Details", "Products", new { id = item.Id })'>
+                    <span>DETAILS<i class="fa-eye"></i></span>
+                </a>
+                <a class="btn btn-danger" href='@Url.Action("Delete", "Products", new { id = item.Id })'>
+                    <span>REMOVE<i class="fa-remove"></i></span>
+                </a>
+            </td>
+        </tr>
+        stt++;
+    }
     </tbody>
 </table>
