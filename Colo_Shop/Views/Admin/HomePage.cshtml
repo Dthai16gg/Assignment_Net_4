@@ -1,18 +1,18 @@
 ﻿@using Colo_Shop.IServices
 @using Colo_Shop.Services
-@{                           
-    //IUserServices _userServices = new UserServices();
+@{
+    IUserServices  _service = new UserServices();
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-    //Guid id = Guid.Parse((ViewData["idUser"] as string));
-    //var user = _userServices.GetUserById(id);
-    string id = ViewData["idUser"] as string;
+     string id =  ViewData["idUser"] as string;
+    Guid IdUser = Guid.Parse(id);
+    var user = _service.GetUserById(IdUser);
 }
 <link rel="stylesheet" href="~/assets/css/StyleAdminHomePage.css">
 <body onLoad="initClock()">
 <div class="sp-container mt-5 ml-3">
     <div class="sp-content">
         <div class="sp-globe"></div>
-        <h2 class="frame-1">Hello Admin,@id</h2>
+        <h2 class="frame-1">Hello,@user.Name</h2>
         <h2 class="frame-2">Have A Good Day ?</h2>
         <h2 class="frame-3">Select Options</h2>
         <h2 class="frame-4">TEST IT!</h2>
@@ -20,7 +20,7 @@
             <span>I</span>
             <span>LOVE</span>
             <span>YOU,</span>
-            <span>ADMIN ❤️</span>
+            <span>@user.Name ❤️</span>
         </h2>
     </div>
     <div id="timedate">

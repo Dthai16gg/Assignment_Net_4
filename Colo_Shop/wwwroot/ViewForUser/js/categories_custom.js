@@ -360,6 +360,7 @@ jQuery(document).ready(function($)
 
 	        // Filter based on the price range slider
 	        filterButton.on('click', function()
+
 	        {
 	        	$('.product-grid').isotope({
 		            filter: function()
@@ -393,8 +394,8 @@ jQuery(document).ready(function($)
 		{
 			range: true,
 			min: 0,
-			max: 1000,
-			values: [ 0, 580 ],
+			max: 10000,
+			values: [ 0, 10000],
 			slide: function( event, ui )
 			{
 				$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );

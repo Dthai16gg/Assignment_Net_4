@@ -882,12 +882,9 @@ section {
     border: solid 1px #ebebeb;
     border-radius: 3px;
     cursor: pointer;
-    float: left;
     font-size: 14px;
     font-weight: 500;
     height: 40px;
-    margin: 0;
-    margin-left: -1px;
     min-width: 102px;
     padding-left: 25px;
     padding-right: 25px;
@@ -895,8 +892,6 @@ section {
 }
 
 .grid_sorting_button:first-child { margin-left: 0px; }
-
-.grid_sorting_button:last-child { }
 
 .grid_sorting_button.active:hover { background: #FE7C7F !important; }
 

@@ -1,52 +1,64 @@
-﻿@{
-    ViewData["Title"] = "MyAccount";
+﻿@using Colo_Shop.IServices
+@using Colo_Shop.Services           
+@model Colo_Shop.Models.User
+@{
+    IUserServices  _service = new UserServices();
+    IRoleServices _roleServices = new RoleServices();
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    string id =  ViewData["idUser"] as string;
+    Guid IdUser = Guid.Parse(id);
+    var user = _service.GetUserById(IdUser);
 }
-
 <div class="wrapper bg-white mt-sm-5 container">
     <h4 class="pb-4 border-bottom">Account settings</h4>
-    <div class="py-2">
+    <form class="py-2"method="post" enctype="multipart/form-data" >
         <div class="row py-2">
             <div class="col-md-6">
-                <label for="firstname">User Name</label>
-                <input type="text" class="bg-light form-control" placeholder="Steve">
+                <label asp-for="RoleId" class="control-label"></label>
+                <select asp-for="RoleId" class="form-control">
+                    @foreach (var item in _roleServices.GetAllRoles().ToList())
+                    {
+                        if (item.Status == 1)
+                        {
+                            <option value="@item.Id">@item.RoleName</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="RoleId" class="text-danger"></span>
             </div>
             <div class="col-md-6 pt-md-0 pt-3">
-                <label for="lastname">Last Name</label>
-                <input type="text" class="bg-light form-control" placeholder="Smith">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" value="@user.Username"/>
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
         </div>
         <div class="row py-2">
             <div class="col-md-6">
-                <label for="email">Email Address</label>
-                <input type="text" class="bg-light form-control" placeholder="steve@email.com">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" value="@user.Name"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="col-md-6 pt-md-0 pt-3">
-                <label for="phone">Phone Number</label>
-                <input type="tel" class="bg-light form-control" placeholder="+1 213-548-6015">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" value="@user.Email"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
         </div> 
         <div class="row py-2">
             <div class="col-md-6">
-                <label for="email">Old Password</label>
-                <input type="password" class="bg-light form-control" >
+                <label asp-for="NumberPhone" class="control-label"></label>
+                <input asp-for="NumberPhone" class="form-control" value="@user.NumberPhone"/>
+                <span asp-validation-for="NumberPhone" class="text-danger"></span>
             </div>
             <div class="col-md-6 pt-md-0 pt-3">
-                <label for="email">New Password</label>
-                <input type="password" class="bg-light form-control" >
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" value="@user.Password"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-        </div>
+        </div>     
+        @{ user.Status = 1;}
         <div class="py-3 pb-4 border-bottom">
-            <button class="btn btn-primary mr-3">Save Changes</button>
-            <button class="btn btn-danger" asp-controller="Admin" asp-action="HomePage">Cancel</button>
+            <button class="btn btn-danger" asp-controller="Admin" asp-action="HomePage">Back To Home</button>
         </div>
-        <div class="d-sm-flex align-items-center pt-3" id="deactivate">
-            <div>
-                <b>Deactivate your account</b>
-            </div>
-            <div class="ml-auto">
-                <button class="btn btn-danger">Delete Account</button>
-            </div>
-        </div>
-    </div>
+    </form>
 </div>

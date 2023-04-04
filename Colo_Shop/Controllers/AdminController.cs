@@ -27,7 +27,16 @@ public class AdminController : Controller
 
     public IActionResult HomePage()
     {
-        return View();
+        string idUser = HttpContext.Session.GetString("idUser");
+        ViewData["idUser"] = idUser;
+        if (!string.IsNullOrEmpty(idUser))
+        {
+            return View();
+        }
+        else
+        {
+            return RedirectToAction("Login");
+        }
     }
 
     public bool CheckLogin(string username, string password)
@@ -57,17 +66,25 @@ public class AdminController : Controller
     public IActionResult Login(string Username, string Password)
     {
         var isValid = CheckLogin(Username, Password);
-        if (isValid) return RedirectToAction("HomePage");
-        ViewBag.ErrorMessage = "The user name or password provided is incorrect.";
-        string idUser = _services.GetUserByUserName(Username).FirstOrDefault().Id.ToString(); ;
-        if (idUser != null)
+        if (isValid)
         {
+            var user = _services.GetUserByUserName(Username).FirstOrDefault();
+            var idUser = user.Id.ToString();
             HttpContext.Session.SetString("idUser", idUser);
-            ViewData["idUser"] = idUser;
+            if (user != null)
+            {
+                return RedirectToAction("HomePage");
+            }
+            else
+            {
+                // handle the case where the user is not found
+                // e.g. display an error message or redirect to a login page
+                ViewData["ErrorMessage"] = "User not found";
+            }
         }
         else
         {
-            return View("Login");
+            ViewBag.ErrorMessage = "The user name or password provided is incorrect.";
         }
         return View("Login");
     }
@@ -143,6 +160,51 @@ public class AdminController : Controller
 
     public IActionResult MyAccount()
     {
-        return View();
+        string idUser = HttpContext.Session.GetString("idUser");
+        ViewData["idUser"] = idUser;
+        if (!string.IsNullOrEmpty(idUser))
+        {
+            return View();
+        }
+        else
+        {
+            return RedirectToAction("Login");
+        }
+    }
+    [HttpPost]
+    public IActionResult MyAccount(User user)
+    {
+        if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
+        {
+            ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
+            return View();
+        }
+
+        if (!IsValidPhoneNumber(user.NumberPhone))
+        {
+            ViewBag.AlertMessage = "Please enter a valid phone number.";
+            return View();
+        }
+        if (!IsValidEmail(user.Email))
+        {
+            ViewBag.AlertMessage = "Please enter a valid email.";
+            return View();
+        }
+        if (IsValidName(user.Name))
+        {
+            ViewBag.AlertMessage = "Please enter a valid name.";
+            return View();
+        }
+        var existingUsers = _services.GetAllUsers(user.Id);
+        if (existingUsers.Any(u => u.Username == user.Username.Trim()))
+        {
+            ViewBag.AlertMessage = "Username already exists.";
+            return View();
+        }
+        else if (_services.UpdateUser(user))
+        {
+            return RedirectToAction("HomePage");
+        }
+        return BadRequest();
     }
 }

@@ -3,6 +3,7 @@ using Colo_Shop.IServices;
 using Colo_Shop.Models;
 using Colo_Shop.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Colo_Shop.Controllers;
 
@@ -26,9 +27,16 @@ public class HomeController : Controller
 
     public IActionResult Shop()
     {
-        return View();
+        var listProduct = _productServices.GetAllProducts();
+        ViewData["urlShop"] = "All";
+        return View(listProduct.ToList());
     }
-
+    public IActionResult Search(string name)
+    {
+        var listProduct = _productServices.GetProductByName(name);
+        ViewData["urlShop"] = $"Search Name : {name}";
+        return View("Shop", listProduct.ToList());
+    }
     public IActionResult Contact()
     {
         return View();
