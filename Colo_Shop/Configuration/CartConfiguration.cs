@@ -8,8 +8,9 @@ public class CartConfiguration : IEntityTypeConfiguration<Cart>
 {
     public void Configure(EntityTypeBuilder<Cart> builder)
     {
-        builder.HasKey(p => p.UserId);
+        builder.HasKey(p => p.Id);
         builder.Property(p => p.Description)
             .HasColumnType("nvarchar(MAX)"); // nvarchar(1000)
+        builder.HasOne(p => p.User).WithMany().HasForeignKey(p => p.UserId);
     }
 }

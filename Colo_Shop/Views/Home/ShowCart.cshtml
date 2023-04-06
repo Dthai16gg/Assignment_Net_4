@@ -1,0 +1,178 @@
+﻿<link rel="stylesheet" type="text/css" href="~/assets/css/StyleCart.css">
+@using Colo_Shop.IServices
+@using Colo_Shop.Services
+@model Cart 
+@{
+    IProductServices _productServices = new ProductServices();
+}
+<div class="container">
+    @{
+        var total = 0;
+        var count = 0;
+    }
+    <div class="divTable div-hover">
+        @if (Model == null)
+        {
+            <h1 class="mt-5">No items in cart.</h1>
+        }
+        else
+        {
+            @if (Model.Details == null || Model.Details.Count == 0)
+            {
+                <h1 class="mt-5">No items in cart.</h1>
+            }
+            else
+            {
+                <div class="rowTable bg-primary text-white pb-2">
+                    <div class="divTableCol">Name</div>
+                    <div class="divTableCol">Style</div>
+                    <div class="divTableCol">Quantity</div>
+                    <div class="divTableCol">Price</div>
+                    <div class="divTableCol">Total</div>
+                    <div class="divTableCol">Actions</div>
+                </div>
+                foreach (var Item in Model.Details)
+                {
+                    <div class="rowTable">
+                        <div class="divTableCol">
+                            <div class="media">
+                                <a class=" pull-left mr-2 ml-0" href="#">
+                                    <img src="data:image/png;base64,@Convert.ToBase64String(_productServices.GetProductById(Item.IdSp).Image)" alt="Product Image" width="50"/>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        <a href='@Url.Action("ProductDetails", "Home", new { id = Item.Id })'>@_productServices.GetProductById(Item.IdSp).Name</a>
+                                    </h4>
+                                    <h5 class="text-danger">
+                                        <a>@_productServices.GetProductById(Item.IdSp).Supplier</a>
+                                    </h5>
+                                    @if (_productServices.GetProductById(Item.IdSp).Status == 1)
+                                    {
+                                        <span>Status: Kha Dung </span>
+                                    }
+                                    else
+                                    {
+                                        <span>Status: Hen xui </span>
+                                    }
+                                    <span class="text-warning">
+                                        <strong class="text-uppercase">@_productServices.GetProductById(Item.IdSp).Style</strong>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divTableCol" id="total-div">
+                            <strong class="text-uppercase">@_productServices.GetProductById(Item.IdSp).Style</strong>
+                        </div>
+                        <div class="divTableCol">
+                            <div class="input-group " id="quantity-div">
+                                <input type="number" class="text-center" value="@Item.Quantity" id="quantity" name="quantity">
+                            </div>
+                        </div>
+                        <div class="divTableCol" id="total-div">
+                            <strong>@_productServices.GetProductById(Item.IdSp).Price</strong>
+                        </div>
+                        <div class="divTableCol">
+                            @{
+                                var x = _productServices.GetProductById(Item.IdSp).Price * Item.Quantity;
+                                total = x + total;
+                                count = Item.Quantity + count;
+                            }
+                            <strong>$@x</strong>
+                        </div>
+                        <div class="divTableCol">
+                            <a href="@Url.Action("RemoveFromCart", "Home", new { id = Item.Id })" class="btn btn-danger btn-sm">Remove</a>
+                        </div>
+                    </div>
+                }
+                <div class="rowTable">
+                    <div class="divTableCol"></div>
+                    <div class="divTableCol">
+                        <h6>Count</h6>
+                    </div>
+                    <div class="divTableCol">
+                        <h6>
+                            <strong>@count</strong>
+                        </h6>
+                    </div>
+                    <div class="divTableCol">
+                        <h6>Total</h6>
+                    </div>
+                    <div class="divTableCol">
+                        <h6>
+                            <strong>$@total</strong>
+                        </h6>
+                    </div>
+                    <div class="divTableCol"></div>
+                </div>
+                <div class="rowTable">
+                    <div class="divTableCol"></div>
+                    <div class="divTableCol"></div>
+                    <div class="divTableCol"></div>
+                    <div class="divTableCol"></div>
+                    <div class="divTableCol"></div>
+                    <div class="divTableCol">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            PAY NOW
+                        </button>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Pay Now</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" enctype="multipart/form-data">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.Details)
+                        {
+                            <tr>
+                                <td>@_productServices.GetProductById(item.IdSp).Name</td>
+                                <td>
+                                    <input type="number" name="quantities" value="@item.Quantity"/>
+                                    <input type="hidden" name="productIds" value="@_productServices.GetProductById(item.IdSp).Id"/>
+                                </td>
+                                <td>@(_productServices.GetProductById(item.IdSp).Price * item.Quantity)</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td></td>
+                            <td>Total</td>
+                            <td>@Model.Details.Sum(item => _productServices.GetProductById(item.IdSp).Price * item.Quantity)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <select class="custom-select mt-2" name="status">
+                                    <option selected>Status</option>
+                                    <option value="1">Pay</option>
+                                    <option value="0">Wait</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" value="DONE" class="btn btn-danger"/>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

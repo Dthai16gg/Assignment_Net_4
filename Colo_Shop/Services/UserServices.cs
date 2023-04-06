@@ -77,15 +77,11 @@ public class UserServices : IUserServices
     {
         return _dbConText.Users.Where(p => p.Username == username).ToList();
     }
+
     public IEnumerable<User> GetAllUsers(Guid? currentUserId = null)
     {
         if (currentUserId.HasValue)
-        {
             return _dbConText.Users.Where(u => u.Id != currentUserId.Value);
-        }
-        else
-        {
-            return _dbConText.Users;
-        }
+        return _dbConText.Users;
     }
 }

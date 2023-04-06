@@ -1,17 +1,17 @@
 ﻿@using Colo_Shop.IServices
-@using Colo_Shop.Services           
-@model Colo_Shop.Models.User
+@using Colo_Shop.Services
+@model User
 @{
-    IUserServices  _service = new UserServices();
+    IUserServices _service = new UserServices();
     IRoleServices _roleServices = new RoleServices();
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-    string id =  ViewData["idUser"] as string;
-    Guid IdUser = Guid.Parse(id);
+    var id = ViewData["idUsers"] as string;
+    var IdUser = Guid.Parse(id);
     var user = _service.GetUserById(IdUser);
 }
 <div class="wrapper bg-white mt-sm-5 container">
     <h4 class="pb-4 border-bottom">Account settings</h4>
-    <form class="py-2"method="post" enctype="multipart/form-data" >
+    <form class="py-2"method="post" enctype="multipart/form-data">
         <div class="row py-2">
             <div class="col-md-6">
                 <label asp-for="RoleId" class="control-label"></label>
@@ -43,7 +43,7 @@
                 <input asp-for="Email" class="form-control" value="@user.Email"/>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-        </div> 
+        </div>
         <div class="row py-2">
             <div class="col-md-6">
                 <label asp-for="NumberPhone" class="control-label"></label>
@@ -55,8 +55,8 @@
                 <input asp-for="Password" class="form-control" value="@user.Password"/>
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-        </div>     
-        @{ user.Status = 1;}
+        </div>
+        @{ user.Status = 1; }
         <div class="py-3 pb-4 border-bottom">
             <button class="btn btn-danger" asp-controller="Admin" asp-action="HomePage">Back To Home</button>
         </div>

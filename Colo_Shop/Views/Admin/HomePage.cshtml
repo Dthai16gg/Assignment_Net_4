@@ -1,10 +1,10 @@
 ﻿@using Colo_Shop.IServices
 @using Colo_Shop.Services
 @{
-    IUserServices  _service = new UserServices();
+    IUserServices _service = new UserServices();
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-     string id =  ViewData["idUser"] as string;
-    Guid IdUser = Guid.Parse(id);
+    var id = ViewData["idUsers"] as string;
+    var IdUser = Guid.Parse(id);
     var user = _service.GetUserById(IdUser);
 }
 <link rel="stylesheet" href="~/assets/css/StyleAdminHomePage.css">

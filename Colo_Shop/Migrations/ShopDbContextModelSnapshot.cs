@@ -73,7 +73,7 @@ namespace Colo_Shop.Migrations
 
             modelBuilder.Entity("Colo_Shop.Models.Cart", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -81,12 +81,12 @@ namespace Colo_Shop.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(MAX)");
 
-                    b.Property<Guid>("UserId1")
+                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Carts");
                 });
@@ -97,20 +97,20 @@ namespace Colo_Shop.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("CartId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("IdSp")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("IdSp");
+                    b.HasIndex("CartId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("IdSp");
 
                     b.ToTable("CartDetails");
                 });
@@ -251,7 +251,7 @@ namespace Colo_Shop.Migrations
                 {
                     b.HasOne("Colo_Shop.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId1")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -260,15 +260,15 @@ namespace Colo_Shop.Migrations
 
             modelBuilder.Entity("Colo_Shop.Models.CartDetail", b =>
                 {
-                    b.HasOne("Colo_Shop.Models.Product", "Product")
-                        .WithMany("CartDetails")
-                        .HasForeignKey("IdSp")
+                    b.HasOne("Colo_Shop.Models.Cart", "Cart")
+                        .WithMany("Details")
+                        .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Colo_Shop.Models.Cart", "Cart")
-                        .WithMany("Details")
-                        .HasForeignKey("UserId")
+                    b.HasOne("Colo_Shop.Models.Product", "Product")
+                        .WithMany("CartDetails")
+                        .HasForeignKey("IdSp")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show container fixed-top" role="alert">
+        @ViewBag.ErrorMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+<link rel="stylesheet" href="~/assets/css/styleLogin.css">
+<div class="sidenav">
+    <div class="login-main-text">
+        <div class="text-uppercase">
+            <h1 class="text-white">colo <span class="text-danger">shop</span> <br>Sign In Now</h1>
+        </div>
+        <p>Login or register from here to access.</p>
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+            <h2 class="text-center" id="title">Hey you ! Login now ? 💪</h2>
+            <p class="text-center">
+                <small id="passwordHelpInline" class="text-muted"> Developer: follow me on facebook <a> Bui Doanh Thai </a> inspired from .</small>
+            </p>
+            <form method="post" asp-controller="Home" asp-action="LoginPage">
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input type="text" class="form-control" placeholder="User Name" name="Username">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password" name="Password">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="rememberMe"/>
+                    <label>Remember Me ?</label>
+                </div>
+                <button type="submit" class="btn btn-black">Login</button>
+                <a asp-controller="Home" asp-action="Register" class="btn btn-danger">Register ?</a>
+            </form>
+            <h6 class="mt-2">Forgot Password ? <a asp-action="ForgotPassword" class="text-danger">Click Now !</a></h6>
+        </div>
+    </div>
+</div>

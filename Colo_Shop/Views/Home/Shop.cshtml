@@ -58,12 +58,12 @@
                 <div class="sidebar_section">
                     <div class="sidebar_title">
                         <h5>Product Style</h5>
-                    </div>     
+                    </div>
                     <ul class="sidebar_categories">
                         <li class="grid_sorting_button  d-flex flex-column justify-content-center align-items-center" data-filter="*">all</li>
                         @foreach (var pro in Model.GroupBy(x => x.Style))
                         {
-                           <li class="grid_sorting_button  d-flex flex-column justify-content-center align-items-center text-uppercase mt-2" data-filter=".@pro.Key">@pro.Key</li>
+                            <li class="grid_sorting_button  d-flex flex-column justify-content-center align-items-center text-uppercase mt-2" data-filter=".@pro.Key">@pro.Key</li>
                         }
                     </ul>
                 </div>
@@ -139,39 +139,42 @@
 
                                 <!-- Product 1 -->
 
-                                    @if (Model.Count > 0)
+                                @if (Model.Count > 0)
+                                {
+                                    foreach (var p in Model)
                                     {
-                                        foreach (var p in Model)
+                                        if (p != null)
                                         {
-                                            if (p != null)
-                                            {
-                                                                    <div class="product-item @p.Style">
-                                                                        <div class="product discount product_filter">
-                                                                            <div class="product_image">
-                                                                                <img src="data:image/png;base64,@Convert.ToBase64String(p.Image)" alt="Product Image" height="200"/>
-                                                                            </div>
-                                                                            <div class="favorite favorite_left"></div>
-                                                                            <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
-                                                                                <span>-$1M</span>
-                                                                            </div>
-                                                                            <div class="product_info">
-                                                                                <h6 class="product_name">
-                                                                                    <a href='@Url.Action("ProductDetails", "Home", new { id = p.Id })'>@p.Name</a>
-                                                                                </h6>
-                                                                                <div class="product_price">$@p.Price.00<span>$1M</span></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="red_button add_to_cart_button">
-                                                                            <a >add to cart</a>
-                                                                        </div>
-                                                                    </div>
-                                            }
+                                            <div class="product-item @p.Style mr-2">
+                                                <div class="product discount product_filter">
+                                                    <div class="product_image">
+                                                        <img src="data:image/png;base64,@Convert.ToBase64String(p.Image)" alt="Product Image" height="200"/>
+                                                    </div>
+                                                    <div class="favorite favorite_left"></div>
+                                                    <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
+                                                        <span>-$1M</span>
+                                                    </div>
+                                                    <div class="product_info">
+                                                        <h6 class="product_name">
+                                                            <a href='@Url.Action("ProductDetails", "Home", new { id = p.Id })'>@p.Name</a>
+                                                        </h6>
+                                                        <div class="product_price">$@p.Price.00<span>$1M</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="red_button add_to_cart_button">
+                                                    <form method="post" asp-action="AddToCart" asp-controller="Home">
+                                                        <input type="hidden" name="productId" value="@p.Id"/>
+                                                        <button type="submit" class="text-uppercase btn btn-danger">add to cart</button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         }
                                     }
-                                    else
-                                    {
-                                            <h2 class="mb-4">No Find Product, Please Try Again !😒😒😒</h2>
-                                    }
+                                }
+                                else
+                                {
+                                    <h2 class="mb-4">No Find Product, Please Try Again !😒😒😒</h2>
+                                }
 
 
                                 <!-- Product 2 -->
@@ -209,7 +212,6 @@
         </div>
     </div>
 </div>
-
 
 
 <div class="benefit">

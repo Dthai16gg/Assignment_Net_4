@@ -1,0 +1,97 @@
+﻿@model Colo_Shop.Controllers.UserController.CreateViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+@if (ViewBag.AlertMessage != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.AlertMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+    <br>
+    <h1 class="text-center text-uppercase">Have a Account ? Login In <a class="text-danger" asp-action="LoginPage">Now</a></h1>
+    <hr>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <header class="card-header">
+                    <a asp-action="LoginPage" class="float-right btn btn-outline-primary mt-1">Log in</a>
+                    <h4 class="card-title mt-2">Sign up</h4>
+                </header>
+                <article class="card-body">
+                    <form method="post" enctype="multipart/form-data" asp-action="Register">
+                        <!-- id role static// -->
+                        <input type="text" class="input form-control" asp-for="User.RoleId" hidden value="7BAE733A-AE4A-475B-923F-08DB345F58CA">
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>User name </label>
+                                <input type="text" class="form-control" placeholder=""asp-for="User.Username">
+                            </div> <!-- form-group end.// -->
+                            <div class="col form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control" placeholder=" " asp-for="User.Name">
+                            </div> <!-- form-group end.// -->
+                        </div> <!-- form-row end.// -->
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" placeholder="" asp-for="User.Email">
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div> <!-- form-group end.// -->
+                        <div class="form-group">
+                            <label>Number Phone</label>
+                            <input type="text" class="form-control" placeholder="" asp-for="User.NumberPhone">
+                        </div> <!-- form-group end.// -->
+                        <div class="form-group">
+                            <label>Create password</label>
+                            <input class="form-control" type="password" asp-for="User.Password">
+                        </div> <!-- form-group end.// -->
+                        <label>
+                            <input type="text" class="input form-control" asp-for="User.Status" hidden value="1">
+                        </label>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-outline-danger btn-block text-uppercase "> Register </button>
+                        </div> <!-- form-group// -->
+                        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
+                    </form>
+                </article> <!-- card-body end .// -->
+                <div class="border-top card-body text-center">Forgot Password ? <a asp-action="ForgotPassword">Click Now</a></div>
+            </div> <!-- card.// -->
+        </div> <!-- col.//-->
+
+    </div> <!-- row.//-->
+
+
+</div>
+<!--container end.//-->
+
+<br><br>
+<article class="bg-dark mb-3">
+    <div class="card-body text-center">
+        <h2 class="text-white mt-3 text-uppercase">Colo <span class="text-danger">Shop</span></h2>
+        <p class="h5 text-white">
+            Components and templates <br> for Ecommerce, marketplace, booking websites
+            and product landing pages
+        </p> <br>
+        <p>
+            <a class="btn btn-warning" target="_blank" asp-action="Shop">
+                Shop Now
+                <i class="fa fa-window-restore "></i>
+            </a>
+        </p>
+    </div>
+    <br><br>
+</article>

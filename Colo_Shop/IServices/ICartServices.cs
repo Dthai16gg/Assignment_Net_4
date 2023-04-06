@@ -7,6 +7,6 @@ public interface ICartServices
     public bool CreateNewCarts(Cart Cart);
     public bool UpdateCart(Cart Cart);
     public bool DeleteCart(Guid id);
-    public Cart GetCartById(Guid id);
+    public Cart GetCartByUserId(Guid id);
     public List<Cart> GetAllCarts();
 }

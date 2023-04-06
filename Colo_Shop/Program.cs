@@ -29,10 +29,7 @@ public class Program
          *AddTransient : Tao moi service voi moi khi co request. Voi moi yeu cau http se nhan dc 1 doi tuong service khac nhau. phu hop cho cac
          * service ma co the phuc vu nhieu yeu cau http request.
          */
-        builder.Services.AddSession(options =>
-        {
-            options.IdleTimeout = TimeSpan.FromSeconds(15);
-        });
+        builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromSeconds(300); });
         // Đăng ký Session với thời gian là 15 giây cho đến khi timeout
 
         var app = builder.Build(); // Các cấu hình phải viết trước dòng này
@@ -53,8 +50,8 @@ public class Program
         app.UseAuthorization();
 
         app.MapControllerRoute(
-            name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+            "default",
+            "{controller=Home}/{action=Index}/{id?}");
 
         app.Run();
     }

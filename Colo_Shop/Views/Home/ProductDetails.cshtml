@@ -109,14 +109,10 @@
                     </div>
                     <div class="product_favorite d-flex flex-column align-items-center justify-content-center"></div>
                 </div>
-                @if (Model.Status == 1 && Model.AvailableQuantity > 0)
-                {
-                    <button href="#" class="btn btn-primary text-uppercase mt-5">add to cart</button>
-                }
-                else
-                {
-                    <button href="#" class="btn btn-primary text-uppercase mt-5">add to cart</button>
-                }
+                <form method="post" asp-action="AddToCart" asp-controller="Home">
+                    <input type="hidden" name="productId" value="@Model.Id"/>
+                    <button type="submit" class="text-uppercase mt-3 btn btn-danger">add to cart</button>
+                </form>
             </div>
         </div>
     </div>

@@ -23,28 +23,28 @@
 ******************************/
 
 
-@media only screen and (max-width: 1600px) {	
+@media only screen and (max-width: 1600px) {
 }
 
 /************
 2. 1440px
 ************/
 
-@media only screen and (max-width: 1540px) {	
+@media only screen and (max-width: 1540px) {
 }
 
 /************
 3. 1380px
 ************/
 
-@media only screen and (max-width: 1380px) {	
+@media only screen and (max-width: 1380px) {
 }
 
 /************
 3. 1280px
 ************/
 
-@media only screen and (max-width: 1280px) {	
+@media only screen and (max-width: 1280px) {
 }
 
 /************
@@ -61,7 +61,7 @@
 5. 1024px
 ************/
 
-@media only screen and (max-width: 1024px) {	
+@media only screen and (max-width: 1024px) {
 }
 
 /************
@@ -132,21 +132,21 @@
 7. 959px
 ************/
 
-@media only screen and (max-width: 959px) {	
+@media only screen and (max-width: 959px) {
 }
 
 /************
 8. 880px
 ************/
 
-@media only screen and (max-width: 880px) {	
+@media only screen and (max-width: 880px) {
 }
 
 /************
 9. 768px
 ************/
 
-@media only screen and (max-width: 768px) {	
+@media only screen and (max-width: 768px) {
 }
 
 /************
@@ -235,14 +235,14 @@
 11. 539px
 ************/
 
-@media only screen and (max-width: 539px) {	
+@media only screen and (max-width: 539px) {
 }
 
 /************
 12. 480px
 ************/
 
-@media only screen and (max-width: 480px) {	
+@media only screen and (max-width: 480px) {
 }
 
 /************
@@ -356,11 +356,6 @@
         padding-left: 0px;
     }
 
-    #newsletter_email::input-placeholder {
-        font-size: 12px !important;
-        padding-left: 0px;
-    }
-
     .footer_nav_container { margin-top: 35px; }
 
     .cr { margin-bottom: 20px; }
@@ -377,5 +372,5 @@
 14. 400px
 ************/
 
-@media only screen and (max-width: 400px) {	
+@media only screen and (max-width: 400px) {
 }

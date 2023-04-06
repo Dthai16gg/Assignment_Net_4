@@ -1,6 +1,4 @@
-﻿@using Colo_Shop.IServices
-@using Colo_Shop.Services
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Colo Shop</title>
@@ -46,10 +44,10 @@
                                     </a>
                                     <ul class="account_selection">
                                         <li>
-                                            <a asp-controller="Login" asp-action="Index"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a>
+                                            <a asp-controller="Home" asp-action="SingOut"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</a>
                                         </li>
                                         <li>
-                                            <a asp-controller="Login" asp-action="Register"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a>
+                                            <a asp-controller="Home" asp-action="Register"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -93,15 +91,9 @@
                                         </a>
                                     </li>
                                     <li class="checkout">
-                                        <a asp-controller="Home" asp-action="Cart">
+                                        <a asp-controller="Home" asp-action="ShowCart">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                            @{
-                                                ICartServices _cartServices = new CartServices();
-                                                ICartDetailsServices _cartDetailsServices = new CartDetailService();
-                                                Guid id = Guid.NewGuid();
-                                              int countProduct =  _cartDetailsServices.GetAllCartDetails().Where(p=>p.UserId == id).Select(p => p.IdSp).Count();
-                                            }
-                                            <span id="checkout_items" class="checkout_items">@countProduct</span>
+                                            <span id="checkout_items" class="checkout_items">99+</span>
                                         </a>
                                     </li>
                                 </ul>

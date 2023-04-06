@@ -47,7 +47,7 @@ public class CartDetailService : ICartDetailsServices
         {
             var _CartDetails = _dbConText.CartDetails.Find(CartDetail.Id);
             _CartDetails.IdSp = CartDetail.IdSp;
-            _CartDetails.UserId = CartDetail.UserId;
+            _CartDetails.CartId = CartDetail.CartId;
             _CartDetails.Quantity = CartDetail.Quantity;
             _dbConText.CartDetails.Update(_CartDetails);
             _dbConText.SaveChanges();

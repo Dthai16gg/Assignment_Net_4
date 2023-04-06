@@ -1,5 +1,6 @@
 using Colo_Shop.IServices;
 using Colo_Shop.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Colo_Shop.Services;
 
@@ -45,8 +46,9 @@ public class CartServices : ICartServices
     {
         try
         {
-            var _Cart = _dbConText.Carts.Find(Cart.UserId);
+            var _Cart = _dbConText.Carts.Find(Cart.Id);
             _Cart.Description = Cart.Description;
+            _Cart.UserId = Cart.UserId;
             _dbConText.Carts.Update(_Cart);
             _dbConText.SaveChanges();
             return true;
@@ -62,8 +64,11 @@ public class CartServices : ICartServices
         return _dbConText.Carts.ToList();
     }
 
-    public Cart GetCartById(Guid id)
+    public Cart GetCartByUserId(Guid userId)
     {
-        return _dbConText.Carts.FirstOrDefault(p => p.UserId == id);
+        return _dbConText.Carts
+            .Include(c => c.Details)
+            .ThenInclude(d => d.Product)
+            .FirstOrDefault(c => c.User.Id == userId);
     }
 }
