@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S8/oZQMm/NP5R6Ex/jfJrBCC4peegpMQ1lP4r5ICIWk=",
+  "Hash": "+qmT/5zNAo5PasCu1Hc/CxS3vjBwzvKWSR6jLXZPIDg=",
   "Source": "Colo_Shop",
   "BasePath": "_content/Colo_Shop",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\styleaAddtoBill.css",
+      "SourceId": "Colo_Shop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\wwwroot\\",
+      "BasePath": "_content/Colo_Shop",
+      "RelativePath": "assets/css/styleaAddtoBill.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\styleaAddtoBill.css"
     },
     {
       "Identity": "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\wwwroot\\assets\\css\\StyleAdminHomePage.css",

@@ -136,7 +136,6 @@ public class HomeController : Controller
         var idUser = HttpContext.Session.GetString("idUser");
         if (string.IsNullOrEmpty(idUser)) return RedirectToAction("LoginPage");
         ViewData["idUser"] = idUser;
-
         var user = _userservices.GetUserById(Guid.Parse(idUser));
         var cart = _cartServices.GetCartByUserId(user.Id);
         if (cart == null)
@@ -149,7 +148,6 @@ public class HomeController : Controller
             };
             _cartServices.CreateNewCarts(cart);
         }
-
         return View(cart);
     }
 
@@ -196,53 +194,18 @@ public class HomeController : Controller
 
         return RedirectToAction("LoginPage");
     }
-
-    [HttpPost]
-    public IActionResult AddToBill(List<Guid> productIds, List<int> quantities, int status)
+    public IActionResult AddToBill()
     {
-        return RedirectToAction("ShowCart");
-        if (productIds == null || !productIds.Any() || quantities == null || !quantities.Any() || status == null)
-            return Content("Null");
         var idUser = HttpContext.Session.GetString("idUser");
+        if (string.IsNullOrEmpty(idUser)) return RedirectToAction("LoginPage");
         var user = _userservices.GetUserById(Guid.Parse(idUser));
-        var bill = new Bill
+        var cart = _cartServices.GetCartByUserId(user.Id);
+        if (cart == null)
         {
-            Id = Guid.NewGuid(),
-            CreateDate = DateTime.Now,
-            UserID = user.Id,
-            Status = status
-        };
-        var allDetailsCreated = true;
-        for (var i = 0; i < productIds.Count; i++)
-        {
-            var productId = productIds[i];
-            var quantity = quantities[i];
-            var product = _productServices.GetProductById(productId);
-            var detail = new BillDetails
-            {
-                Id = Guid.NewGuid(),
-                IdHD = bill.Id,
-                IdSP = productId,
-                Quantity = quantity,
-                Price = product.Price
-            };
-            if (!_billDetailsServices.CreateNewBillDetails(detail))
-            {
-                allDetailsCreated = false;
-                break;
-            }
+            return View("Shop");
         }
-
-        if (allDetailsCreated && _billServices.CreateNewBills(bill))
-        {
-            _cartServices.DeleteCart(_cartServices.GetAllCarts().FirstOrDefault(p => p.UserId == Guid.Parse(idUser))
-                .Id);
-            return RedirectToAction("ShowCart");
-        }
-
-        return Content("Fake");
+        return View(cart);
     }
-
     public IActionResult RemoveFromCart(Guid id)
     {
         _cartDetailsServices.DeleteCartDetail(id);
@@ -357,8 +320,6 @@ public class HomeController : Controller
         {
             return Content(e.Message);
         }
-
-        return Content("Not User");
     }
 
     public IActionResult ForgotPassword()
