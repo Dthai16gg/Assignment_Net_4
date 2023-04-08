@@ -26,7 +26,7 @@ public class ShopDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(
-            @"Data Source=DTHAI16\SQLEXPRESS;Initial Catalog=Assignment_Net-4;Integrated Security=True");
+            @"Data Source=DTHAI16GG\SQLEXPRESS;Initial Catalog=Assignment_Net-4;Integrated Security=True");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

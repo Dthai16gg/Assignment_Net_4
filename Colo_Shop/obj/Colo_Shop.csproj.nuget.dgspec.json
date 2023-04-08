@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj": {}
+    "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj": {
+    "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj",
+        "projectUniqueName": "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj",
         "projectName": "Colo_Shop",
-        "projectPath": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj",
+        "projectPath": "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\Colo_Shop.csproj",
         "packagesPath": "C:\\Users\\buith\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\buith\\OneDrive\\Máy tính\\Assignment_Net_4\\Colo_Shop\\obj\\",
+        "outputPath": "C:\\Users\\buith\\source\\Dthai16gg\\Assignment_Net_4\\Colo_Shop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -200,6 +200,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult AddToBill(List<Guid> productIds, List<int> quantities, int status)
     {
+        return RedirectToAction("ShowCart");
         if (productIds == null || !productIds.Any() || quantities == null || !quantities.Any() || status == null)
             return Content("Null");
         var idUser = HttpContext.Session.GetString("idUser");

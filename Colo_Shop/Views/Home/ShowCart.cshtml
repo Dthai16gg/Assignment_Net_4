@@ -1,7 +1,7 @@
 ﻿<link rel="stylesheet" type="text/css" href="~/assets/css/StyleCart.css">
 @using Colo_Shop.IServices
 @using Colo_Shop.Services
-@model Cart 
+@model Cart
 @{
     IProductServices _productServices = new ProductServices();
 }
@@ -37,7 +37,7 @@
                         <div class="divTableCol">
                             <div class="media">
                                 <a class=" pull-left mr-2 ml-0" href="#">
-                                    <img src="data:image/png;base64,@Convert.ToBase64String(_productServices.GetProductById(Item.IdSp).Image)" alt="Product Image" width="50"/>
+                                    <img src="data:image/png;base64,@Convert.ToBase64String(_productServices.GetProductById(Item.IdSp).Image)" alt="Product Image" width="50" />
                                 </a>
                                 <div class="media-body">
                                     <h4 class="media-heading">
@@ -114,6 +114,9 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                             PAY NOW
                         </button>
+
+
+
                     </div>
                 </div>
             }
@@ -130,48 +133,47 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" enctype="multipart/form-data">
+
+                <form method="post" asp-action="AddToBill">
                     <table>
                         <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                        </tr>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        @foreach (var item in Model.Details)
-                        {
+                            @foreach (var item in Model.Details)
+                            {
+                                <tr>
+                                    <td>@_productServices.GetProductById(item.IdSp).Name</td>
+                                    <td>
+                                        <input type="number" name="quantities" value="@item.Quantity" />
+                                        <input type="hidden" name="productIds" value="@_productServices.GetProductById(item.IdSp).Id" />
+                                    </td>
+                                    <td>@(_productServices.GetProductById(item.IdSp).Price * item.Quantity)</td>
+                                </tr>
+                            }
                             <tr>
-                                <td>@_productServices.GetProductById(item.IdSp).Name</td>
-                                <td>
-                                    <input type="number" name="quantities" value="@item.Quantity"/>
-                                    <input type="hidden" name="productIds" value="@_productServices.GetProductById(item.IdSp).Id"/>
-                                </td>
-                                <td>@(_productServices.GetProductById(item.IdSp).Price * item.Quantity)</td>
+                                <td></td>
+                                <td>Total</td>
+                                <td>@Model.Details.Sum(item => _productServices.GetProductById(item.IdSp).Price * item.Quantity)</td>
                             </tr>
-                        }
-                        <tr>
-                            <td></td>
-                            <td>Total</td>
-                            <td>@Model.Details.Sum(item => _productServices.GetProductById(item.IdSp).Price * item.Quantity)</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <select class="custom-select mt-2" name="status">
-                                    <option selected>Status</option>
-                                    <option value="1">Pay</option>
-                                    <option value="0">Wait</option>
-                                </select>
-                            </td>
-                            <td></td>
-                        </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select class="custom-select mt-2" name="status">
+                                        <option value="1">Pay</option>
+                                        <option value="0">Wait</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
                         </tbody>
                     </table>
-                    <input type="submit" value="DONE" class="btn btn-danger"/>
+                    <input type="submit" value="DONE" class="btn btn-danger" />
                 </form>
-
             </div>
         </div>
     </div>
