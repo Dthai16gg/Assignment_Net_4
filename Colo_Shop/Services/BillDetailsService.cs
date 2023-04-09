@@ -1,7 +1,9 @@
+namespace Colo_Shop.Services;
+
 using Colo_Shop.IServices;
 using Colo_Shop.Models;
 
-namespace Colo_Shop.Services;
+using Microsoft.EntityFrameworkCore;
 
 public class BillDetailsService : IBillDetailsServices
 {
@@ -9,15 +11,15 @@ public class BillDetailsService : IBillDetailsServices
 
     public BillDetailsService()
     {
-        _dbConText = new ShopDbContext();
+        this._dbConText = new ShopDbContext();
     }
 
     public bool CreateNewBillDetails(BillDetails BillDetails)
     {
         try
         {
-            _dbConText.BillDetailss.Add(BillDetails);
-            _dbConText.SaveChanges();
+            this._dbConText.Entry(BillDetails).State = EntityState.Added;
+            this._dbConText.SaveChanges();
             return true;
         }
         catch (Exception)
@@ -30,26 +32,9 @@ public class BillDetailsService : IBillDetailsServices
     {
         try
         {
-            var _BillDetails = _dbConText.BillDetailss.Find(id);
-            _dbConText.BillDetailss.Remove(_BillDetails);
-            _dbConText.SaveChanges();
-            return true;
-        }
-        catch (Exception)
-        {
-            return false;
-        }
-    }
-
-    public bool UpdateBillDetails(BillDetails BillDetails)
-    {
-        try
-        {
-            var _BillDetails = _dbConText.BillDetailss.Find(BillDetails.Id);
-            _BillDetails.Quantity = BillDetails.Quantity;
-            _BillDetails.Price = BillDetails.Price;
-            _dbConText.BillDetailss.Update(_BillDetails);
-            _dbConText.SaveChanges();
+            var _BillDetails = this._dbConText.BillDetailss.Find(id);
+            this._dbConText.BillDetailss.Remove(_BillDetails);
+            this._dbConText.SaveChanges();
             return true;
         }
         catch (Exception)
@@ -60,11 +45,30 @@ public class BillDetailsService : IBillDetailsServices
 
     public List<BillDetails> GetAllBillDetails()
     {
-        return _dbConText.BillDetailss.ToList();
+        return this._dbConText.BillDetailss.ToList();
     }
 
     public BillDetails GetBillDetailsById(Guid id)
     {
-        return _dbConText.BillDetailss.FirstOrDefault(p => p.Id == id);
+        return this._dbConText.BillDetailss.FirstOrDefault(p => p.Id == id);
+    }
+
+    public bool UpdateBillDetails(BillDetails BillDetails)
+    {
+        try
+        {
+            var _BillDetails = this._dbConText.BillDetailss.Find(BillDetails.Id);
+            _BillDetails.Quantity = BillDetails.Quantity;
+            _BillDetails.IdHD = BillDetails.IdHD;
+            _BillDetails.IdSp = BillDetails.IdSp;
+            _BillDetails.Price = BillDetails.Price;
+            this._dbConText.BillDetailss.Update(_BillDetails);
+            this._dbConText.SaveChanges();
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 }

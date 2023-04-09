@@ -25,6 +25,7 @@ namespace Colo_Shop.Migrations
             modelBuilder.Entity("Colo_Shop.Models.Bill", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreateDate")
@@ -38,7 +39,9 @@ namespace Colo_Shop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HoaDon", (string)null);
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Bills");
                 });
 
             modelBuilder.Entity("Colo_Shop.Models.BillDetails", b =>
@@ -50,14 +53,11 @@ namespace Colo_Shop.Migrations
                     b.Property<Guid>("IdHD")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("IdSP")
+                    b.Property<Guid>("IdSp")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
-
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -66,7 +66,7 @@ namespace Colo_Shop.Migrations
 
                     b.HasIndex("IdHD");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("IdSp");
 
                     b.ToTable("BillDetailss");
                 });
@@ -220,10 +220,9 @@ namespace Colo_Shop.Migrations
                 {
                     b.HasOne("Colo_Shop.Models.User", "User")
                         .WithMany("Bills")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_Bill_User");
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -238,7 +237,7 @@ namespace Colo_Shop.Migrations
 
                     b.HasOne("Colo_Shop.Models.Product", "Product")
                         .WithMany("BillDetails")
-                        .HasForeignKey("ProductId")
+                        .HasForeignKey("IdSp")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

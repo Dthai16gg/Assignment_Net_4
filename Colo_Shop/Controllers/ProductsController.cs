@@ -1,9 +1,10 @@
-﻿using Colo_Shop.IServices;
+﻿namespace Colo_Shop.Controllers;
+
+using Colo_Shop.IServices;
 using Colo_Shop.Models;
 using Colo_Shop.Services;
-using Microsoft.AspNetCore.Mvc;
 
-namespace Colo_Shop.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 public class ProductsController : Controller
 {
@@ -11,24 +12,18 @@ public class ProductsController : Controller
 
     public ProductsController()
     {
-        _productServices = new ProductServices();
-    }
-
-    public IActionResult ShowList()
-    {
-        var products = _productServices.GetAllProducts();
-        return View(products.ToList());
+        this._productServices = new ProductServices();
     }
 
     public IActionResult Create()
     {
-        return View();
+        return this.View();
     }
 
     [HttpPost]
     public async Task<IActionResult> Create(Product product, IFormFile imageFile)
     {
-        if (product.Price < 0 || product.AvailableQuantity < 0) return Content("Kiem tra lai");
+        if (product.Price < 0 || product.AvailableQuantity < 0) return this.Content("Kiem tra lai");
 
         if (imageFile != null)
             using (var stream = new MemoryStream())
@@ -37,20 +32,32 @@ public class ProductsController : Controller
                 product.Image = stream.ToArray();
             }
         else
-            return View("Create");
+            return this.View("Create");
 
-        _productServices.CreateNewProducts(product);
+        this._productServices.CreateNewProducts(product);
 
-        return RedirectToAction("ShowList");
+        return this.RedirectToAction("ShowList");
     }
 
+    public IActionResult Delete(Guid id)
+    {
+        this._productServices.DeleteProduct(id);
+        return this.RedirectToAction("ShowList");
+    }
+
+    public IActionResult Details(Guid id)
+    {
+        var p = this._productServices.GetProductById(id);
+        return this.View(p);
+    }
 
     [HttpGet]
     public IActionResult Edit(Guid id)
     {
-        var product = _productServices.GetProductById(id);
+        var product = this._productServices.GetProductById(id);
+
         // Đọc từ Session danh sách sp trong giỏ hàng
-        return View(product);
+        return this.View(product);
     }
 
     [HttpPost]
@@ -64,37 +71,31 @@ public class ProductsController : Controller
                 product.Image = stream.ToArray();
             }
 
-            _productServices.UpdateProduct(product);
+            this._productServices.UpdateProduct(product);
         }
         catch (Exception e)
         {
-            return Content(e.Message);
+            return this.Content(e.Message);
         }
 
-        return RedirectToAction(nameof(ShowList));
-    }
-
-    public IActionResult Delete(Guid id)
-    {
-        _productServices.DeleteProduct(id);
-        return RedirectToAction("ShowList");
+        return this.RedirectToAction(nameof(this.ShowList));
     }
 
     public IActionResult Search(string name)
     {
-        if (name == "" || name == null)
+        if (name == string.Empty || name == null)
         {
-            var r = _productServices.GetAllProducts();
-            return View("ShowList", r.ToList());
+            var r = this._productServices.GetAllProducts();
+            return this.View("ShowList", r.ToList());
         }
 
-        var p = _productServices.GetProductByName(name);
-        return View("ShowList", p.ToList());
+        var p = this._productServices.GetProductByName(name);
+        return this.View("ShowList", p.ToList());
     }
 
-    public IActionResult Details(Guid id)
+    public IActionResult ShowList()
     {
-        var p = _productServices.GetProductById(id);
-        return View(p);
+        var products = this._productServices.GetAllProducts();
+        return this.View(products.ToList());
     }
 }

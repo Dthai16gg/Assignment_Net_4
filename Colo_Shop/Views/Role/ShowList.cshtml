@@ -1,8 +1,11 @@
-﻿@model IEnumerable<Role>
+﻿@using Colo_Shop
+@using Colo_Shop.Models
+@model IEnumerable<Role>
 
 @{
     ViewData["Title"] = "ShowList";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
 }
 
 
@@ -32,6 +35,7 @@
     <tbody>
     @{
         var stt = 1;
+
     }
     @foreach (var item in Model)
     {

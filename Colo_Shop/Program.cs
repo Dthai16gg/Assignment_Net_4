@@ -1,7 +1,7 @@
-﻿using Colo_Shop.IServices;
-using Colo_Shop.Services;
+﻿namespace Colo_Shop;
 
-namespace Colo_Shop;
+using Colo_Shop.IServices;
+using Colo_Shop.Services;
 
 public class Program
 {
@@ -19,8 +19,8 @@ public class Program
         builder.Services.AddTransient<CartDetailService, CartDetailService>();
         builder.Services.AddTransient<BillDetailsService, BillDetailsService>();
 
-        //builder.Services.AddSingleton<IProductServices, ProductServices>();
-        //builder.Services.AddScoped<IProductServices, ProductServices>();
+        // builder.Services.AddSingleton<IProductServices, ProductServices>();
+        // builder.Services.AddScoped<IProductServices, ProductServices>();
         /*
          *AddSingleton : Neu service duoc khoi tao , no co the ton tai cho den khi vong doi cua ung dung ket thuc.
          *Neu cac request khac ma duoc trien khai thi dung lai chinh service do.Phu hop cho cac service co tinh toan cuc va khong thay doi
@@ -30,14 +30,15 @@ public class Program
          * service ma co the phuc vu nhieu yeu cau http request.
          */
         builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromSeconds(300); });
-        // Đăng ký Session với thời gian là 15 giây cho đến khi timeout
 
+        // Đăng ký Session với thời gian là 15 giây cho đến khi timeout
         var app = builder.Build(); // Các cấu hình phải viết trước dòng này
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Home/Error");
+
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
@@ -49,9 +50,7 @@ public class Program
 
         app.UseAuthorization();
 
-        app.MapControllerRoute(
-            "default",
-            "{controller=Home}/{action=Index}/{id?}");
+        app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
 
         app.Run();
     }

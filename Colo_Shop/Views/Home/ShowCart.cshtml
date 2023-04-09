@@ -4,11 +4,13 @@
 @model Cart
 @{
     IProductServices _productServices = new ProductServices();
+
 }
 <div class="container">
     @{
         var total = 0;
         var count = 0;
+
     }
     <div class="divTable div-hover">
         @if (Model == null)
@@ -37,7 +39,7 @@
                         <div class="divTableCol">
                             <div class="media">
                                 <a class=" pull-left mr-2 ml-0" href="#">
-                                    <img src="data:image/png;base64,@Convert.ToBase64String(_productServices.GetProductById(Item.IdSp).Image)" alt="Product Image" width="50" />
+                                    <img src="data:image/png;base64,@Convert.ToBase64String(_productServices.GetProductById(Item.IdSp).Image)" alt="Product Image" width="50"/>
                                 </a>
                                 <div class="media-body">
                                     <h4 class="media-heading">
@@ -76,6 +78,7 @@
                                 var x = _productServices.GetProductById(Item.IdSp).Price * Item.Quantity;
                                 total = x + total;
                                 count = Item.Quantity + count;
+
                             }
                             <strong>$@x</strong>
                         </div>
@@ -84,6 +87,7 @@
                         </div>
                     </div>
                 }
+
                 <div class="rowTable">
                     <div class="divTableCol"></div>
                     <div class="divTableCol">

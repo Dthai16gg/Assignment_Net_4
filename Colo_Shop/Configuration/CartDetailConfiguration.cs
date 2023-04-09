@@ -1,8 +1,9 @@
-﻿using Colo_Shop.Models;
+﻿namespace Colo_Shop.Configurations;
+
+using Colo_Shop.Models;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Colo_Shop.Configurations;
 
 public class CartDetailConfiguration : IEntityTypeConfiguration<CartDetail>
 {

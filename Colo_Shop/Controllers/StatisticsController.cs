@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿namespace Colo_Shop.Controllers;
 
-namespace Colo_Shop.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 public class StatisticsController : Controller
 {
     public IActionResult Index()
     {
-        return View();
+        return this.View();
     }
 }

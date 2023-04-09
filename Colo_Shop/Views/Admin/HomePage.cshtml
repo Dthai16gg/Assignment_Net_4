@@ -6,6 +6,7 @@
     var id = ViewData["idUsers"] as string;
     var IdUser = Guid.Parse(id);
     var user = _service.GetUserById(IdUser);
+
 }
 <link rel="stylesheet" href="~/assets/css/StyleAdminHomePage.css">
 <body onLoad="initClock()">

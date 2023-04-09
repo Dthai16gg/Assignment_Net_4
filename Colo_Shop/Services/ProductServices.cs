@@ -1,7 +1,7 @@
-﻿using Colo_Shop.IServices;
-using Colo_Shop.Models;
+﻿namespace Colo_Shop.Services;
 
-namespace Colo_Shop.Services;
+using Colo_Shop.IServices;
+using Colo_Shop.Models;
 
 public class ProductServices : IProductServices
 {
@@ -9,15 +9,15 @@ public class ProductServices : IProductServices
 
     public ProductServices()
     {
-        _dbConText = new ShopDbContext();
+        this._dbConText = new ShopDbContext();
     }
 
     public bool CreateNewProducts(Product product)
     {
         try
         {
-            _dbConText.Products.Add(product);
-            _dbConText.SaveChanges();
+            this._dbConText.Products.Add(product);
+            this._dbConText.SaveChanges();
             return true;
         }
         catch (Exception)
@@ -30,32 +30,9 @@ public class ProductServices : IProductServices
     {
         try
         {
-            var _product = _dbConText.Products.Find(id);
-            _dbConText.Products.Remove(_product);
-            _dbConText.SaveChanges();
-            return true;
-        }
-        catch (Exception)
-        {
-            return false;
-        }
-    }
-
-    public bool UpdateProduct(Product product)
-    {
-        try
-        {
-            var _product = _dbConText.Products.Find(product.Id);
-            _product.Name = product.Name;
-            _product.Price = product.Price;
-            _product.Supplier = product.Supplier;
-            _product.Status = product.Status;
-            _product.AvailableQuantity = product.AvailableQuantity;
-            _product.Description = product.Description;
-            _product.Style = product.Style;
-            _product.Image = product.Image;
-            _dbConText.Products.Update(_product);
-            _dbConText.SaveChanges();
+            var _product = this._dbConText.Products.Find(id);
+            this._dbConText.Products.Remove(_product);
+            this._dbConText.SaveChanges();
             return true;
         }
         catch (Exception)
@@ -66,16 +43,39 @@ public class ProductServices : IProductServices
 
     public List<Product> GetAllProducts()
     {
-        return _dbConText.Products.ToList();
+        return this._dbConText.Products.ToList();
     }
 
     public Product GetProductById(Guid id)
     {
-        return _dbConText.Products.FirstOrDefault(p => p.Id == id); //
+        return this._dbConText.Products.FirstOrDefault(p=>p.Id ==id);
     }
 
     public List<Product> GetProductByName(string name)
     {
-        return _dbConText.Products.Where(p => p.Name.Contains(name)).ToList();
+        return this._dbConText.Products.Where(p => p.Name.Contains(name)).ToList();
+    }
+
+    public bool UpdateProduct(Product product)
+    {
+        try
+        {
+            var _product = this._dbConText.Products.Find(product.Id);
+            _product.Name = product.Name;
+            _product.Price = product.Price;
+            _product.Supplier = product.Supplier;
+            _product.Status = product.Status;
+            _product.AvailableQuantity = product.AvailableQuantity;
+            _product.Description = product.Description;
+            _product.Style = product.Style;
+            _product.Image = product.Image;
+            this._dbConText.Products.Update(_product);
+            this._dbConText.SaveChanges();
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 }

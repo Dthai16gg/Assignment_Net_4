@@ -1,8 +1,9 @@
-﻿using Colo_Shop.Models;
+﻿namespace Web_Application.Configurations;
+
+using Colo_Shop.Models;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Web_Application.Configurations;
 
 public class RoleConfiguration : IEntityTypeConfiguration<Role>
 {

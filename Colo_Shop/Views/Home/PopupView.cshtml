@@ -1,0 +1,49 @@
+﻿@using Colo_Shop.IServices
+@using Colo_Shop.Services
+@model Bill
+@{
+    ViewData["Title"] = "ShowList";
+    IProductServices _productServices = new ProductServices();
+    IBillServices _billServices = new BillServices();
+    IBillDetailsServices _billDetailsServices = new BillDetailsService();
+}
+<div class="modal-dialog" role="document">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="billDetailsModalLabel">Bill Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            @if (Model == null)
+            {
+                <p>LOZ, dume sai roi</p>
+            }
+            else
+            {
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in _billDetailsServices.GetAllBillDetails().Where(p=>p.IdSp == Model.Id))
+                    {
+                        <tr>
+                            <td>@_productServices.GetProductById(item.IdSp).Name</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.Price</td>
+                        </tr>
+                    }
+                    </tbody>
+
+                </table>
+            }
+        </div>
+    </div>
+</div>

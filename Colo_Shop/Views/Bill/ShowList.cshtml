@@ -1,0 +1,130 @@
+﻿@using Colo_Shop.IServices
+@using Colo_Shop.Services
+@model  Colo_Shop.Controllers.BillController.ViewModelBill   
+@{
+    ViewData["Title"] = "ShowList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+
+}
+@{
+    IProductServices _productServices = new ProductServices();
+    IUserServices _userServices = new UserServices();
+    IBillDetailsServices _billDetailsServices = new BillDetailsService();
+    IBillServices _billServices = new BillServices();
+
+
+}
+<h1>ShowList</h1>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            Create Date
+        </th>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Total
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Username
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+        var i = 1;
+
+    }
+    @foreach (var Item in Model.Bill)
+    {
+        <tr>
+            <td>
+                Bill - @i
+            </td>
+            <td>
+                @Item.CreateDate.ToString("F");
+            </td>
+            <td>
+                <table>
+                    @foreach (var billDetails in _billDetailsServices.GetAllBillDetails().Where(p => p.IdHD == Item.Id).ToList())
+                    {
+                        <tr>
+                            <td>@_productServices.GetProductById(billDetails.IdSp).Name</td>
+                        </tr>
+                    }
+                </table>
+            </td>
+            <td>
+                <table>
+                    @foreach (var billDetails in _billDetailsServices.GetAllBillDetails().Where(p => p.IdHD == Item.Id).ToList())
+                    {
+                        <tr>
+                            <td>$@billDetails.Price</td>
+                        </tr>
+                    }
+                </table>
+            </td>
+            <td>
+                <table>
+                    @foreach (var billDetails in _billDetailsServices.GetAllBillDetails().Where(p => p.IdHD == Item.Id).ToList())
+                    {
+                        <tr>
+                            <td>@billDetails.Quantity</td>
+                        </tr>
+                    }
+                </table>
+            </td>
+            <td>
+                @{
+                    decimal total = 0;
+
+                }
+                @foreach (var billDetails in _billDetailsServices.GetAllBillDetails().Where(p => p.IdHD == Item.Id).ToList())
+                {
+                    total = billDetails.Price * billDetails.Quantity;
+                }
+                $@total
+            </td>
+            <td>
+                @if (Item.Status == 1)
+                {
+                    <span class="text-success">Pay</span>
+                }
+                else
+                {
+                    <span class="text-danger">Wait</span>
+                }
+            </td>
+            <td>
+                @_userServices.GetUserById(Item.UserID).Username
+            </td>
+            <td>
+                <a class="btn btn-danger" href='@Url.Action("Delete", "Bill", new { id = Item.Id })'>
+                    <span>REMOVE</span>
+                </a>
+            </td>
+        </tr>
+        i++;
+    }
+    </tbody>
+</table>

@@ -1,7 +1,7 @@
+namespace Colo_Shop.Services;
+
 using Colo_Shop.IServices;
 using Colo_Shop.Models;
-
-namespace Colo_Shop.Services;
 
 public class CartDetailService : ICartDetailsServices
 {
@@ -9,15 +9,15 @@ public class CartDetailService : ICartDetailsServices
 
     public CartDetailService()
     {
-        _dbConText = new ShopDbContext();
+        this._dbConText = new ShopDbContext();
     }
 
     public bool CreateNewCartDetails(CartDetail CartDetail)
     {
         try
         {
-            _dbConText.CartDetails.Add(CartDetail);
-            _dbConText.SaveChanges();
+            this._dbConText.CartDetails.Add(CartDetail);
+            this._dbConText.SaveChanges();
             return true;
         }
         catch (Exception)
@@ -30,27 +30,9 @@ public class CartDetailService : ICartDetailsServices
     {
         try
         {
-            var _CartDetails = _dbConText.CartDetails.Find(id);
-            _dbConText.CartDetails.Remove(_CartDetails);
-            _dbConText.SaveChanges();
-            return true;
-        }
-        catch (Exception)
-        {
-            return false;
-        }
-    }
-
-    public bool UpdateCartDetail(CartDetail CartDetail)
-    {
-        try
-        {
-            var _CartDetails = _dbConText.CartDetails.Find(CartDetail.Id);
-            _CartDetails.IdSp = CartDetail.IdSp;
-            _CartDetails.CartId = CartDetail.CartId;
-            _CartDetails.Quantity = CartDetail.Quantity;
-            _dbConText.CartDetails.Update(_CartDetails);
-            _dbConText.SaveChanges();
+            var _CartDetails = this._dbConText.CartDetails.Find(id);
+            this._dbConText.CartDetails.Remove(_CartDetails);
+            this._dbConText.SaveChanges();
             return true;
         }
         catch (Exception)
@@ -61,11 +43,29 @@ public class CartDetailService : ICartDetailsServices
 
     public List<CartDetail> GetAllCartDetails()
     {
-        return _dbConText.CartDetails.ToList();
+        return this._dbConText.CartDetails.ToList();
     }
 
     public CartDetail GetCartDetailById(Guid id)
     {
-        return _dbConText.CartDetails.FirstOrDefault(p => p.Id == id);
+        return this._dbConText.CartDetails.FirstOrDefault(p => p.Id == id);
+    }
+
+    public bool UpdateCartDetail(CartDetail CartDetail)
+    {
+        try
+        {
+            var _CartDetails = this._dbConText.CartDetails.Find(CartDetail.Id);
+            _CartDetails.IdSp = CartDetail.IdSp;
+            _CartDetails.CartId = CartDetail.CartId;
+            _CartDetails.Quantity = CartDetail.Quantity;
+            this._dbConText.CartDetails.Update(_CartDetails);
+            this._dbConText.SaveChanges();
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 }

@@ -1,263 +1,232 @@
-﻿using System.Diagnostics;
-using System.Text.RegularExpressions;
-using Colo_Shop.IServices;
-using Colo_Shop.Models;
-using Colo_Shop.Services;
-using Microsoft.AspNetCore.Mvc;
-using static Colo_Shop.Controllers.UserController;
+﻿using static Colo_Shop.Controllers.UserController;
 
 namespace Colo_Shop.Controllers;
 
+using System.Diagnostics;
+using System.Text.RegularExpressions;
+
+using Colo_Shop.IServices;
+using Colo_Shop.Models;
+using Colo_Shop.Services;
+
+using Microsoft.AspNetCore.Mvc;
+
 public class HomeController : Controller
 {
-    private readonly IBillDetailsServices _billDetailsServices;
-    private readonly IBillServices _billServices;
+    private readonly IBillDetailsServices _billDetailsServices; // = new BillDetailsService();
+
+    private readonly IBillServices _billServices; // = new BillServices();
+
     private readonly ICartDetailsServices _cartDetailsServices;
+
     private readonly ICartServices _cartServices;
+
     private readonly ILogger<HomeController> _logger;
+
     private readonly IProductServices _productServices;
+
     private readonly IRoleServices _roleServices;
+
     private readonly IUserServices _userservices;
 
     public HomeController(ILogger<HomeController> logger)
     {
-        _logger = logger;
-        _productServices = new ProductServices();
-        _userservices = new UserServices();
-        _roleServices = new RoleServices();
-        _cartDetailsServices = new CartDetailService();
-        _cartServices = new CartServices();
-        _billDetailsServices = new BillDetailsService();
-        _billServices = new BillServices();
+        this._logger = logger;
+        this._productServices = new ProductServices();
+        this._userservices = new UserServices();
+        this._roleServices = new RoleServices();
+        this._cartDetailsServices = new CartDetailService();
+        this._cartServices = new CartServices();
+        this._billDetailsServices = new BillDetailsService();
+        this._billServices = new BillServices();
     }
 
-    public IActionResult Index()
+    public IActionResult About()
     {
-        var idUser = HttpContext.Session.GetString("idUser");
-        ViewData["idUser"] = idUser;
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        this.ViewData["idUser"] = idUser;
         if (!string.IsNullOrEmpty(idUser))
+            return this.View();
+        return this.RedirectToAction("LoginPage");
+    }
+
+    public IActionResult AddToBill()
+    {
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        if (string.IsNullOrEmpty(idUser)) return this.RedirectToAction("LoginPage");
+        var user = this._userservices.GetUserById(Guid.Parse(idUser));
+        var cart = this._cartServices.GetCartByUserId(user.Id);
+        if (cart == null) return this.View("Shop");
+        return this.View(cart);
+    }
+
+    // create action for add to bill with list id product and list quantity and status bill
+    [HttpPost]
+    public IActionResult AddToBill(List<Guid> productId, List<int> quantities, int Status)
+    {
+        if (productId.Count > 0 && quantities.Count > 0 && (Status == 1 || Status == 0))
         {
-            var listProduct = _productServices.GetAllProducts();
-            return View(listProduct.ToList());
+            // Kiểm tra xem người dùng đã đăng nhập chưa
+            var idUser = this.HttpContext.Session.GetString("idUser");
+            if (string.IsNullOrEmpty(idUser)) return this.RedirectToAction("LoginPage");
+
+            // Lấy thông tin người dùng
+            var user = this._userservices.GetUserById(Guid.Parse(idUser));
+
+            // Lấy thông tin giỏ hàng của người dùng
+            var cart = this._cartServices.GetCartByUserId(user.Id);
+
+            // Kiểm tra xem giỏ hàng có tồn tại hay không
+            if (cart == null)
+
+                // Nếu giỏ hàng không tồn tại thì trả về trang Shop
+                return this.View("Shop");
+
+            var bill = new Bill
+                           {
+                               Id = Guid.NewGuid(), // ID hóa đơn
+                               UserID = user.Id, // ID người dùng
+                               CreateDate = Convert.ToDateTime(DateTime.Now.ToString()), // Ngày tạo hóa đơn
+                               Status = Status, // Trạng thái hóa đơn//Khởi tạo danh sách chi tiết hóa đơn,
+                               Details = new List<BillDetails>()
+                           };
+            for (var i = 0; i < productId.Count; i++)
+            {
+                // Lấy thông tin sản phẩm
+                var product = this._productServices.GetProductById(productId[i]);
+
+                // Tạo một đối tượng BillDetails
+                var detail = new BillDetails
+                                 {
+                                     Id = Guid.NewGuid(), // ID chi tiết hóa đơn
+                                     Quantity = quantities[i], // Số lượng sản phẩm
+                                     Price = product.Price, // Giá sản phẩm
+                                     IdHD = bill.Id, // ID hóa đơn
+                                     IdSp = product.Id // ID sản phẩm
+                                 };
+                if (Status == 1 && product.AvailableQuantity > quantities[i])
+                {
+                    product.AvailableQuantity = product.AvailableQuantity - quantities[i];
+                    this._productServices.UpdateProduct(product);
+                    bill.Details.Add(detail);
+                }
+                else
+                {
+                    return this.Content("Hết hàng rồi");
+                }
+            }
+
+            // Lưu hóa đơn và chi tiết hóa đơn vào cơ sở dữ liệu
+            if (this._billServices.CreateNewBills(bill))
+            {
+                this._cartServices.DeleteCart(cart.Id);
+                return this.RedirectToAction("Shop");
+            }
+
+            // Trở về giỏ hàng
+        }
+        else
+        {
+            return this.Content("fake");
         }
 
-        return RedirectToAction("LoginPage");
+        return this.Content("Sai roi");
+    }
+
+    [HttpPost]
+    public IActionResult AddToCart(Guid productId, int Quantity)
+    {
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        if (!string.IsNullOrEmpty(idUser))
+        {
+            var user = this._userservices.GetUserById(Guid.Parse(idUser));
+            var cart = this._cartServices.GetCartByUserId(user.Id);
+            if (cart == null)
+            {
+                cart = new Cart { UserId = user.Id, Details = new List<CartDetail>() };
+                this._cartServices.CreateNewCarts(cart);
+            }
+
+            var product = this._productServices.GetProductById(productId);
+            if (product == null) return this.NotFound();
+            var cartDetail = cart.Details.FirstOrDefault(d => d.Product.Id == productId);
+
+            if (cartDetail == null)
+            {
+                // Add a new cart detail if the product is not in the cart
+                cartDetail = new CartDetail { IdSp = product.Id, CartId = cart.Id, Quantity = Quantity };
+                cart.Details.Add(cartDetail);
+            }
+            else
+            {
+                cartDetail.Quantity = cartDetail.Quantity + Quantity;
+            }
+
+            this._cartServices.UpdateCart(cart);
+            return this.RedirectToAction("ShowCart");
+        }
+
+        return this.RedirectToAction("LoginPage");
+    }
+
+    public IActionResult Blog()
+    {
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        this.ViewData["idUser"] = idUser;
+        if (!string.IsNullOrEmpty(idUser))
+            return this.View();
+        return this.RedirectToAction("LoginPage");
     }
 
     public bool CheckLogin(string username, string password)
     {
-        var user = _userservices.GetUserByUserName(username).FirstOrDefault();
+        var user = this._userservices.GetUserByUserName(username.Trim()).FirstOrDefault();
         if (user != null && user.Password == password && user.Status == 1)
         {
-            var role = _roleServices.GetRoleById(user.RoleId);
+            var role = this._roleServices.GetRoleById(user.RoleId);
             if (role.RoleName != "Admin") return true;
         }
 
         return false;
     }
 
-    public IActionResult Shop()
+    public IActionResult Contact()
     {
-        var idUser = HttpContext.Session.GetString("idUser");
-        ViewData["idUser"] = idUser;
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        this.ViewData["idUser"] = idUser;
         if (!string.IsNullOrEmpty(idUser))
-        {
-            var listProduct = _productServices.GetAllProducts();
-            ViewData["urlShop"] = "All";
-            return View(listProduct.ToList());
-        }
-
-        return RedirectToAction("LoginPage");
-    }
-
-    public IActionResult Search(string name)
-    {
-        var listProduct = _productServices.GetProductByName(name);
-        if (listProduct.Count == 0)
-        {
-            var list = _productServices.GetAllProducts();
-            return View("Shop", list.ToList());
-        }
-
-        ViewData["urlShop"] = $"Search Name : {name}";
-        return View("Shop", listProduct.ToList());
+            return this.View();
+        return this.RedirectToAction("LoginPage");
     }
 
     public IActionResult Delete(Guid id)
     {
-        _userservices.DeleteUser(id);
-        return RedirectToAction("LoginPage");
+        this._userservices.DeleteUser(id);
+        return this.RedirectToAction("LoginPage");
     }
 
-    public IActionResult Contact()
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
     {
-        var idUser = HttpContext.Session.GetString("idUser");
-        ViewData["idUser"] = idUser;
-        if (!string.IsNullOrEmpty(idUser))
-            return View();
-        return RedirectToAction("LoginPage");
+        return this.View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
     }
 
-    public IActionResult Blog()
+    public IActionResult ForgotPassword()
     {
-        var idUser = HttpContext.Session.GetString("idUser");
-        ViewData["idUser"] = idUser;
-        if (!string.IsNullOrEmpty(idUser))
-            return View();
-        return RedirectToAction("LoginPage");
+        return this.View();
     }
 
-    public IActionResult About()
+    public IActionResult Index()
     {
-        var idUser = HttpContext.Session.GetString("idUser");
-        ViewData["idUser"] = idUser;
-        if (!string.IsNullOrEmpty(idUser))
-            return View();
-        return RedirectToAction("LoginPage");
-    }
-
-    public IActionResult MyAccount()
-    {
-        var idUser = HttpContext.Session.GetString("idUser");
-        ViewData["idUser"] = idUser;
-        if (!string.IsNullOrEmpty(idUser))
-            return View();
-        return RedirectToAction("LoginPage");
-    }
-
-    public IActionResult ProductDetails(Guid id)
-    {
-        var product = _productServices.GetProductById(id);
-        return View(product);
-    }
-
-    public IActionResult ShowCart()
-    {
-        var idUser = HttpContext.Session.GetString("idUser");
-        if (string.IsNullOrEmpty(idUser)) return RedirectToAction("LoginPage");
-        ViewData["idUser"] = idUser;
-        var user = _userservices.GetUserById(Guid.Parse(idUser));
-        var cart = _cartServices.GetCartByUserId(user.Id);
-        if (cart == null)
-        {
-            // Create a new cart if one doesn't exist
-            cart = new Cart
-            {
-                Description = "1",
-                UserId = user.Id
-            };
-            _cartServices.CreateNewCarts(cart);
-        }
-        return View(cart);
-    }
-
-    [HttpPost]
-    public IActionResult AddToCart(Guid productId)
-    {
-        var idUser = HttpContext.Session.GetString("idUser");
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        this.ViewData["idUser"] = idUser;
         if (!string.IsNullOrEmpty(idUser))
         {
-            var user = _userservices.GetUserById(Guid.Parse(idUser));
-            var cart = _cartServices.GetCartByUserId(user.Id);
-            if (cart == null)
-            {
-                cart = new Cart
-                {
-                    UserId = user.Id
-                };
-                _cartServices.CreateNewCarts(cart);
-            }
-
-            var product = _productServices.GetProductById(productId);
-            if (product == null) return NotFound();
-            var cartDetail = cart.Details.FirstOrDefault(d => d.Product.Id == productId);
-
-            if (cartDetail == null)
-            {
-                // Add a new cart detail if the product is not in the cart
-                cartDetail = new CartDetail
-                {
-                    IdSp = product.Id,
-                    CartId = cart.Id,
-                    Quantity = 1
-                };
-                cart.Details.Add(cartDetail);
-            }
-            else
-            {
-                cartDetail.Quantity++;
-            }
-
-            _cartServices.UpdateCart(cart);
-            return RedirectToAction("ShowCart");
+            var listProduct = this._productServices.GetAllProducts();
+            return this.View(listProduct.ToList());
         }
 
-        return RedirectToAction("LoginPage");
-    }
-    public IActionResult AddToBill()
-    {
-        var idUser = HttpContext.Session.GetString("idUser");
-        if (string.IsNullOrEmpty(idUser)) return RedirectToAction("LoginPage");
-        var user = _userservices.GetUserById(Guid.Parse(idUser));
-        var cart = _cartServices.GetCartByUserId(user.Id);
-        if (cart == null)
-        {
-            return View("Shop");
-        }
-        return View(cart);
-    }
-    public IActionResult RemoveFromCart(Guid id)
-    {
-        _cartDetailsServices.DeleteCartDetail(id);
-        return RedirectToAction("ShowCart");
-    }
-
-    public IActionResult LoginPage()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    public IActionResult LoginPage(string Username, string Password)
-    {
-        var isValid = CheckLogin(Username, Password);
-        if (isValid)
-        {
-            var user = _userservices.GetUserByUserName(Username).FirstOrDefault();
-            var idUser = user.Id.ToString();
-            HttpContext.Session.SetString("idUser", idUser);
-            if (user != null)
-                return RedirectToAction("Index");
-            ViewData["ErrorMessage"] = "User not found";
-        }
-        else
-        {
-            ViewBag.ErrorMessage = "The user name or password provided is incorrect.";
-        }
-
-        return View("LoginPage");
-    }
-
-    public IActionResult SingOut()
-    {
-        HttpContext.Session.Remove("idUser");
-        return RedirectToAction("LoginPage");
-    }
-
-    public IActionResult Register()
-    {
-        var viewModel = new CreateViewModel
-        {
-            Roles = _roleServices.GetAllRoles().ToList(),
-            User = new User()
-        };
-        return View(viewModel);
-    }
-
-    public bool IsValidPhoneNumber(string phoneNumber)
-    {
-        var regex = new Regex(@"^(03|05|07|08|09)[0-9]{8}$");
-        return regex.IsMatch(phoneNumber);
+        return this.RedirectToAction("LoginPage");
     }
 
     public bool IsValidEmail(string email)
@@ -272,64 +241,166 @@ public class HomeController : Controller
         return regex.IsMatch(name);
     }
 
+    public bool IsValidPhoneNumber(string phoneNumber)
+    {
+        var regex = new Regex(@"^(03|05|07|08|09)[0-9]{8}$");
+        return regex.IsMatch(phoneNumber);
+    }
+
+    public IActionResult LoginPage()
+    {
+        return this.View();
+    }
+
+    [HttpPost]
+    public IActionResult LoginPage(string Username, string Password)
+    {
+        var isValid = this.CheckLogin(Username, Password);
+        if (isValid)
+        {
+            var user = this._userservices.GetUserByUserName(Username).FirstOrDefault();
+            var idUser = user.Id.ToString();
+            this.HttpContext.Session.SetString("idUser", idUser);
+            if (user != null)
+                return this.RedirectToAction("Index");
+            this.ViewData["ErrorMessage"] = "User not found";
+        }
+        else
+        {
+            this.ViewBag.ErrorMessage = "The user name or password provided is incorrect.";
+        }
+
+        return this.View("LoginPage");
+    }
+
+    public IActionResult MyAccount()
+    {
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        this.ViewData["idUser"] = idUser;
+        if (!string.IsNullOrEmpty(idUser))
+            return this.View();
+        return this.RedirectToAction("LoginPage");
+    }
+
+    public IActionResult PopupView(Guid id)
+    {
+        var bill = this._billServices.GetBillById(id);
+        return this.View(bill);
+    }
+
+    public IActionResult ProductDetails(Guid id)
+    {
+        var product = this._productServices.GetProductById(id);
+        return this.View(product);
+    }
+
+    public IActionResult Register()
+    {
+        var viewModel = new CreateViewModel { Roles = this._roleServices.GetAllRoles().ToList(), User = new User() };
+        return this.View(viewModel);
+    }
+
     [HttpPost]
     public IActionResult Register(User user)
     {
-        var viewModel = new CreateViewModel
-        {
-            Roles = _roleServices.GetAllRoles().ToList(),
-            User = new User()
-        };
+        var viewModel = new CreateViewModel { Roles = this._roleServices.GetAllRoles().ToList(), User = new User() };
         try
         {
             if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
             {
-                ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
-                return View(viewModel);
+                this.ViewBag.AlertMessage =
+                    "Password must be at least 8 characters long and contain at least one letter.";
+                return this.View(viewModel);
             }
 
-            if (!IsValidPhoneNumber(user.NumberPhone))
+            if (!this.IsValidPhoneNumber(user.NumberPhone))
             {
-                ViewBag.AlertMessage = "Please enter a valid phone number.";
-                return View(viewModel);
+                this.ViewBag.AlertMessage = "Please enter a valid phone number.";
+                return this.View(viewModel);
             }
 
-            if (!IsValidEmail(user.Email))
+            if (!this.IsValidEmail(user.Email))
             {
-                ViewBag.AlertMessage = "Please enter a valid email.";
-                return View(viewModel);
+                this.ViewBag.AlertMessage = "Please enter a valid email.";
+                return this.View(viewModel);
             }
 
-            if (IsValidName(user.Name))
+            if (this.IsValidName(user.Name))
             {
-                ViewBag.AlertMessage = "Please enter a valid name.";
-                return View(viewModel);
+                this.ViewBag.AlertMessage = "Please enter a valid name.";
+                return this.View(viewModel);
             }
 
-            if (_userservices.GetAllUsers().Any(u => u.Username == user.Username.Trim()))
+            if (this._userservices.GetAllUsers().Any(u => u.Username == user.Username.Trim()))
             {
-                ViewBag.AlertMessage = "Username already exists.";
-                return View(viewModel);
+                this.ViewBag.AlertMessage = "Username already exists.";
+                return this.View(viewModel);
             }
 
-            if (_userservices.CreateNewUsers(user)) ;
+            if (this._userservices.CreateNewUsers(user)) ;
 
-            return RedirectToAction("LoginPage");
+            return this.RedirectToAction("LoginPage");
         }
         catch (Exception e)
         {
-            return Content(e.Message);
+            return this.Content(e.Message);
         }
     }
 
-    public IActionResult ForgotPassword()
+    // Xóa sản phẩm khỏi giỏ hàng
+    public IActionResult RemoveFromCart(Guid id)
     {
-        return View();
+        this._cartDetailsServices.DeleteCartDetail(id);
+        return this.RedirectToAction("ShowCart");
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    public IActionResult Search(string name)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        var listProduct = this._productServices.GetProductByName(name);
+        if (listProduct.Count == 0)
+        {
+            var list = this._productServices.GetAllProducts();
+            return this.View("Shop", list.ToList());
+        }
+
+        this.ViewData["urlShop"] = $"Search Name : {name}";
+        return this.View("Shop", listProduct.ToList());
+    }
+
+    public IActionResult Shop()
+    {
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        this.ViewData["idUser"] = idUser;
+        if (!string.IsNullOrEmpty(idUser))
+        {
+            var listProduct = this._productServices.GetAllProducts();
+            this.ViewData["urlShop"] = "All";
+            return this.View(listProduct.ToList());
+        }
+
+        return this.RedirectToAction("LoginPage");
+    }
+
+    public IActionResult ShowCart()
+    {
+        var idUser = this.HttpContext.Session.GetString("idUser");
+        if (string.IsNullOrEmpty(idUser)) return this.RedirectToAction("LoginPage");
+        this.ViewData["idUser"] = idUser;
+        var user = this._userservices.GetUserById(Guid.Parse(idUser));
+        var cart = this._cartServices.GetCartByUserId(user.Id);
+        if (cart == null)
+        {
+            // Create a new cart if one doesn't exist
+            cart = new Cart { Description = "1", UserId = user.Id };
+            this._cartServices.CreateNewCarts(cart);
+        }
+
+        return this.View(cart);
+    }
+
+    public IActionResult SingOut()
+    {
+        this.HttpContext.Session.Remove("idUser");
+        return this.RedirectToAction("LoginPage");
     }
 }

@@ -1,46 +1,138 @@
-﻿using System.Text.RegularExpressions;
+﻿namespace Colo_Shop.Controllers;
+
+using System.Text.RegularExpressions;
+
 using Colo_Shop.IServices;
 using Colo_Shop.Models;
 using Colo_Shop.Services;
-using Microsoft.AspNetCore.Mvc;
 
-namespace Colo_Shop.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 public class UserController : Controller
 {
     private readonly IRoleServices _roleServices;
+
     private readonly IUserServices _userServices;
 
     public UserController()
     {
-        _userServices = new UserServices();
-        _roleServices = new RoleServices();
-    }
-
-    public IActionResult ShowList()
-    {
-        var ShowModel = new ShowModel
-        {
-            Roles = _roleServices.GetAllRoles().ToList(),
-            User = _userServices.GetAllUsers().ToList()
-        };
-        return View(ShowModel);
+        this._userServices = new UserServices();
+        this._roleServices = new RoleServices();
     }
 
     public IActionResult Create()
     {
-        var viewModel = new CreateViewModel
-        {
-            Roles = _roleServices.GetAllRoles().ToList(),
-            User = new User()
-        };
-        return View(viewModel);
+        var viewModel = new CreateViewModel { Roles = this._roleServices.GetAllRoles().ToList(), User = new User() };
+        return this.View(viewModel);
     }
 
-    public bool IsValidPhoneNumber(string phoneNumber)
+    [HttpPost]
+    public IActionResult Create(User user)
     {
-        var regex = new Regex(@"^(03|05|07|08|09)[0-9]{8}$");
-        return regex.IsMatch(phoneNumber);
+        var viewModel = new CreateViewModel { Roles = this._roleServices.GetAllRoles().ToList(), User = new User() };
+        try
+        {
+            if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
+            {
+                this.ViewBag.AlertMessage =
+                    "Password must be at least 8 characters long and contain at least one letter.";
+                return this.View(viewModel);
+            }
+
+            if (!this.IsValidPhoneNumber(user.NumberPhone))
+            {
+                this.ViewBag.AlertMessage = "Please enter a valid phone number.";
+                return this.View(viewModel);
+            }
+
+            if (!this.IsValidEmail(user.Email))
+            {
+                this.ViewBag.AlertMessage = "Please enter a valid email.";
+                return this.View(viewModel);
+            }
+
+            if (this.IsValidName(user.Name))
+            {
+                this.ViewBag.AlertMessage = "Please enter a valid name.";
+                return this.View(viewModel);
+            }
+
+            if (this._userServices.GetAllUsers().Any(u => u.Username == user.Username.Trim()))
+            {
+                this.ViewBag.AlertMessage = "Username already exists.";
+                return this.View(viewModel);
+            }
+
+            if (this._userServices.CreateNewUsers(user)) ;
+
+            return this.RedirectToAction("ShowList");
+        }
+        catch (Exception e)
+        {
+            return this.Content(e.Message);
+        }
+
+        return this.Content("Not User");
+    }
+
+    public IActionResult Delete(Guid id)
+    {
+        this._userServices.DeleteUser(id);
+        return this.RedirectToAction("ShowList");
+    }
+
+    public IActionResult Details(Guid id)
+    {
+        var p = this._userServices.GetUserById(id);
+        return this.View(p);
+    }
+
+    [HttpGet]
+    public IActionResult Edit(Guid id)
+    {
+        // var viewModel = new CreateViewModel
+        // {
+        // Roles = _roleServices.GetAllRoles().ToList(),
+        // User = _userServices.GetUserById(id)
+        // };
+        return this.View(this._userServices.GetUserById(id));
+    }
+
+    public IActionResult Edit(User user)
+    {
+        if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
+        {
+            this.ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
+            return this.View();
+        }
+
+        if (!this.IsValidPhoneNumber(user.NumberPhone))
+        {
+            this.ViewBag.AlertMessage = "Please enter a valid phone number.";
+            return this.View();
+        }
+
+        if (!this.IsValidEmail(user.Email))
+        {
+            this.ViewBag.AlertMessage = "Please enter a valid email.";
+            return this.View();
+        }
+
+        if (this.IsValidName(user.Name))
+        {
+            this.ViewBag.AlertMessage = "Please enter a valid name.";
+            return this.View();
+        }
+
+        var existingUsers = this._userServices.GetAllUsers(user.Id);
+        if (existingUsers.Any(u => u.Username == user.Username.Trim()))
+        {
+            this.ViewBag.AlertMessage = "Username already exists.";
+            return this.View();
+        }
+
+        if (this._userServices.UpdateUser(user)) return this.RedirectToAction("ShowList");
+        return this.BadRequest();
     }
 
     public bool IsValidEmail(string email)
@@ -55,128 +147,33 @@ public class UserController : Controller
         return regex.IsMatch(name);
     }
 
-    [HttpPost]
-    public IActionResult Create(User user)
+    public bool IsValidPhoneNumber(string phoneNumber)
     {
-        var viewModel = new CreateViewModel
-        {
-            Roles = _roleServices.GetAllRoles().ToList(),
-            User = new User()
-        };
-        try
-        {
-            if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
-            {
-                ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
-                return View(viewModel);
-            }
-
-            if (!IsValidPhoneNumber(user.NumberPhone))
-            {
-                ViewBag.AlertMessage = "Please enter a valid phone number.";
-                return View(viewModel);
-            }
-
-            if (!IsValidEmail(user.Email))
-            {
-                ViewBag.AlertMessage = "Please enter a valid email.";
-                return View(viewModel);
-            }
-
-            if (IsValidName(user.Name))
-            {
-                ViewBag.AlertMessage = "Please enter a valid name.";
-                return View(viewModel);
-            }
-
-            if (_userServices.GetAllUsers().Any(u => u.Username == user.Username.Trim()))
-            {
-                ViewBag.AlertMessage = "Username already exists.";
-                return View(viewModel);
-            }
-
-            if (_userServices.CreateNewUsers(user)) ;
-
-            return RedirectToAction("ShowList");
-        }
-        catch (Exception e)
-        {
-            return Content(e.Message);
-        }
-
-        return Content("Not User");
+        var regex = new Regex(@"^(03|05|07|08|09)[0-9]{8}$");
+        return regex.IsMatch(phoneNumber);
     }
 
-    [HttpGet]
-    public IActionResult Edit(Guid id)
+    public IActionResult ShowList()
     {
-        //var viewModel = new CreateViewModel
-        //{
-        //    Roles = _roleServices.GetAllRoles().ToList(),
-        //    User = _userServices.GetUserById(id)
-        //};
-        return View(_userServices.GetUserById(id));
-    }
-
-    public IActionResult Edit(User user)
-    {
-        if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
-        {
-            ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
-            return View();
-        }
-
-        if (!IsValidPhoneNumber(user.NumberPhone))
-        {
-            ViewBag.AlertMessage = "Please enter a valid phone number.";
-            return View();
-        }
-
-        if (!IsValidEmail(user.Email))
-        {
-            ViewBag.AlertMessage = "Please enter a valid email.";
-            return View();
-        }
-
-        if (IsValidName(user.Name))
-        {
-            ViewBag.AlertMessage = "Please enter a valid name.";
-            return View();
-        }
-
-        var existingUsers = _userServices.GetAllUsers(user.Id);
-        if (existingUsers.Any(u => u.Username == user.Username.Trim()))
-        {
-            ViewBag.AlertMessage = "Username already exists.";
-            return View();
-        }
-
-        if (_userServices.UpdateUser(user)) return RedirectToAction("ShowList");
-        return BadRequest();
-    }
-
-
-    public IActionResult Delete(Guid id)
-    {
-        _userServices.DeleteUser(id);
-        return RedirectToAction("ShowList");
-    }
-
-    public IActionResult Details(Guid id)
-    {
-        var p = _userServices.GetUserById(id);
-        return View(p);
+        var ShowModel = new ShowModel
+                            {
+                                Roles = this._roleServices.GetAllRoles().ToList(),
+                                User = this._userServices.GetAllUsers().ToList()
+                            };
+        return this.View(ShowModel);
     }
 
     public class CreateViewModel
     {
         public List<Role> Roles { get; set; }
+
         public User User { get; set; }
     }
 
     public class ShowModel
     {
         public List<Role> Roles { get; set; }
+
         public List<User> User { get; set; }
     }
 }

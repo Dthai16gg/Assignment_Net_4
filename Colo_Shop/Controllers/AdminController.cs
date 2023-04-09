@@ -1,97 +1,51 @@
-﻿using System.Text.RegularExpressions;
+﻿using static Colo_Shop.Controllers.UserController;
+
+namespace Colo_Shop.Controllers;
+
+using System.Text.RegularExpressions;
+
 using Colo_Shop.IServices;
 using Colo_Shop.Models;
 using Colo_Shop.Services;
-using Microsoft.AspNetCore.Mvc;
-using static Colo_Shop.Controllers.UserController;
 
-namespace Colo_Shop.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 public class AdminController : Controller
 {
     private readonly IRoleServices _roleServices;
+
     private readonly IUserServices _services;
 
     public AdminController()
     {
-        _services = new UserServices();
-        _roleServices = new RoleServices();
-    }
-
-    public IActionResult Index()
-    {
-        return RedirectToAction("Login");
-    }
-
-    public IActionResult SingOut()
-    {
-        HttpContext.Session.Remove("idUsers");
-        return RedirectToAction("Login");
-    }
-
-    public IActionResult HomePage()
-    {
-        var idUsers = HttpContext.Session.GetString("idUsers");
-        ViewData["idUsers"] = idUsers;
-        if (!string.IsNullOrEmpty(idUsers))
-            return View();
-        return RedirectToAction("Login");
+        this._services = new UserServices();
+        this._roleServices = new RoleServices();
     }
 
     public bool CheckLogin(string username, string password)
     {
-        var user = _services.GetUserByUserName(username).FirstOrDefault();
+        var user = this._services.GetUserByUserName(username).FirstOrDefault();
         if (user != null && user.Password == password && user.Status == 1)
         {
-            var role = _roleServices.GetRoleById(user.RoleId);
+            var role = this._roleServices.GetRoleById(user.RoleId);
             if (role.RoleName == "Admin") return true;
         }
 
         return false;
     }
 
-    public IActionResult Login()
+    public IActionResult HomePage()
     {
-        return View();
+        var idUsers = this.HttpContext.Session.GetString("idUsers");
+        this.ViewData["idUsers"] = idUsers;
+        if (!string.IsNullOrEmpty(idUsers))
+            return this.View();
+        return this.RedirectToAction("Login");
     }
 
-    [HttpPost]
-    public IActionResult Login(string Username, string Password)
+    public IActionResult Index()
     {
-        var isValid = CheckLogin(Username, Password);
-        if (isValid)
-        {
-            var user = _services.GetUserByUserName(Username).FirstOrDefault();
-            var idUsers = user.Id.ToString();
-            HttpContext.Session.SetString("idUsers", idUsers);
-            if (user != null)
-                return RedirectToAction("HomePage");
-            // handle the case where the user is not found
-            // e.g. display an error message or redirect to a login page
-            ViewData["ErrorMessage"] = "User not found";
-        }
-        else
-        {
-            ViewBag.ErrorMessage = "The user name or password provided is incorrect.";
-        }
-
-        return View("Login");
-    }
-
-    public IActionResult Register()
-    {
-        var viewModel = new CreateViewModel
-        {
-            Roles = _roleServices.GetAllRoles().ToList(),
-            User = new User()
-        };
-        return View(viewModel);
-    }
-
-    public bool IsValidPhoneNumber(string phoneNumber)
-    {
-        var regex = new Regex(@"^(03|05|07|08|09)[0-9]{8}$");
-        return regex.IsMatch(phoneNumber);
+        return this.RedirectToAction("Login");
     }
 
     public bool IsValidEmail(string email)
@@ -106,65 +60,48 @@ public class AdminController : Controller
         return regex.IsMatch(name);
     }
 
-    [HttpPost]
-    public IActionResult Register(User user)
+    public bool IsValidPhoneNumber(string phoneNumber)
     {
-        var viewModel = new CreateViewModel
+        var regex = new Regex(@"^(03|05|07|08|09)[0-9]{8}$");
+        return regex.IsMatch(phoneNumber);
+    }
+
+    public IActionResult Login()
+    {
+        return this.View();
+    }
+
+    [HttpPost]
+    public IActionResult Login(string Username, string Password)
+    {
+        var isValid = this.CheckLogin(Username, Password);
+        if (isValid)
         {
-            Roles = _roleServices.GetAllRoles().ToList(),
-            User = new User()
-        };
-        try
-        {
-            if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
-            {
-                ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
-                return View(viewModel);
-            }
+            var user = this._services.GetUserByUserName(Username).FirstOrDefault();
+            var idUsers = user.Id.ToString();
+            this.HttpContext.Session.SetString("idUsers", idUsers);
+            if (user != null)
+                return this.RedirectToAction("HomePage");
 
-            if (!IsValidPhoneNumber(user.NumberPhone))
-            {
-                ViewBag.AlertMessage = "Please enter a valid phone number.";
-                return View(viewModel);
-            }
-
-            if (!IsValidEmail(user.Email))
-            {
-                ViewBag.AlertMessage = "Please enter a valid email.";
-                return View(viewModel);
-            }
-
-            if (IsValidName(user.Name))
-            {
-                ViewBag.AlertMessage = "Please enter a valid name.";
-                return View(viewModel);
-            }
-
-            if (_services.GetAllUsers().Any(u => u.Username == user.Username.Trim()))
-            {
-                ViewBag.AlertMessage = "Username already exists.";
-                return View(viewModel);
-            }
-
-            if (_services.CreateNewUsers(user)) ;
-
-            return RedirectToAction("Login");
+            // handle the case where the user is not found
+            // e.g. display an error message or redirect to a login page
+            this.ViewData["ErrorMessage"] = "User not found";
         }
-        catch (Exception e)
+        else
         {
-            return Content(e.Message);
+            this.ViewBag.ErrorMessage = "The user name or password provided is incorrect.";
         }
 
-        return Content("Not User");
+        return this.View("Login");
     }
 
     public IActionResult MyAccount()
     {
-        var idUsers = HttpContext.Session.GetString("idUsers");
-        ViewData["idUsers"] = idUsers;
+        var idUsers = this.HttpContext.Session.GetString("idUsers");
+        this.ViewData["idUsers"] = idUsers;
         if (!string.IsNullOrEmpty(idUsers))
-            return View();
-        return RedirectToAction("Login");
+            return this.View();
+        return this.RedirectToAction("Login");
     }
 
     [HttpPost]
@@ -172,36 +109,97 @@ public class AdminController : Controller
     {
         if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
         {
-            ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
-            return View();
+            this.ViewBag.AlertMessage = "Password must be at least 8 characters long and contain at least one letter.";
+            return this.View();
         }
 
-        if (!IsValidPhoneNumber(user.NumberPhone))
+        if (!this.IsValidPhoneNumber(user.NumberPhone))
         {
-            ViewBag.AlertMessage = "Please enter a valid phone number.";
-            return View();
+            this.ViewBag.AlertMessage = "Please enter a valid phone number.";
+            return this.View();
         }
 
-        if (!IsValidEmail(user.Email))
+        if (!this.IsValidEmail(user.Email))
         {
-            ViewBag.AlertMessage = "Please enter a valid email.";
-            return View();
+            this.ViewBag.AlertMessage = "Please enter a valid email.";
+            return this.View();
         }
 
-        if (IsValidName(user.Name))
+        if (this.IsValidName(user.Name))
         {
-            ViewBag.AlertMessage = "Please enter a valid name.";
-            return View();
+            this.ViewBag.AlertMessage = "Please enter a valid name.";
+            return this.View();
         }
 
-        var existingUsers = _services.GetAllUsers(user.Id);
+        var existingUsers = this._services.GetAllUsers(user.Id);
         if (existingUsers.Any(u => u.Username == user.Username.Trim()))
         {
-            ViewBag.AlertMessage = "Username already exists.";
-            return View();
+            this.ViewBag.AlertMessage = "Username already exists.";
+            return this.View();
         }
 
-        if (_services.UpdateUser(user)) return RedirectToAction("HomePage");
-        return BadRequest();
+        if (this._services.UpdateUser(user)) return this.RedirectToAction("HomePage");
+        return this.BadRequest();
+    }
+
+    public IActionResult Register()
+    {
+        var viewModel = new CreateViewModel { Roles = this._roleServices.GetAllRoles().ToList(), User = new User() };
+        return this.View(viewModel);
+    }
+
+    [HttpPost]
+    public IActionResult Register(User user)
+    {
+        var viewModel = new CreateViewModel { Roles = this._roleServices.GetAllRoles().ToList(), User = new User() };
+        try
+        {
+            if (user.Password.Length < 8 || !user.Password.Any(char.IsLetter) || user.Password == null)
+            {
+                this.ViewBag.AlertMessage =
+                    "Password must be at least 8 characters long and contain at least one letter.";
+                return this.View(viewModel);
+            }
+
+            if (!this.IsValidPhoneNumber(user.NumberPhone))
+            {
+                this.ViewBag.AlertMessage = "Please enter a valid phone number.";
+                return this.View(viewModel);
+            }
+
+            if (!this.IsValidEmail(user.Email))
+            {
+                this.ViewBag.AlertMessage = "Please enter a valid email.";
+                return this.View(viewModel);
+            }
+
+            if (this.IsValidName(user.Name))
+            {
+                this.ViewBag.AlertMessage = "Please enter a valid name.";
+                return this.View(viewModel);
+            }
+
+            if (this._services.GetAllUsers().Any(u => u.Username == user.Username.Trim()))
+            {
+                this.ViewBag.AlertMessage = "Username already exists.";
+                return this.View(viewModel);
+            }
+
+            if (this._services.CreateNewUsers(user)) ;
+
+            return this.RedirectToAction("Login");
+        }
+        catch (Exception e)
+        {
+            return this.Content(e.Message);
+        }
+
+        return this.Content("Not User");
+    }
+
+    public IActionResult SingOut()
+    {
+        this.HttpContext.Session.Remove("idUsers");
+        return this.RedirectToAction("Login");
     }
 }

@@ -1,10 +1,13 @@
 ﻿<link rel="stylesheet" type="text/css" href="~/ViewForUser/styles/categories_styles.css">
 <link rel="stylesheet" type="text/css" href="~/ViewForUser/styles/categories_responsive.css">
+@using Colo_Shop
+@using Colo_Shop.Models
 @model List<Product> 
 @{
     ViewBag.Title = "Shop";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var urlShop = ViewData["urlShop"] as string ?? "All";
+
 }
 
 <div class="super_container">
@@ -163,6 +166,7 @@
                                                 </div>
                                                 <div class="red_button add_to_cart_button">
                                                     <form method="post" asp-action="AddToCart" asp-controller="Home">
+                                                        <input type="hidden" name="Quantity" value="1" name="Quantity"/>
                                                         <input type="hidden" name="productId" value="@p.Id"/>
                                                         <button type="submit" class="text-uppercase btn btn-danger">add to cart</button>
                                                     </form>

@@ -2,10 +2,15 @@
 
 public class CartDetail
 {
-    public Guid Id { get; set; }
-    public Guid CartId { get; set; }
-    public Guid IdSp { get; set; }
-    public int Quantity { get; set; }
-    public virtual Product Product { get; set; }
     public virtual Cart Cart { get; set; }
+
+    public Guid CartId { get; set; }
+
+    public Guid Id { get; set; }
+
+    public Guid IdSp { get; set; }
+
+    public virtual Product Product { get; set; }
+
+    public int Quantity { get; set; }
 }

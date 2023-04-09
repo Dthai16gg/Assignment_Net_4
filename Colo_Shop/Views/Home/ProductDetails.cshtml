@@ -4,6 +4,7 @@
 @{
     IProductServices _productServices = new ProductServices();
     var listProduct = _productServices.GetAllProducts();
+
 }
 <link rel="stylesheet" type="text/css" href="~/ViewForUser/styles/single_styles.css">
 <link rel="stylesheet" type="text/css" href="~/ViewForUser/styles/single_responsive.css">
@@ -96,27 +97,16 @@
                         <li style="background: #60b3f3"></li>
                     </ul>
                 </div>
-                <div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
-                    <span>Quantity:</span>
-                    <div class="quantity_selector">
-                        <span class="minus">
-                            <i class="fa fa-minus" aria-hidden="true"></i>
-                        </span>
-                        <span id="quantity_value">1</span>
-                        <span class="plus">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <div class="product_favorite d-flex flex-column align-items-center justify-content-center"></div>
-                </div>
-                <form method="post" asp-action="AddToCart" asp-controller="Home">
-                    <input type="hidden" name="productId" value="@Model.Id"/>
+                @using (Html.BeginForm("AddToCart", "Home", FormMethod.Post))
+                {
+                    <label class=""> Quantity : </label>
+                    <input type="number" class="form-control" value="1" name="Quantity">
+                    <input class="form-control" type="hidden" name="productId" value="@Model.Id"/>
                     <button type="submit" class="text-uppercase mt-3 btn btn-danger">add to cart</button>
-                </form>
+                }
             </div>
         </div>
     </div>
-
 </div>
 <section id="tabs" class="project-tab">
     <div class="container">

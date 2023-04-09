@@ -1,11 +1,15 @@
-﻿@using Colo_Shop.IServices
+﻿@using Colo_Shop
+@using Colo_Shop.IServices
+@using Colo_Shop.Models
 @using Colo_Shop.Services
-@model Colo_Shop.Models.User
+@using TModel = Colo_Shop.Models.User
+@model User
 
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     IRoleServices _roleServices = new RoleServices();
+
 }
 @if (ViewBag.AlertMessage != null)
 {

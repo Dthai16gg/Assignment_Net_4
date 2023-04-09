@@ -8,6 +8,7 @@
     var id = ViewData["idUsers"] as string;
     var IdUser = Guid.Parse(id);
     var user = _service.GetUserById(IdUser);
+
 }
 <div class="wrapper bg-white mt-sm-5 container">
     <h4 class="pb-4 border-bottom">Account settings</h4>
