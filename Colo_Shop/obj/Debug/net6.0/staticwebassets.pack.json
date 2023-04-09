@@ -1989,6 +1989,18 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\css\\flag-icon.min.css"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\css\\flag-icons.css",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\css\\flag-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\css\\flag-icons.min.css",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\css\\flag-icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ac.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ac.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ad.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ad.svg"
     },
@@ -2185,6 +2197,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\co.svg"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\cp.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\cp.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\cr.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\cr.svg"
     },
@@ -2217,6 +2233,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\de.svg"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\dg.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\dg.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\dj.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\dj.svg"
     },
@@ -2235,6 +2255,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\dz.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\dz.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ea.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ea.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ec.svg",
@@ -2259,6 +2283,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\es-ca.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\es-ca.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\es-ct.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\es-ct.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\es-ga.svg",
@@ -2415,6 +2443,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\hu.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\hu.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ic.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ic.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\id.svg",
@@ -2869,6 +2901,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\sz.svg"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ta.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ta.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\tc.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\tc.svg"
     },
@@ -3001,6 +3037,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\xk.svg"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\xx.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\xx.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ye.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\ye.svg"
     },
@@ -3019,6 +3059,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\1x1\\zw.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\1x1\\zw.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ac.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ac.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ad.svg",
@@ -3217,6 +3261,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\co.svg"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\cp.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\cp.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\cr.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\cr.svg"
     },
@@ -3249,6 +3297,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\de.svg"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\dg.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\dg.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\dj.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\dj.svg"
     },
@@ -3267,6 +3319,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\dz.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\dz.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ea.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ea.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ec.svg",
@@ -3291,6 +3347,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\es-ca.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\es-ca.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\es-ct.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\es-ct.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\es-ga.svg",
@@ -3447,6 +3507,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\hu.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\hu.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ic.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ic.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\id.svg",
@@ -3901,6 +3965,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\sz.svg"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ta.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ta.svg"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\tc.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\tc.svg"
     },
@@ -4031,6 +4099,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\xk.svg",
       "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\xk.svg"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\xx.svg",
+      "PackagePath": "staticwebassets\\Client\\plugins\\flag-icon-css\\flags\\4x3\\xx.svg"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\flag-icon-css\\flags\\4x3\\ye.svg",
@@ -4529,6 +4601,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\fullcalendar\\locales\\ru.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\fullcalendar\\locales\\si-lk.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\fullcalendar\\locales\\si-lk.js"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\fullcalendar\\locales\\sk.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\fullcalendar\\locales\\sk.js"
     },
@@ -4619,6 +4695,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\icheck-bootstrap\\icheck-bootstrap.min.css",
       "PackagePath": "staticwebassets\\Client\\plugins\\icheck-bootstrap\\icheck-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\inputmask\\inputmask.es6.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\inputmask\\inputmask.es6.js"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\inputmask\\inputmask.js",
@@ -7165,6 +7245,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\font\\summernote.eot"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\font\\summernote.hash",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\font\\summernote.hash"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\font\\summernote.ttf",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\font\\summernote.ttf"
     },
@@ -7181,6 +7265,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ar-AR.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ar-AR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ar-AR.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ar-AR.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ar-AR.min.js"
     },
@@ -7191,6 +7279,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-az-AZ.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-az-AZ.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-az-AZ.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-az-AZ.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-az-AZ.min.js",
@@ -7205,6 +7297,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-bg-BG.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-bg-BG.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-bg-BG.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-bg-BG.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-bg-BG.min.js"
     },
@@ -7213,8 +7309,24 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-bg-BG.min.js.LICENSE.txt"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-bn-BD.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-bn-BD.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-bn-BD.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-bn-BD.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-bn-BD.min.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-bn-BD.min.js"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ca-ES.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ca-ES.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ca-ES.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ca-ES.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ca-ES.min.js",
@@ -7229,6 +7341,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-cs-CZ.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-cs-CZ.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-cs-CZ.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-cs-CZ.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-cs-CZ.min.js"
     },
@@ -7241,6 +7357,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-da-DK.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-da-DK.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-da-DK.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-da-DK.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-da-DK.min.js"
     },
@@ -7249,8 +7369,24 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-da-DK.min.js.LICENSE.txt"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-de-CH.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-de-CH.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-de-CH.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-de-CH.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-de-CH.min.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-de-CH.min.js"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-de-DE.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-de-DE.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-de-DE.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-de-DE.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-de-DE.min.js",
@@ -7265,6 +7401,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-el-GR.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-el-GR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-el-GR.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-el-GR.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-el-GR.min.js"
     },
@@ -7273,8 +7413,24 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-el-GR.min.js.LICENSE.txt"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-en-US.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-en-US.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-en-US.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-en-US.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-en-US.min.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-en-US.min.js"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-es-ES.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-es-ES.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-es-ES.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-es-ES.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-es-ES.min.js",
@@ -7289,6 +7445,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-es-EU.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-es-EU.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-es-EU.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-es-EU.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-es-EU.min.js"
     },
@@ -7299,6 +7459,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fa-IR.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-fa-IR.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fa-IR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-fa-IR.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fa-IR.min.js",
@@ -7313,6 +7477,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-fi-FI.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fi-FI.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-fi-FI.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fi-FI.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-fi-FI.min.js"
     },
@@ -7323,6 +7491,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fr-FR.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-fr-FR.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fr-FR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-fr-FR.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-fr-FR.min.js",
@@ -7337,6 +7509,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-gl-ES.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-gl-ES.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-gl-ES.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-gl-ES.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-gl-ES.min.js"
     },
@@ -7347,6 +7523,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-he-IL.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-he-IL.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-he-IL.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-he-IL.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-he-IL.min.js",
@@ -7361,6 +7541,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-hr-HR.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-hr-HR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-hr-HR.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-hr-HR.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-hr-HR.min.js"
     },
@@ -7371,6 +7555,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-hu-HU.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-hu-HU.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-hu-HU.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-hu-HU.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-hu-HU.min.js",
@@ -7385,6 +7573,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-id-ID.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-id-ID.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-id-ID.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-id-ID.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-id-ID.min.js"
     },
@@ -7395,6 +7587,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-it-IT.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-it-IT.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-it-IT.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-it-IT.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-it-IT.min.js",
@@ -7409,6 +7605,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ja-JP.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ja-JP.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ja-JP.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ja-JP.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ja-JP.min.js"
     },
@@ -7419,6 +7619,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ko-KR.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ko-KR.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ko-KR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ko-KR.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ko-KR.min.js",
@@ -7433,6 +7637,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-lt-LT.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-lt-LT.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-lt-LT.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-lt-LT.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-lt-LT.min.js"
     },
@@ -7443,6 +7651,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-lt-LV.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-lt-LV.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-lt-LV.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-lt-LV.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-lt-LV.min.js",
@@ -7457,6 +7669,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-mn-MN.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-mn-MN.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-mn-MN.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-mn-MN.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-mn-MN.min.js"
     },
@@ -7467,6 +7683,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-nb-NO.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-nb-NO.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-nb-NO.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-nb-NO.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-nb-NO.min.js",
@@ -7481,6 +7701,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-nl-NL.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-nl-NL.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-nl-NL.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-nl-NL.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-nl-NL.min.js"
     },
@@ -7491,6 +7715,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pl-PL.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-pl-PL.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pl-PL.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-pl-PL.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pl-PL.min.js",
@@ -7505,6 +7733,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-pt-BR.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pt-BR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-pt-BR.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pt-BR.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-pt-BR.min.js"
     },
@@ -7515,6 +7747,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pt-PT.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-pt-PT.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pt-PT.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-pt-PT.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-pt-PT.min.js",
@@ -7529,6 +7765,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ro-RO.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ro-RO.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ro-RO.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ro-RO.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ro-RO.min.js"
     },
@@ -7539,6 +7779,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ru-RU.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ru-RU.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ru-RU.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ru-RU.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ru-RU.min.js",
@@ -7553,6 +7797,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sk-SK.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sk-SK.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sk-SK.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sk-SK.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sk-SK.min.js"
     },
@@ -7563,6 +7811,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sl-SI.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sl-SI.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sl-SI.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sl-SI.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sl-SI.min.js",
@@ -7577,6 +7829,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sr-RS-Latin.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sr-RS-Latin.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sr-RS-Latin.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sr-RS-Latin.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sr-RS-Latin.min.js"
     },
@@ -7587,6 +7843,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sr-RS.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sr-RS.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sr-RS.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sr-RS.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sr-RS.min.js",
@@ -7601,6 +7861,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sv-SE.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sv-SE.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sv-SE.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-sv-SE.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-sv-SE.min.js"
     },
@@ -7611,6 +7875,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ta-IN.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ta-IN.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ta-IN.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-ta-IN.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-ta-IN.min.js",
@@ -7625,6 +7893,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-th-TH.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-th-TH.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-th-TH.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-th-TH.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-th-TH.min.js"
     },
@@ -7635,6 +7907,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-tr-TR.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-tr-TR.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-tr-TR.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-tr-TR.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-tr-TR.min.js",
@@ -7649,6 +7925,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-uk-UA.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-uk-UA.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-uk-UA.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-uk-UA.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-uk-UA.min.js"
     },
@@ -7659,6 +7939,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-uz-UZ.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-uz-UZ.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-uz-UZ.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-uz-UZ.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-uz-UZ.min.js",
@@ -7673,6 +7957,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-vi-VN.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-vi-VN.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-vi-VN.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-vi-VN.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-vi-VN.min.js"
     },
@@ -7685,6 +7973,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-zh-CN.js"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-zh-CN.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-zh-CN.js.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-zh-CN.min.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-zh-CN.min.js"
     },
@@ -7695,6 +7987,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-zh-TW.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-zh-TW.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-zh-TW.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\lang\\summernote-zh-TW.js.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\lang\\summernote-zh-TW.min.js",
@@ -7725,6 +8021,10 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs4.css"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs4.css.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs4.css.map"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs4.js",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs4.js"
     },
@@ -7749,8 +8049,36 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs4.min.js.map"
     },
     {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs5.css",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs5.css"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs5.css.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs5.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs5.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs5.js"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs5.js.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs5.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs5.min.css",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-bs5.min.js",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-bs5.min.js"
+    },
+    {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-lite.css",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-lite.css"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-lite.css.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote-lite.css.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote-lite.js",
@@ -7779,6 +8107,10 @@
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote.css",
       "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote.css"
+    },
+    {
+      "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote.css.map",
+      "PackagePath": "staticwebassets\\Client\\plugins\\summernote\\summernote.css.map"
     },
     {
       "Id": "C:\\Users\\Dthai\\Desktop\\Assignment_Net_4\\Colo_Shop\\wwwroot\\Client\\plugins\\summernote\\summernote.js",

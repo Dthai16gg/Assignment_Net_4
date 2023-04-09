@@ -1,11 +1,23 @@
-﻿@using Colo_Shop
-@using Colo_Shop.Models
+﻿
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="~/Client/plugins/fontawesome-free/css/all.min.css" />
+<!-- DataTables -->
+<link rel="stylesheet"
+      href="~/Client/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+<link rel="stylesheet"
+      href="~/Client/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+<link rel="stylesheet"
+      href="~/Client/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+<!-- Theme style -->
+<link rel="stylesheet" href="~/Client/dist/css/adminlte.min.css" />
 @model IEnumerable<Product>
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 
 }
-
 <p>
     <a class="ml-3 mt-5 btn btn-outline-danger" asp-action="Create">Create New<i class="fa-plus"></i></a>
 </p>
@@ -25,7 +37,7 @@
 
 }
 
-<table class="table super_container mt-3 bg-gradient-info">
+<table class="table table-bordered table-hover super_container mt-3 " id="example1">
     <thead>
     <tr>
         <th>
@@ -102,7 +114,7 @@
                 @Html.DisplayFor(modelItem => item.Style)
             </td>
             <td>
-                <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" alt="Product Image" width="70"/>
+                <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" alt="Product Image" width="70" />
             </td>
             <td>
                 <a class="btn btn-secondary" href='@Url.Action("Edit", "Products", new { id = item.Id })'>
@@ -120,3 +132,25 @@
     }
     </tbody>
 </table>
+
+<script src="~/Client/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/Client/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="~/Client/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/Client/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/Client/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/Client/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="~/Client/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="~/Client/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="~/Client/plugins/jszip/jszip.min.js"></script>
+<script src="~/Client/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="~/Client/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="~/Client/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="~/Client/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="~/Client/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/Client/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/Client/dist/js/demo.js"></script>
+<!-- Page specific script -->

@@ -1,49 +1,54 @@
 ﻿@using Colo_Shop.IServices
 @using Colo_Shop.Services
-@model Bill
+@model Colo_Shop.Models.Bill
 @{
-    ViewData["Title"] = "ShowList";
     IProductServices _productServices = new ProductServices();
-    IBillServices _billServices = new BillServices();
     IBillDetailsServices _billDetailsServices = new BillDetailsService();
+    int stt = 1;
+    decimal tol = 0;
+    int quantity = 0;
 }
-<div class="modal-dialog" role="document">
 
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="billDetailsModalLabel">Bill Details</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            @if (Model == null)
-            {
-                <p>LOZ, dume sai roi</p>
-            }
-            else
-            {
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach (var item in _billDetailsServices.GetAllBillDetails().Where(p=>p.IdSp == Model.Id))
-                    {
-                        <tr>
-                            <td>@_productServices.GetProductById(item.IdSp).Name</td>
-                            <td>@item.Quantity</td>
-                            <td>@item.Price</td>
-                        </tr>
-                    }
-                    </tbody>
-
-                </table>
-            }
-        </div>
-    </div>
-</div>
+<table class="table border-0">
+    <thead>
+        <tr>
+            <th class="text-danger">STT</th>
+            <th class="text-danger">Product Name</th>
+            <th class="text-danger">Quantity</th>
+            <th class="text-danger">Price</th>
+        </tr>
+    </thead>
+    <tbody id="billDetailsTableBody">
+        @{
+            var listilldetails = _billDetailsServices.GetAllBillDetails().Where(p => p.IdHD == Model.Id).ToList();
+        }
+        @foreach (var item in listilldetails)
+        {
+            <tr>
+                <td>
+                    @stt
+                </td>
+                <td>
+                    <a href='@Url.Action("ProductDetails", "Home", new { id = item.IdSp })'>@_productServices.GetProductById(item.IdSp).Name</a>
+                </td>
+                <td>
+                    @item.Quantity
+                </td>
+                <td>
+                    $ @_productServices.GetProductById(item.IdSp).Price
+                </td>
+            </tr>
+            tol += item.Quantity * _productServices.GetProductById(item.IdSp).Price;
+            quantity += item.Quantity;
+            stt++;
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th class="text-dark mt-2"><h3>Final:</h3></th>
+            <th class="text-dark mt-2"><h3></h3></th>
+            <th class="text-dark mt-2"><h3>@quantity (Product) </h3></th>
+            <th class="text-dark mt-2"><h3>$ @tol</h3></th>
+        </tr>
+    </tfoot>
+</table>

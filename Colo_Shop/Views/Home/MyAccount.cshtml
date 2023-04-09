@@ -35,86 +35,128 @@
                 @if (_billServices.GetAllBills().Where(p => p.UserID == user.Id).Count() > 0)
                 {
                     <h2>Show List Bill</h2>
-                    <table class="table">
+                    <select id="filter-select">
+                        <option value="all" selected>Choose option</option>
+                        <option value="pay">Pay</option>
+                        <option value="wait">Wait</option>
+                    </select>
+                    <table class="table mt-">
                         <thead>
-                        <tr>
-                            <th>Stt</th>
-                            <th>
-                                Create Date
-                            </th>
-                            <th>
-                                Status
-                            </th>
-                            <th>
-                                Action
-                            </th>
-                        </tr>
+                            <tr>
+                                <th>Stt</th>
+                                <th>
+                                    Create Date
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
                         </thead>
                         <tbody>
-                        @{
-                            var i = 1;
-
-                        }
-                        @foreach (var item in _billServices.GetAllBills().Where(p => p.UserID == user.Id).ToList())
-                        {
-                            <tr>
-                                <td>
-                                    Bill- @i
-                                </td>
-                                <td>
-                                    @item.CreateDate.ToLocalTime().ToString("F")
-                                </td>
-                                <td>
-                                    @if (item.Status == 0)
-                                    {
-                                        <p class="text-danger">Wait</p>
-                                    }
-                                    else
-                                    {
-                                        <p class="text-success">Pay</p>
-                                    }
-                                </td>
-
-                                <td>
-                                    @if (item.Status == 0)
-                                    {
-                                        @Html.ActionLink("Pay", "Update", "Bill", new { id = item.Id })
-                                        <span>|</span>
-                                    }
-
-                                    <a data-toggle="modal" data-target="#billDetailsModal" class="btn btn-danger" href='@Url.Action("PopupView", "Home", new { id = item.Id })'>
-                                        <span>View</span>
-                                    </a>
-
-                                    <a class="btn btn-danger" href='@Url.Action("DeleteInMyAccount", "Bill", new { id = item.Id })'>
-                                        <span>Delete</span>
-                                    </a>
-                                </td>
-                            </tr>
-                            i++;
-                        }
+                            @{
+                                var i = 1;
+                            }
+                            @foreach (var item in _billServices.GetAllBills().Where(p => p.UserID == user.Id).ToList())
+                            {
+                                <tr class="@item.Status">
+                                    <td>
+                                        Bill- @i
+                                    </td>
+                                    <td>
+                                        @item.CreateDate.ToLocalTime().ToString("F")
+                                    </td>
+                                    <td class="status-column">
+                                        @if (item.Status == 0)
+                                        {
+                                            <p class="text-danger">Wait</p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-success">Pay</p>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (item.Status == 0)
+                                        {
+                                            <a class="btn btn-success" href='@Url.Action("Update", "Bill", new { id = item.Id })'>
+                                                <span>Pay</span>
+                                            </a>
+                                        }
+                                        <a class="btn btn-danger view-btn">View</a>
+                                        <a class="btn btn-danger" href='@Url.Action("DeleteInMyAccount", "Bill", new { id = item.Id })'>
+                                            <span>Delete</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="details-row" style="display:none">
+                                    <td colspan="4">
+                                        @Html.Partial("PopupView", item)
+                                    </td>
+                                </tr>
+                                i++;
+                            }
                         </tbody>
                     </table>
                 }
                 else
                 {
-                    <h2>No bill ? Go to shop ? <a asp-action="Shop">Now</a></h2>
+                    <h2>No bill? Go to shop? <a asp-action="Shop">Now</a></h2>
                 }
             </div>
-            <div class="modal fade" id="billDetailsModal" tabindex="-1" role="dialog" aria-labelledby="billDetailsModalLabel" aria-hidden="true">
-                @Html.Partial("PopupView")
-            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script>
+                $('.view-btn').on('click', function () {
+                    var detailsRow = $(this).closest('tr').next('.details-row');
+                    detailsRow.toggle();
+                });
+                $(document).ready(function () {
+                    // handle change event of filter-select
+                    $('#filter-select').on('change', function () {
+                        var selectedOption = $(this).val();
+                        if (selectedOption === 'all') {
+                            // show all rows if all option is selected
+                            $('tbody tr').show();
+                        } else {
+                            // hide all rows except the ones with the selected class
+                            $('tbody tr').hide();
+                            $('tbody tr.' + selectedOption).show();
+                        }
+                        $('tbody tr').each(function () {
+                            if (selectedOption === 'all') {
+                                // reset all status values to original text
+                                $(this).find('.status-column p').text(function () {
+                                    return $(this).hasClass('text-danger') ? 'Wait' : 'Pay';
+                                });
+                            } else {
+                                $(this).find('.status-column p').each(function () {
+                                    var statusText = $(this).text().toLowerCase();
+                                    if (statusText.indexOf(selectedOption) !== -1) {
+                                        $(this).parent().parent().show();
+                                    } else {
+                                        $(this).parent().parent().hide();
+                                    }
+                                });
+                            }
+                        });
+                    });
+                });
+
+            </script>
         </div>
+
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="wrapper bg-white mt-sm-5">
                 <h4 class="pb-4 border-bottom">Account settings</h4>
                 <form class="py-2" asp-action="Edit" asp-controller="User">
                     <div class="row py-2">
                         <div class="col-md-6">
-                            <input asp-for="RoleId" value="@user.RoleId" hidden/>
+                            <input asp-for="RoleId" value="@user.RoleId" hidden />
                         </div>
                         <div class="col-md-6 pt-md-0 pt-3">
-                            <input asp-for="Status" value="@user.Status" hidden/>
+                            <input asp-for="Status" value="@user.Status" hidden />
                         </div>
                     </div>
                     <div class="row py-2">

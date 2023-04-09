@@ -83,13 +83,13 @@ public class HomeController : Controller
                 return this.View("Shop");
 
             var bill = new Bill
-                           {
-                               Id = Guid.NewGuid(), // ID hóa đơn
-                               UserID = user.Id, // ID người dùng
-                               CreateDate = Convert.ToDateTime(DateTime.Now.ToString()), // Ngày tạo hóa đơn
-                               Status = Status, // Trạng thái hóa đơn//Khởi tạo danh sách chi tiết hóa đơn,
-                               Details = new List<BillDetails>()
-                           };
+            {
+                Id = Guid.NewGuid(), // ID hóa đơn
+                UserID = user.Id, // ID người dùng
+                CreateDate = Convert.ToDateTime(DateTime.Now.ToString()), // Ngày tạo hóa đơn
+                Status = Status, // Trạng thái hóa đơn//Khởi tạo danh sách chi tiết hóa đơn,
+                Details = new List<BillDetails>()
+            };
             for (var i = 0; i < productId.Count; i++)
             {
                 // Lấy thông tin sản phẩm
@@ -97,14 +97,14 @@ public class HomeController : Controller
 
                 // Tạo một đối tượng BillDetails
                 var detail = new BillDetails
-                                 {
-                                     Id = Guid.NewGuid(), // ID chi tiết hóa đơn
-                                     Quantity = quantities[i], // Số lượng sản phẩm
-                                     Price = product.Price, // Giá sản phẩm
-                                     IdHD = bill.Id, // ID hóa đơn
-                                     IdSp = product.Id // ID sản phẩm
-                                 };
-                if (Status == 1 && product.AvailableQuantity > quantities[i])
+                {
+                    Id = Guid.NewGuid(), // ID chi tiết hóa đơn
+                    Quantity = quantities[i], // Số lượng sản phẩm
+                    Price = product.Price, // Giá sản phẩm
+                    IdHD = bill.Id, // ID hóa đơn
+                    IdSp = product.Id // ID sản phẩm
+                };
+                if (Status == 1 || Status == 0 && product.AvailableQuantity > quantities[i])
                 {
                     product.AvailableQuantity = product.AvailableQuantity - quantities[i];
                     this._productServices.UpdateProduct(product);
@@ -281,11 +281,15 @@ public class HomeController : Controller
             return this.View();
         return this.RedirectToAction("LoginPage");
     }
-
-    public IActionResult PopupView(Guid id)
+    public IActionResult GetBillDetails(Guid billId)
     {
-        var bill = this._billServices.GetBillById(id);
-        return this.View(bill);
+        var bill = this._billServices.GetBillById(billId);
+        return PartialView("PopupView", bill);
+    }
+
+    public IActionResult PopupView()
+    {
+        return this.View();
     }
 
     public IActionResult ProductDetails(Guid id)
