@@ -1,4 +1,44 @@
-# Assignment NET-4 (Colo_shop)
+
+# Assignment net 4
+
+Đây là 1 sản phẩm web bán hàng sử dụng công nghệ Asp.net cùng mô hình MVC, Framework : entity và hệ cơ sở dữ liệu sử dụng là Sql server
+
+
+
+## Về tôi 
+
+ - [Awesome Code Templates](https://github.com/Dthai16gg)
+ - [Awesome Net](https://github.com/matiassingers/awesome-readme)
+ - [Facebook](https://fb.com/Dthai16gg)
+
+
+## Installation
+
+Install Dotnet
+
+```powershell
+  dotnet-install.ps1 -Channel 7.0 -Runtime aspnetcore
+  dotnet-install.ps1 -Channel STS
+```
+Tải xuống Source
+
+```powershell
+  git clone https://github.com/Dthai16gg/Assignment_Net_4
+  cd Assignment_Net_4 
+  cd Colo_shop
+  dotnet dev-certs https --trust
+  dotnet watch run
+  ctr+c để ngừng
+```
+
+Sửa tên database 
+
+        1. Copy server name 
+        2. Open code editor 
+        3. open file ShopDbcontext.cs
+        4. in [optionsBuilder.UseSqlServer(
+            @"Data Source=YourServerName;Initial Catalog=Assignment_Net-4-Main;   Integrated Security=True");]
+        5. Backup file mssql
 
 <h1 align="center">Hi 👋, I'm Dthai16-gg</h1>
 
