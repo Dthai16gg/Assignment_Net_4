@@ -24,21 +24,37 @@ public class ProductsController : Controller
     public async Task<IActionResult> Create(Product product, IFormFile imageFile)
     {
         if (product.Price < 0 || product.AvailableQuantity < 0) return this.Content("Kiem tra lai");
+        if (CheckTrungTen(product.Name, product.Supplier))
+        {
+            if (imageFile != null)
+                using (var stream = new MemoryStream())
+                {
+                    await imageFile.CopyToAsync(stream);
+                    product.Image = stream.ToArray();
+                }
+            else
+                return this.View("Create");
 
-        if (imageFile != null)
-            using (var stream = new MemoryStream())
-            {
-                await imageFile.CopyToAsync(stream);
-                product.Image = stream.ToArray();
-            }
+            this._productServices.CreateNewProducts(product);
+
+            return this.RedirectToAction("ShowList");
+        }
         else
-            return this.View("Create");
-
-        this._productServices.CreateNewProducts(product);
-
-        return this.RedirectToAction("ShowList");
+        {
+            return this.Content("dm");
+        }
     }
-
+    //Check trùng (tên + nhà cung cấp) đã tồn tại khi sửa/thêm mới sản phẩm. VD: Bánh Quy - Kinhdo sẽ không trùng với Bánh Quy - Bibica 
+    public bool CheckTrungTen(string name, string supplier)
+    {
+        var existingProduct = _productServices.GetAllProducts()
+            .FirstOrDefault(p => p.Name == name && p.Supplier == supplier);
+        if (existingProduct != null)
+        {
+            return false;
+        }
+        return true;
+    } 
     public IActionResult Delete(Guid id)
     {
         this._productServices.DeleteProduct(id);

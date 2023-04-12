@@ -13,7 +13,15 @@
     var user = _service.GetUserById(IdUser);
 
 }
-
+@if (ViewBag.AlertMessage != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.AlertMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
 <div class="container" style="margin-top: 200px">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
@@ -42,62 +50,74 @@
                     </select>
                     <table class="table mt-">
                         <thead>
-                            <tr>
-                                <th>Stt</th>
-                                <th>
-                                    Create Date
-                                </th>
-                                <th>
-                                    Status
-                                </th>
-                                <th>
-                                    Action
-                                </th>
-                            </tr>
+                        <tr>
+                            <th>Stt</th>
+                            <th>
+                                Create Date
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Action
+                            </th>
+                        </tr>
                         </thead>
                         <tbody>
-                            @{
-                                var i = 1;
-                            }
-                            @foreach (var item in _billServices.GetAllBills().Where(p => p.UserID == user.Id).ToList())
-                            {
-                                <tr class="@item.Status">
-                                    <td>
-                                        Bill- @i
-                                    </td>
-                                    <td>
-                                        @item.CreateDate.ToLocalTime().ToString("F")
-                                    </td>
-                                    <td class="status-column">
-                                        @if (item.Status == 0)
-                                        {
-                                            <p class="text-danger">Wait</p>
-                                        }
-                                        else
-                                        {
-                                            <p class="text-success">Pay</p>
-                                        }
-                                    </td>
-                                    <td>
-                                        @if (item.Status == 0)
-                                        {
-                                            <a class="btn btn-success" href='@Url.Action("Update", "Bill", new { id = item.Id })'>
-                                                <span>Pay</span>
-                                            </a>
-                                        }
-                                        <a class="btn btn-danger view-btn">View</a>
-                                        <a class="btn btn-danger" href='@Url.Action("DeleteInMyAccount", "Bill", new { id = item.Id })'>
-                                            <span>Delete</span>
+                        @{
+                            var i = 1;
+                        }
+                        @foreach (var item in _billServices.GetAllBills().Where(p => p.UserID == user.Id).ToList())
+                        {
+                            <tr class="@item.Status">
+                                <td>
+                                    Bill- @i
+                                </td>
+                                <td>
+                                    @item.CreateDate.ToLocalTime().ToString("F")
+                                </td>
+                                <td class="status-column">
+                                    @if (item.Status == 0)
+                                    {
+                                        <p class="text-danger">Wait</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="text-success">Pay</p>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.Status == 0)
+                                    {
+                                        <a class="btn btn-success" onclick="confirmPay()">
+                                            <span>Pay</span>
                                         </a>
-                                    </td>
-                                </tr>
-                                <tr class="details-row" style="display:none">
-                                    <td colspan="4">
-                                        @Html.Partial("PopupView", item)
-                                    </td>
-                                </tr>
-                                i++;
-                            }
+                                    }
+                                    <a class="btn btn-danger view-btn">View</a>
+                                    <a class="btn btn-danger" onclick="confirmDelete()">
+                                        <span>Delete</span>
+                                    </a>
+                                </td>
+                                <script>
+                                        function confirmDelete() {
+                                            if (confirm("Are you sure you want to DELETE this item?")) {
+                                                window.location.href = '@Url.Action("DeleteInMyAccount", "Bill",new{id = item.Id})/';
+                                            }
+                                        }
+                                        function confirmPay() {
+                                            if (confirm("Are you sure you want to PAY this item?")) {
+                                                window.location.href = '@Url.Action("Update", "Bill",new{id = item.Id})/';
+                                            }
+                                        }
+                                    </script>
+                            </tr>
+                            <tr class="details-row" style="display:none">
+                                <td colspan="4">
+                                    @Html.Partial("PopupView", item)
+                                </td>
+                            </tr>
+                            i++;
+                        }
                         </tbody>
                     </table>
                 }
@@ -153,36 +173,36 @@
                 <form class="py-2" asp-action="Edit" asp-controller="User">
                     <div class="row py-2">
                         <div class="col-md-6">
-                            <input asp-for="RoleId" value="@user.RoleId" hidden />
+                            <input required asp-for="RoleId" value="@user.RoleId" hidden />
                         </div>
                         <div class="col-md-6 pt-md-0 pt-3">
-                            <input asp-for="Status" value="@user.Status" hidden />
+                            <input required asp-for="Status" value="@user.Status" hidden />
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6">
                             <label for="firstname">User Name</label>
-                            <input type="text" class="bg-light form-control" asp-for="Username" value="@user.Username">
+                            <input type="text" class="bg-light form-control" required asp-for="Username" re>
                         </div>
                         <div class="col-md-6 pt-md-0 pt-3">
                             <label for="lastname">Full Name</label>
-                            <input type="text" class="bg-light form-control" asp-for="Name" value="@user.Name">
+                            <input type="text" class="bg-light form-control" required asp-for="Name">
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6">
                             <label for="email">Email Address</label>
-                            <input type="text" class="bg-light form-control" asp-for="Email" value="@user.Email">
+                            <input type="email" class="bg-light form-control" required asp-for="Email">
                         </div>
                         <div class="col-md-6 pt-md-0 pt-3">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" class="bg-light form-control" asp-for="NumberPhone" value="@user.NumberPhone">
+                            <input type="tel" class="bg-light form-control" required asp-for="NumberPhone">
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6 pt-md-0 pt-3">
                             <label for="phone">Password</label>
-                            <input type="tel" class="bg-light form-control" asp-for="NumberPhone" value="@user.Password">
+                            <input type="text" class="bg-light form-control" required asp-for="Password">
                         </div>
                     </div>
                     <div class="py-3 pb-4 border-bottom">
@@ -196,10 +216,17 @@
                         <p>Details about your company account and password</p>
                     </div>
                     <div class="ml-auto">
-                        <a class="btn btn-danger" href='@Url.Action("Delete", "Home", new { id = user.Id })'>
-                            <span>Delete Account <i class="fa-remove"></i></span>
+                        <a class="btn btn-danger" onclick="confirmDlAc()">
+                            <span>Delete Account <i class="fa-user"></i></span>
                         </a>
                     </div>
+                    <script>
+                        function confirmDlAc() {
+                            if (confirm("Are you sure you want to PAY this item?")) {
+                                window.location.href = '@Url.Action("Delete", "Home",new{ id = user.Id })/';
+                            }
+                        }
+                    </script>
                 </div>
             </div>
         </div>

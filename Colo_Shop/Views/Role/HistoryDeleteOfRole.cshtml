@@ -1,0 +1,74 @@
+﻿@using Colo_Shop
+@using Colo_Shop.Models
+@model IEnumerable<Role>
+
+@{
+    ViewData["Title"] = "ShowList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+
+<table class="table super_container bg-gradient-info">
+    <h1 class="text-center">ShowList</h1>
+    <p class="ml-3">
+        <a class="btn btn-primary" asp-action="Create">Create New</a>
+    </p>
+
+    <thead>
+        <tr>
+            <th>
+                STT
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var stt = 1;
+
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @stt
+                </td>
+                @if (item.Status == 1)
+                {
+                    <td>
+                        Active
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        InActive
+                    </td>
+                }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleName)
+                </td>
+                <td>
+                    <form method="post" action="@Url.Action("CallBack", "Role")">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit">Call back</button>
+                    </form>
+                </td>
+            </tr>
+            stt++;
+        }
+    </tbody>
+</table>

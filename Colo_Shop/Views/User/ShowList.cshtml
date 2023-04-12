@@ -8,7 +8,13 @@
 }
 
 <h1 class="text-center">ShowList</h1>
-
+@using (Html.BeginForm("SearchByUser", "User", FormMethod.Post))
+{
+    @Html.TextBox("username")
+    <button type="submit" class="btn_search mt-3">
+       Search Now ? 
+    </button>
+}
 <p>
     <a class="ml-3 mt-5 btn btn-outline-danger" asp-action="Create">Create New<i class="fa-plus"></i></a>
 </p>

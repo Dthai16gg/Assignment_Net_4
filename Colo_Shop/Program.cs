@@ -47,7 +47,7 @@ public class Program
         app.UseStaticFiles();
         app.UseSession();
         app.UseRouting();
-
+        //app.UseStatusCodePagesWithReExecute("/Home/Index"); // Nhảy về trang chủ khi route sai
         app.UseAuthorization();
 
         app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");

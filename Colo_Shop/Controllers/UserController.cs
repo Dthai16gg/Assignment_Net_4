@@ -125,11 +125,12 @@ public class UserController : Controller
         }
 
         var existingUsers = this._userServices.GetAllUsers(user.Id);
-        if (existingUsers.Any(u => u.Username == user.Username.Trim()))
+        if (existingUsers.Any(u => u.Username.Trim() == user.Username.Trim() && u.Id != user.Id))
         {
             this.ViewBag.AlertMessage = "Username already exists.";
             return this.View();
         }
+
 
         if (this._userServices.UpdateUser(user)) return this.RedirectToAction("ShowList");
         return this.BadRequest();
@@ -156,13 +157,22 @@ public class UserController : Controller
     public IActionResult ShowList()
     {
         var ShowModel = new ShowModel
-                            {
-                                Roles = this._roleServices.GetAllRoles().ToList(),
-                                User = this._userServices.GetAllUsers().ToList()
-                            };
+        {
+            Roles = this._roleServices.GetAllRoles().ToList(),
+            User = this._userServices.GetAllUsers().ToList()
+        };
         return this.View(ShowModel);
     }
-
+    [HttpPost]
+    public IActionResult SearchByUser(string username)
+    {
+        var ShowModel = new ShowModel
+        {
+            Roles = this._roleServices.GetAllRoles().ToList(),
+            User = this._userServices.GetAllUsers().Where(p => p.Username.ToLower().Contains(username.ToLower().Trim())).ToList()
+        };
+        return this.View("ShowList", ShowModel);
+    }
     public class CreateViewModel
     {
         public List<Role> Roles { get; set; }

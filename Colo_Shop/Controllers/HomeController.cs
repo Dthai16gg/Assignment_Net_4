@@ -134,7 +134,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult AddToCart(Guid productId, int Quantity)
+    public  IActionResult AddToCart(Guid productId, int Quantity)
     {
         var idUser = this.HttpContext.Session.GetString("idUser");
         if (!string.IsNullOrEmpty(idUser))
@@ -148,7 +148,7 @@ public class HomeController : Controller
             }
 
             var product = this._productServices.GetProductById(productId);
-            if (product == null) return this.NotFound();
+            if (product == null) return this.NotFound();                
             var cartDetail = cart.Details.FirstOrDefault(d => d.Product.Id == productId);
 
             if (cartDetail == null)
@@ -160,6 +160,7 @@ public class HomeController : Controller
             else
             {
                 cartDetail.Quantity = cartDetail.Quantity + Quantity;
+
             }
 
             this._cartServices.UpdateCart(cart);
@@ -277,8 +278,9 @@ public class HomeController : Controller
     {
         var idUser = this.HttpContext.Session.GetString("idUser");
         this.ViewData["idUser"] = idUser;
-        if (!string.IsNullOrEmpty(idUser))
-            return this.View();
+         var usr= this._userservices.GetUserById(Guid.Parse(idUser));
+        if (!string.IsNullOrEmpty(idUser) && usr != null)
+            return this.View(usr);
         return this.RedirectToAction("LoginPage");
     }
     public IActionResult GetBillDetails(Guid billId)

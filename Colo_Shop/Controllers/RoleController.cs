@@ -29,6 +29,9 @@ public class RoleController : Controller
 
     public IActionResult Delete(Guid id)
     {
+        var role = SessionServices.GetObjFromSession(HttpContext.Session, "History");
+        role.Add(this._roleServices.GetRoleById(id));
+        SessionServices.SetObjToSession(HttpContext.Session, "History", role);
         this._roleServices.DeleteRole(id);
         return this.RedirectToAction("ShowList");
     }
@@ -56,5 +59,17 @@ public class RoleController : Controller
     {
         var role = this._roleServices.GetAllRoles();
         return this.View(role.ToList());
+    }
+
+    public IActionResult HistoryDeleteOfRole()
+    {
+        var role = SessionServices.GetObjFromSession(HttpContext.Session, "History");
+        return this.View(role.ToList());
+    }
+    public IActionResult CallBack(Guid id)
+    {
+        var role = SessionServices.GetObjFromSession(HttpContext.Session, "History").FirstOrDefault(p => p.Id == id);
+        this._roleServices.CreateNewRoles(role);
+        return this.RedirectToAction("ShowList");
     }
 }
