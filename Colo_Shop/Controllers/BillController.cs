@@ -55,7 +55,6 @@ public class BillController : Controller
         public List<BillDetails> BillDetails { get; set; }
     }
 
-    // create action popup view
     public class ViewModelBills
     {
         public Bill Bill { get; set; }

@@ -106,7 +106,7 @@ public class HomeController : Controller
                 };
                 if (Status == 1 || Status == 0 && product.AvailableQuantity > quantities[i])
                 {
-                    product.AvailableQuantity = product.AvailableQuantity - quantities[i];
+                    product.AvailableQuantity = product.AvailableQuantity - quantities[i]; // sau khi thêm thì phải trừ số lượng đó đi ở trong db theo sp
                     this._productServices.UpdateProduct(product);
                     bill.Details.Add(detail);
                 }
