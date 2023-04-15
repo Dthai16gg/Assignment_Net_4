@@ -179,7 +179,6 @@ public class UserController : Controller
 
         public User User { get; set; }
     }
-
     public class ShowModel
     {
         public List<Role> Roles { get; set; }

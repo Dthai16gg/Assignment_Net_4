@@ -84,7 +84,14 @@
                 @stt
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+               @if (item.Price * item.AvailableQuantity > 1000000)
+               {
+                   <p class="text-danger">@item.Name</p>
+               }
+               else
+               {
+                   <p>@item.Name</p>
+               }
             </td>
             <td>
                 $@Html.DisplayFor(modelItem => item.Price)

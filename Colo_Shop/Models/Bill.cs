@@ -8,7 +8,7 @@ public class Bill
 
     public Guid Id { get; set; }
 
-    public int Status { get; set; }
+    public int Status { get; set; } // dùng status là kiểu số vì có thể có nhiều trạng thái khác nhau
 
     public virtual User User { get; set; }
 

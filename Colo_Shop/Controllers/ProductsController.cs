@@ -41,15 +41,15 @@ public class ProductsController : Controller
         }
         else
         {
-            return this.Content("dm");
+            return Content("BỊ TrÙNG");
         }
     }
     //Check trùng (tên + nhà cung cấp) đã tồn tại khi sửa/thêm mới sản phẩm. VD: Bánh Quy - Kinhdo sẽ không trùng với Bánh Quy - Bibica 
     public bool CheckTrungTen(string name, string supplier)
     {
-        var existingProduct = _productServices.GetAllProducts()
+        var Product = _productServices.GetAllProducts()
             .FirstOrDefault(p => p.Name == name && p.Supplier == supplier);
-        if (existingProduct != null)
+        if (Product != null)
         {
             return false;
         }
@@ -71,14 +71,14 @@ public class ProductsController : Controller
     public IActionResult Edit(Guid id)
     {
         var product = this._productServices.GetProductById(id);
-
         // Đọc từ Session danh sách sp trong giỏ hàng
-        return this.View(product);
+            return this.View(product);
     }
 
     [HttpPost]
     public async Task<IActionResult> Edit(Product product, IFormFile imageFile)
     {
+
         try
         {
             using (var stream = new MemoryStream())
@@ -87,7 +87,14 @@ public class ProductsController : Controller
                 product.Image = stream.ToArray();
             }
 
-            this._productServices.UpdateProduct(product);
+            if (CheckTrungTen(product.Name, product.Supplier))
+            {
+                this._productServices.UpdateProduct(product);
+            }
+            else
+            {
+                return Content("BỊ TrÙNG");
+            }
         }
         catch (Exception e)
         {
